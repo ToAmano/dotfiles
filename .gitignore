@@ -35,6 +35,9 @@
 # github
 !/clone.sh
 
+# python
+!/pyenv_install.sh
+
 # iterm
 !/com.googlecode.iterm2.plist
 !/Solarized-Dark.json
