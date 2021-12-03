@@ -495,6 +495,14 @@ eval "$(pyenv virtualenv-init -)"
 alias brew="env PATH=${PATH/\/Users\/${USER}\/\.pyenv\/shims:/} brew"
 
 
+#2021/12/3
+# https://zenn.dev/k4zu/articles/zsh-tutorial
+# zsh_autosuggestions
+if [ -f /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh ]; then
+  source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+fi
+
+
 #=============================
 # source zsh-syntax-highlighting
 #=============================
