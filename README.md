@@ -8,7 +8,8 @@
 
 
 ## 実際の設定
-1, 事前準備
+
+### 1, 事前準備
 install xcode command line tools.
 
 ssh connection to github
@@ -16,12 +17,6 @@ ssh connection to github
 clone "codes" repository in ${HOME}/works
 
 
-2, できること。
-
-
-- clone.sh 他人の作ったgit repositoryをcloneする。
-- ~/src/z.sh
-- 
 
 
 ## contents
@@ -41,14 +36,18 @@ clone "codes" repository in ${HOME}/works
 - init.el
 
 
+4,  
+- clone.sh clone other's git repository
+- ~/src/z.sh
+ 
 
+
+3, auto installation for Homebrew
 !! causion !!
 before installation,
 - xcode Tools
 are needed.
 
-
-3, auto installation for Homebrew
 
 # apps
 - mas
@@ -86,7 +85,7 @@ sqlite
 
 
 
-4, GUI apps installation for homebrew cask
+### 4, GUI apps installation for homebrew cask
 https://qiita.com/takeshisakuma/items/e9685fb9e394212247c0
 
 - alfread
@@ -126,30 +125,23 @@ https://www.tweeeety.blog/entry/20121129/1354192716
 
 
 
-##emacsのtrue color設定について
+### emacsのtrue color設定について
 tic -x -o ~/.terminfo terminfo-24bit.src
-を実行すること．
+を実行する。
 
 
 
 6, TODO
 
-２、色々echoで情報を出すようにしたい。
 
 ３、https://github.com/b4b4r07/dotfiles/blob/master/Makefile
 を参考に、makeで自動的にやってくれるようにしたい。
-
-５、やはりcodesとdotfileは分けておくべきでは？ という気がする。 今更どうしようもないのかもしれないけど。
-→ 一応そういうわけでもないかもしれない。いずれにせよ一回試すべき。
-→ というのも、わざわざgitにssh接続しなくて良いように、公開repositoryにしようと思うので。今使用しているdotfilesレポジトリがあるので、それを利用する形に変更したい。
-→ これをやる場合、キーパスファイルやsshのファイルなどは同じrepositoryでは保管できなくなるので注意。
-→ 後はsshkeygenのスクリプトも作って.sshディレクトリに入れておいた方が良い。
 
 ８、pdfpc：プレゼンテーションツール
 
 
 
-9, python setting
+9, python setting for pyenv
 https://mitsudo.net/python環境の構築-mac-with-anaconda-by-homebrew/
 
 http://omilab.naist.jp/~mukaigawa/misc/Makefile.html
