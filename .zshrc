@@ -58,7 +58,8 @@ fi
 
 #対応するファイルの場所
 # 2021/10/30 mv dotfiles to works/codes
-dircolorsPATH=${HOME}/works/codes/dotfiles/iterm2setting/dircolors.ansi-modify-dark
+# 2021/12/03 mv dotfiles to works/dotfiles
+dircolorsPATH=${HOME}/works/dotfiles/iterm2setting/dircolors.ansi-modify-dark
 #dircolorsPATH=~/dotfiles/iterm2setting/dircolors-solarized/dircolors.ansi-modify-dark
 #dircolorsPATH=~/dotfiles/iterm2setting/dircolors-solarized/dircolors.256dark
 #以下で読み込み
@@ -382,6 +383,9 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
+
+# 2021/12/3 setting conda for m1 mac?
+conda activate
 
 
 # 2021/10/20
