@@ -98,10 +98,13 @@ zstyle ':completion::complete:*' use-cache true
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 # 補完リストの表示間隔を狭くする
 setopt list_packed
+# sudo でも補完の対象
+zstyle ':completion:*:sudo:*' command-path /usr/local/sbin /usr/local/bin /usr/sbin /usr/bin /sbin /bin
 
 # コマンドの打ち間違いを指摘してくれる
 setopt correct
 SPROMPT="correct: $RED%R$DEFAULT -> $GREEN%r$DEFAULT ? [Yes/No/Abort/Edit] => "
+
 
 
 
@@ -112,11 +115,47 @@ setopt auto_cd
 # $ cd - でTabを押すと、ディレクトリの履歴が見れる
 setopt auto_pushd
 
+# 2021/12/3
+# https://qiita.com/mollifier/items/1a9126b2200bcbaf515f
+autoload -Uz smart-insert-last-word
 
 
+# 2021/12/3
+# https://wonderwall.hatenablog.com/entry/2017/02/26/000702
+autoload -U zmv
 
 
+# 2021/12/3
+# https://qiita.com/Kakuni/items/a8025e075926272f491d
 
+# 補完候補一覧でファイルの種別を識別マーク表示(ls -F の記号)
+setopt list_types
+
+# lsコマンドの補完候補にも色付き表示
+zstyle ':completion:*:default' list-colors ${LS_COLORS}
+
+
+# ヒストリー機能
+# command r でコマンド履歴を辿るのでいっぱいにしとく
+HISTFILE=~/.zsh/.zsh_history      # ヒストリファイルを指定
+HISTSIZE=10000               # ヒストリに保存するコマンド数
+SAVEHIST=10000               # ヒストリファイルに保存するコマンド数
+setopt hist_ignore_all_dups  # 重複するコマンド行は古い方を削除
+setopt hist_ignore_dups      # 直前と同じコマンドラインはヒストリに追加しない
+setopt share_history         # コマンド履歴ファイルを共有する
+setopt append_history        # 履歴を追加 (毎回 .zsh_history を作るのではなく)
+setopt inc_append_history    # 履歴をインクリメンタルに追加
+setopt hist_no_store         # historyコマンドは履歴に登録しない
+setopt hist_reduce_blanks    # 余分な空白は詰めて記録
+zstyle ':completion:*:default' menu select
+
+
+# emacs スタイルのキーバインド
+# https://yuta84q.hatenadiary.org/entry/20090318/1237340720
+bindkey -e
+
+# 文字コードの設定
+export LANG=ja_JP.UTF-8
 
 
 #change prompt to pure
@@ -385,7 +424,7 @@ unset __conda_setup
 # <<< conda initialize <<<
 
 # 2021/12/3 setting conda for m1 mac?
-conda activate
+# conda activate
 
 
 # 2021/10/20
@@ -454,3 +493,16 @@ eval "$(pyenv virtualenv-init -)"
 
 # brew doctor 対策
 alias brew="env PATH=${PATH/\/Users\/${USER}\/\.pyenv\/shims:/} brew"
+
+
+#=============================
+# source zsh-syntax-highlighting
+#=============================
+
+#https://blog.glidenote.com/blog/2012/12/15/zsh-syntax-highlighting/
+#https://github.com/zsh-users/zsh-syntax-highlighting/blob/master
+export ZSH_HIGHLIGHT_HIGHLIGHTERS_DIR=/opt/homebrew/share/zsh-syntax-highlighting/highlighters
+
+if [ -f /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]; then
+    source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+fi
