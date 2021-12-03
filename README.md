@@ -7,15 +7,17 @@
 # 
 
 
-## 実際の設定
+## How to use
 
 ### 1, 事前準備
-install xcode command line tools.
+- install xcode command line tools.
+- ssh connection to github
+- clone "dotfiles" repository in ${HOME}/works
 
-ssh connection to github
-
-clone "codes" repository in ${HOME}/works
-
+### 2, dotfiles
+- install_simple.sh: symlinking
+- install_brew.sh: install commands/apps via homebrew
+- 
 
 
 
@@ -108,15 +110,6 @@ https://qiita.com/takeshisakuma/items/e9685fb9e394212247c0
 5, 
 
 
-5, setting not included
-
-Due to security issue
-- keepassXC key files
-- ssh key files
-- 
-
-
-
 
 ##シンボリックリンクを貼るときの相対パスの指定についての注意
 #ln -s シンボリックリンクからのパス シンボリックリンクのパス が正しい
@@ -143,5 +136,15 @@ tic -x -o ~/.terminfo terminfo-24bit.src
 
 9, python setting for pyenv
 https://mitsudo.net/python環境の構築-mac-with-anaconda-by-homebrew/
-
 http://omilab.naist.jp/~mukaigawa/misc/Makefile.html
+
+
+10, gitに上げられないけど必要なファイルは基本icloudに置く。
+- sauronVPN (L2TP).networkConnect
+- keepass_passwords.kdbx
+
+
+11, その他共有が必要なファイル。
+- keepassのパスワードファイル
+- sshの秘密鍵ファイル。
+- 
