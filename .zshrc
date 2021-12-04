@@ -495,22 +495,47 @@ eval "$(pyenv virtualenv-init -)"
 alias brew="env PATH=${PATH/\/Users\/${USER}\/\.pyenv\/shims:/} brew"
 
 
-#2021/12/3
-# https://zenn.dev/k4zu/articles/zsh-tutorial
-# zsh_autosuggestions
-if [ -f /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh ]; then
-  source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-fi
 
 
 #=============================
-# source zsh-syntax-highlighting
+# packages manager antigen
 #=============================
-
-#https://blog.glidenote.com/blog/2012/12/15/zsh-syntax-highlighting/
-#https://github.com/zsh-users/zsh-syntax-highlighting/blob/master
-export ZSH_HIGHLIGHT_HIGHLIGHTERS_DIR=/opt/homebrew/share/zsh-syntax-highlighting/highlighters
-
-if [ -f /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]; then
-    source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+# 2021/12/4
+# とりあえずpackage-managerを導入．homebrewだとintel-M1macでのpathの違いが面倒なので．
+# いくつかあるようだが，とりあえずantigenを使用する．
+if [ -f ${HOME}/.zsh/antigen/antigen.zsh ]; then
+source ${HOME}/.zsh/antigen/antigen.zsh
 fi
+
+# 
+antigen bundle zsh-users/zsh-completions
+
+# autosuggestion bundle.
+antigen bundle zsh-users/zsh-autosuggestions
+
+# Syntax highlighting bundle.
+antigen bundle zsh-users/zsh-syntax-highlighting
+
+
+# Tell antigen that you're done.
+antigen apply
+
+# #2021/12/3
+# # https://zenn.dev/k4zu/articles/zsh-tutorial
+# # zsh_autosuggestions
+# if [ -f /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh ]; then
+#   source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+# fi
+
+
+# #=============================
+# # source zsh-syntax-highlighting
+# #=============================
+
+# #https://blog.glidenote.com/blog/2012/12/15/zsh-syntax-highlighting/
+# #https://github.com/zsh-users/zsh-syntax-highlighting/blob/master
+# export ZSH_HIGHLIGHT_HIGHLIGHTERS_DIR=/opt/homebrew/share/zsh-syntax-highlighting/highlighters
+
+# if [ -f /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]; then
+#     source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+# fi

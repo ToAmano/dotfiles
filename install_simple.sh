@@ -73,4 +73,5 @@ ln -snfv ${PWD}/.ssh/config ${HOME}/.ssh/config
 
 # emacs true color用の設定．
 # https://stackoverflow.com/questions/14672875/true-color-24-bit-in-terminal-emacs
-tic -x -o ${HOME}/.terminfo ${BASEDIR}/.terminfo/78/terminfo-24bit.src
+# use "system tic" https://emacs.stackexchange.com/questions/32506/conditional-true-color-24-bit-color-support-for-iterm2-and-terminal-app-in-osx
+/usr/bin/tic -x -o ${HOME}/.terminfo ${BASEDIR}/.terminfo/78/terminfo-24bit.src

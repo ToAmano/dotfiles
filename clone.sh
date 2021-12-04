@@ -16,7 +16,9 @@ git clone git://github.com/rupa/z ${HOME}/src/z/
 git clone git@github.com:seebi/dircolors-solarized.git ${PWD}/iterm2setting/dircolors-solarized/
 git clone git@github.com:altercation/solarized.git ${PWD}/iterm2setting/solarized/
 # git clone git@github.com:abertsch/Menlo-for-Powerline.git ${PWD}/iterm2setting
-git clone --depth 1  git@github.com:ryanoasis/nerd-fonts.git ${PWD}/iterm2setting/nerd-fonts/
+# git clone --depth 1  git@github.com:ryanoasis/nerd-fonts.git ${PWD}/iterm2setting/nerd-fonts/
 
-
+# 2021/12/4
+# antigen
+git clone git@github.com:zsh-users/antigen.git ${HOME}/.zsh/antigen/
 
