@@ -331,7 +331,7 @@
 			<key>Guid</key>
 			<string>A3154373-EFB2-4A5B-B334-7A5CD9FFD8FE</string>
 			<key>Has Hotkey</key>
-			<true/>
+			<false/>
 			<key>Horizontal Spacing</key>
 			<real>1</real>
 			<key>HotKey Activated By Modifier</key>

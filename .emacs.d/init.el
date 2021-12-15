@@ -494,6 +494,9 @@
 ;;https://www.reddit.com/r/emacs/comments/8i2ip7/emacs_dashboard_emacsclient
 (setq initial-buffer-choice (lambda () (get-buffer "*dashboard*")))
 ;;→なんか微妙な挙動を示しているので一時停止→2021/10/28 使用再開
+;; 2021/12/6 普通にemacsを開いた場合はダメになってしまう．
+;; したがって，常にemacs --daemonを使用する必要がある．
+
 
 ;;ダッシュボードをもう一回開きたいとき．
 ;;https://qiita.com/minoruGH/items/d5f2975a76b6ca4ceb1c

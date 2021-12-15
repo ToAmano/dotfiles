@@ -17,7 +17,9 @@ curl -L https://iterm2.com/shell_integration/install_shell_integration_and_utili
 cp ./com.googlecode.iterm2.plist ${HOME}/Library/Application\ Support/iTerm2/DynamicProfiles/
 
 
-
+# font rectyのinstall for intel-mac
+cp -f /usr/local/opt/ricty/share/fonts/Ricty*.ttf ~/Library/Fonts/
+fc-cache -vf
 
 
 # chrome extension

@@ -23,6 +23,8 @@ echo "brew tap"
 # brew tap thirdparty
 # https://github.com/ryanoasis/nerd-fonts#option-4-homebrew-fonts 
 brew tap homebrew/cask-fonts
+# https://qiita.com/segur/items/50ae2697212a7bdb7c7f
+brew tap sanemat/font
 
 
 echo "brew install..."

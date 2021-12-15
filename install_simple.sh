@@ -67,6 +67,21 @@ if [ ! -d ${HOME}/.emacs.d/site-lisp ];then
     mkdir ${HOME}/.emacs.d/site-lisp
 fi
 
+echo
+echo "making directories for downloads..."
+echo
+if [ ! -d ${HOME}/var ];then
+    mkdir ${HOME}/var
+fi
+if [ ! -d ${HOME}/var/chrome ];then
+    mkdir ${HOME}/var/chrome
+fi
+if [ ! -d ${HOME}/var/mail ];then
+    mkdir ${HOME}/var/mail
+fi
+
+
+
 # sshのlinkをはる。
 mkdir ${HOME}/.ssh
 ln -snfv ${PWD}/.ssh/config ${HOME}/.ssh/config
