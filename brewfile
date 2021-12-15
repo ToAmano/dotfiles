@@ -60,6 +60,7 @@ cask "font-menlo-for-powerline"
 # cask
 # cask "anaconda" 現在M1macに非対応
 cask "xquartz" # need password
+cask "thorium" # epub reader
 cask "google-chrome"
 cask "hiddenbar"
 cask "iterm2"
