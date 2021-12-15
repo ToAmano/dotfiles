@@ -92,7 +92,8 @@ cask "nextcloud" # need password
 # appstore
 mas "Things 3", id: 904280696
 mas "WeatherBug", id: 1059074180
-
+# mas "hidden bard", id: 1452453066
+# mas "line", id: 539883307
 
 # after things3 install
 cask "thingsmacsandboxhelper"
