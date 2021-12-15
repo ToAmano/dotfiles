@@ -48,7 +48,7 @@ brew "gnu-which"
 brew "ccat" # replace cat
 brew "grc"  # ping, etc..
 brew "colordiff" # replace diff
-brew "source-hihlight" # replace less
+brew "source-highlight" # replace less
 
 
 
