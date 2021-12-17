@@ -19,12 +19,13 @@ unmapAll
 # scroll
 map <c-n> scrollDown
 map <c-p> scrollUp
-map <c-b> scrollLeft
-map <c-f> scrollRight
+map <c-B> scrollLeft
+map <c-F> scrollRight
 map ¯ scrollToTop # map <a-<> scrollToTop
 map ˘ scrollToBottom # map <a->> scrollToBottom
-map √ scrollFullPageUp # map <a-v> scrollFullPageUp
 map <c-v> scrollFullPageDown
+map <a-√> scrollFullPageUp # map <a-v> scrollFullPageUp
+#map <a-v> scrollFullPageUp # map <a-v> scrollFullPageUp
 
 # Edit
 map <c-l> reload
@@ -57,12 +58,12 @@ map <c-R> performBackwardsFind
 # History
 map <c-g><left> goPrevious
 map <c-g><right> goNext
-map <c-B> goBack
-map <c-F> goForward
+map <c-b> goBack
+map <c-f> goForward
 
 # Tab
-map ı previousTab # map <a-B> previousTab
-map Ï nextTab # map <a-F> nextTab
+map <c-x><left> previousTab # map <a-B> previousTab
+map <c-x><right> nextTab # map <a-F> nextTab
 map <c-x><up> firstTab
 map <c-x><down> lastTab
 map <c-t> createTab
@@ -71,3 +72,5 @@ map <c-g><c-r> restoreTab
 
 # Help
 map <c-h> showHelp
+
+
