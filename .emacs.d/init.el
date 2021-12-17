@@ -196,6 +196,10 @@
 (set-terminal-coding-system 'utf-8)
 (prefer-coding-system 'utf-8)
 
+;; 2021/12/18 backup file directory
+;; http://yohshiy.blog.fc2.com/blog-entry-319.html
+ (setq backup-directory-alist '((".*" . "~/.emacs.d/.ehist")))
+
 
 ;;emacs23.2以降では非推奨
 ;;(setq default-buffer-file-coding-system 'utf-8)
