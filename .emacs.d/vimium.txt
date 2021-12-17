@@ -1,0 +1,73 @@
+#************************************************************************************
+#*                   Generated at  2021-12-18                                       *
+#*                                                                                  *
+#*                                    emacs-style key-bind in vimium                *
+#************************************************************************************
+
+#https://qiita.com/maebaru/items/f7163b70625865b32e68
+#https://swat.hatenadiary.com/entry/2017/07/09/144844
+
+#https://github.com/raamdev/vimium
+#https://github.com/philc/vimium/wiki/Key-Mappings#emacs
+#https://tsukachu.hatenablog.com/entry/vimium_keymappings_emacs_like
+#https://github.com/maeda-kazuya/chromemacs
+
+
+# Use Emacs-style bindings only.
+unmapAll
+
+# scroll
+map <c-n> scrollDown
+map <c-p> scrollUp
+map <c-b> scrollLeft
+map <c-f> scrollRight
+map ¯ scrollToTop # map <a-<> scrollToTop
+map ˘ scrollToBottom # map <a->> scrollToBottom
+map √ scrollFullPageUp # map <a-v> scrollFullPageUp
+map <c-v> scrollFullPageDown
+
+# Edit
+map <c-l> reload
+map <c-g><c-u> copyCurrentUrl
+map <c-g><c-l> LinkHints.activateModeToCopyLinkUrl
+map <c-g><c-o> openCopiedUrlInCurrentTab
+map <c-g><c-O> openCopiedUrlInNewTab
+map <c-g><c-i> enterInsertMode
+map <c-g><c-f> focusInput
+
+# LinkHints
+map <c-x><c-f> LinkHints.activateMode
+map <c-x><c-F> LinkHints.activateModeToOpenInNewForegroundTab
+map <c-x><a-f> LinkHints.activateModeWithQueue
+map <c-x><a-F> LinkHints.activateModeToOpenInNewTab
+
+# Vomnibar
+map <c-x><c-D> Vomnibar.activate
+map <c-x><c-d> Vomnibar.activateInNewTab
+map <c-x>b Vomnibar.activateTabSelection
+map <c-x><c-b> Vomnibar.activateBookmarks
+map <c-x><c-B> Vomnibar.activateBookmarksInNewTab
+
+# Find
+map <c-s> enterFindMode
+map <c-S> performFind
+map <c-r> performBackwardsFind
+map <c-R> performBackwardsFind
+
+# History
+map <c-g><left> goPrevious
+map <c-g><right> goNext
+map <c-B> goBack
+map <c-F> goForward
+
+# Tab
+map ı previousTab # map <a-B> previousTab
+map Ï nextTab # map <a-F> nextTab
+map <c-x><up> firstTab
+map <c-x><down> lastTab
+map <c-t> createTab
+map <c-x><c-v> removeTab
+map <c-g><c-r> restoreTab
+
+# Help
+map <c-h> showHelp
