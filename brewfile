@@ -79,7 +79,8 @@ cask "deepl"
 cask "dropbox"
 cask "grammarly"
 cask "itsycal"
-cask "db-browser-for-sqlite" 
+cask "db-browser-for-sqlite"
+cask "gpg-suite-no-mail" # needed for opengpg
 cask "background-music" #need password. not suitable for M1 mac
 cask "google-drive" #need password
 cask "zoom"  #need password
