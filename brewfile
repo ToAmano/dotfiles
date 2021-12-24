@@ -15,6 +15,7 @@ brew "sqlite"
 brew "inetutils"
 brew "imagemagick"
 brew "youtube-dl"
+brew "jq"
 brew "git-lfs"
 brew "hub"     #githubの上級コマンド
 brew "macfuse" # needed for sshfs
@@ -79,6 +80,7 @@ cask "deepl"
 cask "dropbox"
 cask "grammarly"
 cask "itsycal"
+cask "sourcetree" #github GUI
 cask "db-browser-for-sqlite"
 cask "gpg-suite-no-mail" # needed for opengpg need password
 cask "background-music" #need password. not suitable for M1 mac
