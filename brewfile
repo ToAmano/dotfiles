@@ -1,6 +1,5 @@
 #
 
-
 # https://dev-yakuza.posstree.com/environment/configure-development-environment-on-mac-with-homebrew-and-shell-script/#homebrew%E3%81%A8brewfile%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB
 
 
@@ -18,7 +17,7 @@ brew "youtube-dl"
 brew "jq"
 brew "git-lfs"
 brew "hub"     #githubの上級コマンド
-brew "macfuse" # needed for sshfs
+cask "macfuse" # needed for sshfs. should be installed before ssfs-mac
 brew "gromgit/fuse/sshfs-mac" #original sshfs is deprecated in brew. see https://blog.kmdkuk.com/2021/06/05/macでsshfsをインストール.html 
 brew "pyenv" # https://mitsudo.net/python環境の構築-mac-with-anaconda-by-homebrew/
 brew "pyenv-virtualenv"
@@ -68,12 +67,10 @@ cask "iterm2"
 cask "alfred"
 cask "notion"
 cask "keepassXC"
-cask "things"
 cask "visual-studio-code"
 cask "iterm2"
 cask "zotero"
 cask "slack"
-cask "line"
 cask "skim"
 cask "alfred"
 cask "deepl"
@@ -96,7 +93,7 @@ cask "nextcloud" # need password
 mas "Things 3", id: 904280696
 mas "WeatherBug", id: 1059074180
 # mas "hidden bard", id: 1452453066
-# mas "line", id: 539883307
+# mas "Line", id: 539883307
 
 # after things3 install
 cask "thingsmacsandboxhelper"
