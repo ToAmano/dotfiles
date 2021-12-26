@@ -8,7 +8,7 @@
 [core]
 	editor = TERM=xterm-24bit emacsclient -t
 	autocrlf = false # 改行コードの自動変換
-	excludesfile = ${HOME}/.gitignore_global
+	excludesfile = ~/.gitignore_global
 [hub]
 #	procotol = --help
 	procotol = ssh
