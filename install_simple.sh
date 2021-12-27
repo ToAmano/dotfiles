@@ -26,7 +26,7 @@ cd $BASEDIR
 # dirに対してもlinkを貼ろうとするのでそれはやめさせる。
 
 echo 
-echo "linking dot files ..."
+echo "linking dot files (including gnuplot)..."
 echo
 for f in .??*; do
     [ "$f" = ".git" ] && continue
@@ -85,6 +85,7 @@ fi
 # sshのlinkをはる。
 mkdir ${HOME}/.ssh
 ln -snfv ${PWD}/.ssh/config ${HOME}/.ssh/config
+
 
 # emacs true color用の設定．
 # https://stackoverflow.com/questions/14672875/true-color-24-bit-in-terminal-emacs
