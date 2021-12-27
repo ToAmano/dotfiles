@@ -8,7 +8,7 @@ brew "mas"
 brew "emacs"
 brew "gnuplot"
 brew "sqlite"
-
+brew "tmux"
 
 # commands
 brew "inetutils"
