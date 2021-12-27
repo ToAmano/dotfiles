@@ -26,6 +26,8 @@ brew tap homebrew/cask-fonts
 # https://qiita.com/segur/items/50ae2697212a7bdb7c7f
 brew tap sanemat/font
 
+# for sshmuse
+brew tap gromgit/fuse
 
 echo "brew install..."
 brew bundle --file=./brewfile
