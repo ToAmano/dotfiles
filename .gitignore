@@ -67,3 +67,7 @@
 
 #gnuplot
 !/.gnuplot
+
+#conda
+!/conda_info
+!/conda_info/**
