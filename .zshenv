@@ -87,3 +87,8 @@ MANPATH=/usr/local/opt/grep/libexec/gnuman:${MANPATH}
  MANPATH=/opt/homebrew/opt/gnu-sed/libexec/gnuman:${MANPATH}
  MANPATH=/opt/homebrew/opt/gnu-tar/libexec/gnuman:${MANPATH}
  MANPATH=/opt/homebrew/opt/grep/libexec/gnuman:${MANPATH}
+
+
+# 2022/1/27 for homebrew
+PATH=/usr/local/sbin:${PATH}
+

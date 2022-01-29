@@ -31,6 +31,8 @@ fpath+=$HOME/.zsh/pure
 
 
 
+export PATH="/usr/local/sbin:$PATH"
+
 # https://docs.brew.sh/Shell-Completion#configuring-completions-in-zsh
 if type brew &>/dev/null
 then
