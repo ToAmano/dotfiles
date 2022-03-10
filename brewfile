@@ -9,8 +9,10 @@ brew "emacs"
 brew "gnuplot"
 brew "sqlite"
 brew "tmux"
+brew "pymol"
 
 # commands
+brew "nkf"        # 文字コード
 brew "inetutils"
 brew "imagemagick"
 brew "youtube-dl"

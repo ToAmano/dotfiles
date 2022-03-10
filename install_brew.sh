@@ -29,6 +29,9 @@ brew tap sanemat/font
 # for sshmuse
 brew tap gromgit/fuse
 
+# for pymol
+brew tap brewsci/bio
+
 echo "brew install..."
 brew bundle --file=./brewfile
 
