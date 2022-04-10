@@ -10,6 +10,7 @@ brew "gnuplot"
 brew "sqlite"
 brew "tmux"
 brew "pymol"
+brew "openjdk"
 
 # commands
 brew "nkf"        # 文字コード
