@@ -235,9 +235,9 @@
 (setq auto-insert-alist
       (append '(
                ("\\.cpp$" . "template.cpp" )
-               ("\\.h$"   . "template.h" )
-               ("\\.cc$"  . "template.cc" )
-              ) auto-insert-alist ))
+               ("\\.h$"   . "template.h"   )
+               ("\\.cc$"  . "template.cc"  )
+	       ) auto-insert-alist ))
 
 ;;;;; input special and control characters by "Option"
 (setq ns-option-modifier 'none)
@@ -669,8 +669,10 @@
 
 ;;https://qiita.com/twitte_raru/items/6f02b6a8b6020a0e4f64
 ;;これは，どうもdoom-modeline-iconsと言うiconフォントを使っていて，それが文字化けの原因になっているようだ．
-(use-package doom-modeline)
-(doom-modeline-mode 1)
+(use-package doom-modeline
+  :ensure t
+  :init (doom-modeline-mode 1))
+
 ;;:custom
 (setq doom-modeline-buffer-file-name-style 'truncate-with-project)
 (setq doom-modeline-icon nil)
@@ -867,7 +869,7 @@
 ;; https://yuelab82.hatenablog.com/entry/terminal_now
 (use-package rainbow-delimiters
   :ensure t
-  :config 
+  :config
   (add-hook 'yatex-mode-hook 'rainbow-delimiters-mode)
    )
 
@@ -1480,7 +1482,7 @@
 ;; helm
 ;;;;=======================
 ;;2020/2/26
-(use-package helm-config)
+;; (use-package helm-config)
 
 ;;;;=======================
 ;; highlight-indentaiton
@@ -2008,7 +2010,17 @@
  '(org-agenda-files nil)
  '(org-bullets-bullet-list '("" "" "" "" "" "" "" "" "" "") t)
  '(package-selected-packages
-   '(doom-modeline-now-playing doom hide-mode-line vterm eglot ## outline-magic py-autopep8 volatile-highlights w3m mew fill-column-indicator magit org-bullets org-pomodoro org-beautify-theme doom-modeline company-lsp lsp-ui lsp-mode blgrep clmemo amx which-key package-utils dashboard open-junk-file company-math company git-gutter+ git-gutter google-this selected symbol-overlay beacon anzu flycheck-color-mode-line ov rainbow-delimiters yatex spaceline-all-the-icons highlight-indentation indent-guide nyan-mode spaceline powerline total-lines helm imenu-list eyebrowse use-package gtags atom-one-dark-theme quickrun color-moccur yasnippet web-mode solarized-theme projectile neotree howm hiwin flycheck elscreen dumb-jump color-theme-sanityinc-solarized auto-complete all-the-icons)))
+   '(doom-modeline-now-playing doom hide-mode-line vterm eglot ## outline-magic py-autopep8 volatile-highlights w3m mew fill-column-indicator magit org-bullets org-pomodoro org-beautify-theme doom-modeline company-lsp lsp-ui lsp-mode blgrep clmemo amx which-key package-utils dashboard open-junk-file company-math company git-gutter+ git-gutter google-this selected symbol-overlay beacon anzu flycheck-color-mode-line ov rainbow-delimiters yatex spaceline-all-the-icons highlight-indentation indent-guide nyan-mode spaceline powerline total-lines helm imenu-list eyebrowse use-package gtags atom-one-dark-theme quickrun color-moccur yasnippet web-mode solarized-theme projectile neotree howm hiwin flycheck elscreen dumb-jump color-theme-sanityinc-solarized auto-complete all-the-icons))
+ '(warning-suppress-log-types '((use-package)))
+ '(warning-suppress-types
+   '((use-package)
+     (use-package)
+     (use-package)
+     (use-package)
+     (use-package)
+     (use-package)
+     (use-package)
+     (use-package))))
 
 ;;faceをいじる
 ;;https://qiita.com/AnchorBlues/items/91026c4f1c0745f5b851

@@ -436,18 +436,19 @@ autoload -U compinit && compinit
 
 eval "$(hub alias -s)"
 
-
+# シェル起動時にEmacs daemonも起動する．
 #  https://www.pandanoir.info/entry/2018/08/03/193000
-function estart() {
-  if ! emacsclient -e 0 > /dev/null 2>&1; then
-    ({
-      cd
-      emacs --daemon
-      cd -
-    } > /dev/null 2>&1 & )
-  fi
-}
-estart # シェル起動時にEmacsデーモンも起動する
+# function estart() {
+#   if ! emacsclient -e 0 > /dev/null 2>&1; then
+#     ({
+#       cd
+#       emacs --daemon
+#       cd -
+#     } > /dev/null 2>&1 & )
+#   fi
+# }
+# estart # シェル起動時にEmacsデーモンも起動する
+
 
 # emacsclient用の追加の設定
 # https://www.emacswiki.org/emacs/EmacsClient#h5o-1
