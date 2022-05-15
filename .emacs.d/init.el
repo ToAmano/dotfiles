@@ -224,7 +224,7 @@
 
 ;;;;auto-insert(テンプレートの挿入）
 ;;http://www.math.s.chiba-u.ac.jp/~matsu/emacs/emacs21/autoinsert.html
-;;http://higepon.hatenablog.com/entry/20080731/1217491155
+;;https://higepon.hatenablog.com/entry/20080731/1217491155
 
 ;;auto-insertの有効化
 (use-package autoinsert)
@@ -237,7 +237,34 @@
                ("\\.cpp$" . "template.cpp" )
                ("\\.h$"   . "template.h"   )
                ("\\.cc$"  . "template.cc"  )
+               ("\\.gp$"  . "template.gp"  )
+
 	       ) auto-insert-alist ))
+
+;; 変数設定
+(defvar template-replacements-alists
+  '(("%file%"             . (lambda () (file-name-nondirectory (buffer-file-name))))
+    ("%file-without-ext%" . (lambda () (file-name-sans-extension (file-name-nondirectory (buffer-file-name)))))
+    ("%include-guard%"    . (lambda () (format "__SCHEME_%s__" (upcase (file-name-sans-extension (file-name-nondirectory buffer-file-name))))))))
+
+(defun my-template ()
+  (time-stamp)
+  (mapc #'(lambda(c)
+        (progn
+          (goto-char (point-min))
+          (replace-string (car c) (funcall (cdr c)) nil)))
+    template-replacements-alists)
+  (goto-char (point-max))
+  (message "done."))
+(add-hook 'find-file-not-found-hooks 'auto-insert)
+
+
+;; 先頭から8行以内の Time-stamp: <> にタイムスタンプを自動挿入
+;; https://masa21kik.hateblo.jp/entry/20090906/1252212952
+(require 'time-stamp)
+(add-hook 'write-file-hooks 'time-stamp)
+
+
 
 ;;;;; input special and control characters by "Option"
 (setq ns-option-modifier 'none)
@@ -423,6 +450,16 @@
 
 ;; https://blog.goo.ne.jp/dak-ikd/e/01b45dc521b48536fbd0ac4d6a4a4d6e
 (add-to-list 'auto-mode-alist '("\\.pyx\\'" . python-mode))
+
+;; VASP
+(add-to-list 'auto-mode-alist '("\\INCAR\\'" . fortran-mode))
+;; QE
+(add-to-list 'auto-mode-alist '("\\pw.in\\'" . fortran-mode))
+(add-to-list 'auto-mode-alist '("\\ph.in\\'" . fortran-mode))
+
+
+
+
 
 
 
