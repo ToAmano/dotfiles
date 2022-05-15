@@ -46,6 +46,8 @@ if [ ! -d ${HOME}/.emacs.d ];then
     mkdir ${HOME}/.emacs.d
 fi
 ln -snfv ${PWD}/.emacs.d/init.el ~/.emacs.d/init.el
+ln -snfv ${PWD}/.emacs.d/insert ~/.emacs.d/insert  # for auto-insert template
+
 
 # make directories for emacs
 echo

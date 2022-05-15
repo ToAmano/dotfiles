@@ -230,7 +230,7 @@
 (use-package autoinsert)
 (add-hook 'find-file-hooks 'auto-insert)
 ;;insertするサンプルファイルの置き場所
-(setq auto-insert-directory "~/.emacs.d/elisp/insert/")
+(setq auto-insert-directory "~/.emacs.d/insert/")
 ;;各ファイルによってテンプレートを切り替える
 (setq auto-insert-alist
       (append '(
