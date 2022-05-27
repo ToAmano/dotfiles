@@ -3,11 +3,11 @@
 #
 # ========================
 # https://ss.scphys.kyoto-u.ac.jp/person/yonezawa/contents/program/gnuplot/paper_adv2.html
-# Time-stamp: <>
+# Time-stamp: <2022-05-27 09:30:59 amanotomohito>
 
 
 # output setting
-set output pdfcairo enhanced # enhanced for latin
+set term pdfcairo enhanced # enhanced for latin
 set output "test.pdf"
 
 
@@ -25,7 +25,7 @@ set y2label "y2"
 
 # margin setting (if num is large, margin becomes large)
 set lmargin 15 #left
-set bmargin 15 #bottom
+set bmargin 5 #bottom
 
 
 # plot
