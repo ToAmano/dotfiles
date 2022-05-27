@@ -238,6 +238,7 @@
                ("\\.h$"   . "template.h"   )
                ("\\.cc$"  . "template.cc"  )
                ("\\.gp$"  . "template.gp"  )
+	       ("README$"  . "template.README"  )
 
 	       ) auto-insert-alist ))
 
