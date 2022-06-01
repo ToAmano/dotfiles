@@ -29,6 +29,9 @@ brew "pyenv-virtualenv"
 # update command
 brew "bash"    #ブレース展開にbash4以上が必要．
 
+# chemical
+brew "open-babel"
+
 # gnu command replace
 # https://qiita.com/eumesy/items/3bb39fc783c8d4863c5f
 # https://yu8mada.com/2018/07/25/install-gnu-commands-on-macos-with-homebrew/
@@ -89,6 +92,12 @@ cask "zoom"  #need password
 # cask for Lab
 cask "apache-directory-studio"
 cask "nextcloud" # need password
+
+
+# chemical
+cask "ibabel"
+cask "avogadro"
+
 
 
 # appstore
