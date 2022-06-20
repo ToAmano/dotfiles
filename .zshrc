@@ -496,7 +496,12 @@ eval "$(pyenv virtualenv-init -)"
 # brew doctor 対策
 alias brew="env PATH=${PATH/\/Users\/${USER}\/\.pyenv\/shims:/} brew"
 
+# pythonpath(acpype)
+export PYTHONPATH=$HOME/src/acpype:$PYTHONPATH
 
+
+# pythonpath for my modules
+export PYTHONPATH=$HOME/works/research/work21_quadrupole/modules:$PYTHONPATH
 
 
 #=============================
