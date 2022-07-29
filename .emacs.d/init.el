@@ -1960,7 +1960,8 @@
 ;;2019/11/13 今まではC-c-t-jコマンドでptex2pdfを用いていたが，これからはlatexmkを使う．
 ;;というのも，bibtexを使いたくなったからで，latexmkならば面倒臭いbibtex関連のコンパイルをコマンド一つで実行できる．
 ;;https://qiita.com/Rumisbern/items/d9de41823aa46d5f05a8
-(setq tex-command "latexmk")
+;; 2022/07/27::latexmkでlualatexを利用するようにしたので対応して変更.
+(setq tex-command "latexmk -pdf")
 
 
 
