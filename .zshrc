@@ -304,6 +304,11 @@ RPROMPT='`rprompt-git-current-branch`'
 
 ##alias
 
+#2022/7/7 g++/gcc
+alias g++="/usr/local/bin/g++-11"
+alias gcc="/usr/local/bin/gcc-11"
+
+
 #2020/2/23 ls
 #これはsolarized colorになるようにわざわざcoreutilsを入れている
 #https://joppot.info/2013/12/24/265
