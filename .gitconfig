@@ -9,6 +9,7 @@
 	editor = TERM=xterm-24bit emacsclient -t
 	autocrlf = false # 改行コードの自動変換
 	excludesfile = ~/.gitignore_global
+	symlinks = true #https://took.jp/post-447/
 
 [hub]
 #	procotol = --help

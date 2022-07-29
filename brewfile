@@ -13,6 +13,7 @@ brew "pymol"
 brew "openjdk"
 
 # commands
+brew "iproute2mac" # ip 
 brew "nkf"        # 文字コード
 brew "inetutils"
 brew "imagemagick"
