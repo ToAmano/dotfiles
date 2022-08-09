@@ -43,8 +43,11 @@ export LIBRARY_PATH=$LIBRARY_PATH:/Users/AMANOTOMOHITO/src/Eigen
 
 #2021/10/28
 # 自作codeへのpathを通す．
-export PATH="/Users/amanotomohito/works/codes:$PATH"
+export PATH=/Users/amanotomohito/works/codes:$PATH
 
+
+# 2022/07/29 :: MacTex2022
+export PATH=/usr/local/texlive/2022/bin/universal-darwin/:$PATH
 
 
 #2021/11/15 for homebrew on M1 mac
