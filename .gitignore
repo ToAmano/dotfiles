@@ -71,3 +71,10 @@
 #conda
 !/conda_info
 !/conda_info/**
+
+
+#最後に削除するファイルを追加する
+.DS_Store
+'#*
+*~
+*.~undo-tree~

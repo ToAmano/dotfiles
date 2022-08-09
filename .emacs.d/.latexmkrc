@@ -24,3 +24,7 @@ $pvc_view_file_via_temporary = 6;
 ## output directory
 #$aux_dir          = "build/";
 #$out_dir          = "build/";
+
+# https://kwakita.blog/2014/06/14/writing-environment/
+# $aux_dir           = "$ENV{HOME}/.tmp/tex/" . basename(getcwd);
+# $out_dir           = $aux_dir;

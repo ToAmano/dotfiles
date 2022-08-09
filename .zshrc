@@ -304,6 +304,14 @@ RPROMPT='`rprompt-git-current-branch`'
 
 ##alias
 
+#2022/07/22 g++
+alias g++="/opt/homebrew/bin/g++-11"
+
+
+#2022/07/23 locate
+# homebrewと被っているのを元に戻す
+alias locate="/usr/bin/locate"
+
 #2020/2/23 ls
 #これはsolarized colorになるようにわざわざcoreutilsを入れている
 #https://joppot.info/2013/12/24/265
@@ -503,6 +511,14 @@ export PYTHONPATH=$HOME/src/acpype:$PYTHONPATH
 # pythonpath for my modules
 export PYTHONPATH=$HOME/works/research/work21_quadrupole/modules:$PYTHONPATH
 
+
+# CPATH m1macだとうまく動いていない．
+# https://apple.stackexchange.com/questions/414622/installing-a-c-c-library-with-homebrew-on-m1-macs
+# export CPATH=/opt/homebrew/include:$CPATH
+# export LIBRARY_PATH=/opt/homebrew/lib:$LIBRARY_PATH
+export CPATH=/opt/homebrew/Cellar/boost/1.79.0_1/include/:$CPATH  #boost 
+export CPATH=/opt/homebrew/Cellar/open-mpi/4.1.4/include/:$CPATH  #mpi.h
+# export CPLUS_INCLUDE_PATH=/opt/homebrew/Cellar/gcc/11.3.0_2/include/c++/11:$CPLUS_INCLUDE_PATH #標準library置き換え macのdefaultでは/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/vector:704:10:にある．
 
 #=============================
 # packages manager antigen
