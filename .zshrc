@@ -42,6 +42,20 @@ then
 fi
 
 
+# path to homebrew
+## The path can be defferent on on defferent machines.
+if [[ -d '/home/linuxbrew/.linuxbrew' ]]; then
+ # Linux/WSL
+ HOMEBREW_HOME='/home/linuxbrew/.linuxbrew'
+elif [[ -d '/opt/homebrew' ]]; then
+ # M1 Mac
+ HOMEBREW_HOME='/opt/homebrew'
+else
+ # Intel Mac (should be the last)
+ HOMEBREW_HOME='/usr/local' 
+fi
+eval "$($HOMEBREW_HOME/bin/brew shellenv)"
+
 
 ####################################################
 #
@@ -303,14 +317,22 @@ RPROMPT='`rprompt-git-current-branch`'
 
 
 ##alias
+# https://qiita.com/the_red/items/a30e23c66a3d8838912a
+
+
 
 #2022/07/22 g++
-alias g++="/opt/homebrew/bin/g++-11"
+alias g++="${HOMEBREW_HOME}/bin/g++-11"
 
 
 #2022/07/23 locate
-# homebrewと被っているのを元に戻す
+# homebrewと被っているのを元に戻す.
 alias locate="/usr/bin/locate"
+
+#2022/7/7 g++/gcc
+alias g++="${HOMEBREW_HOME}/bin/g++-11"
+alias gcc="${HOMEBREW_HOME}/bin/gcc-11"
+
 
 #2020/2/23 ls
 #これはsolarized colorになるようにわざわざcoreutilsを入れている
@@ -333,11 +355,11 @@ alias lsl='gls -l --color=auto'
 
 # read grc setting 
 [[ -s "/usr/local/etc/grc.zsh" ]] && source /usr/local/etc/grc.zsh
-[[ -s "/opt/homebrew/share/zsh/site-functions/usr/local/etc/grc.zsh" ]] && source /usr/local/etc/grc.zsh
+[[ -s "${HOMEBREW_HOME}/share/zsh/site-functions/usr/local/etc/grc.zsh" ]] && source /usr/local/etc/grc.zsh
 
 # less
 export LESS='-R'
-export LESSOPEN='| /usr/local/bin/src-hilite-lesspipe.sh  %s'
+export LESSOPEN='| ${HOMEBREW_HOME}/bin/src-hilite-lesspipe.sh  %s'
 
 # cat
 if [[ -x `which ccat` ]]; then
