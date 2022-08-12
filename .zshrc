@@ -321,10 +321,6 @@ RPROMPT='`rprompt-git-current-branch`'
 
 
 
-#2022/07/22 g++
-alias g++="${HOMEBREW_HOME}/bin/g++-11"
-
-
 #2022/07/23 locate
 # homebrewと被っているのを元に戻す.
 alias locate="/usr/bin/locate"
@@ -346,20 +342,20 @@ alias gcc="${HOMEBREW_HOME}/bin/gcc-11"
 # しかし，grcにもlsの設定があるため，バッティングする．そこで，glsにaliasを入れる．
 alias ls="gls -F --color=auto"
 alias lsa='gls -Fa --color=auto'
-alias lsl='gls -l --color=auto'
+alias lsl='gls -Fl --color=auto'
 
 
 #2021/11/17
 # color cat,less, etc...
-#  https://fhiyo.github.io/2017/11/14/colorize-terminal-output.html
 
 # read grc setting 
-[[ -s "/usr/local/etc/grc.zsh" ]] && source /usr/local/etc/grc.zsh
-[[ -s "${HOMEBREW_HOME}/share/zsh/site-functions/usr/local/etc/grc.zsh" ]] && source /usr/local/etc/grc.zsh
+#[[ -s "/usr/local/etc/grc.zsh" ]] && source ${HOMEBREW_HOME}/etc/grc.zsh
+#[[ -s "${HOMEBREW_HOME}/share/zsh/site-functions/usr/local/etc/grc.zsh" ]] && source ${HOMEBREW_HOME}/etc/grc.zsh
+[[ -s "${HOMEBREW_HOME}/etc/grc.zsh" ]] && source ${HOMEBREW_HOME}/etc/grc.zsh
 
 # less
-export LESS='-R'
-export LESSOPEN='| ${HOMEBREW_HOME}/bin/src-hilite-lesspipe.sh  %s'
+export LESS="-R"
+export LESSOPEN="| ${HOMEBREW_HOME}/bin/src-hilite-lesspipe.sh  %s"
 
 # cat
 if [[ -x `which ccat` ]]; then
@@ -584,3 +580,4 @@ antigen apply
 # if [ -f /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]; then
 #     source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # fi
+export PATH="/opt/homebrew/opt/openjdk@11/bin:$PATH"
