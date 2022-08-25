@@ -15,6 +15,23 @@
 
 
 
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/Users/amano/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/Users/amano/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/Users/amano/anaconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/Users/amano/anaconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
+
 #環境変数
 
 #2020/2/23 TERM
@@ -435,20 +452,6 @@ google(){
 
 
 
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/Users/amanotomohito/opt/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/Users/amanotomohito/opt/anaconda3/etc/profile.d/conda.sh" ]; then
-        . "/Users/amanotomohito/opt/anaconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="/Users/amanotomohito/opt/anaconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
 
 # 2021/12/3 setting conda for m1 mac?
 # conda activate
@@ -510,24 +513,28 @@ function ssh_local() {
 }
 
 
+# lmode
+source /opt/homebrew/opt/lmod/init/profile
+
+
 # pyenv
 # pyenv
 #https://mitsudo.net/python環境の構築-mac-with-anaconda-by-homebrew/
-export PYENV_ROOT=~/.pyenv
-export PATH=$PYENV_ROOT/bin:$PATH
-eval "$(pyenv init --path)" # https://commte.net/7259
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
+#export PYENV_ROOT=~/.pyenv
+#export PATH=$PYENV_ROOT/bin:$PATH
+#eval "$(pyenv init --path)" # https://commte.net/7259
+#eval "$(pyenv init -)"
+#eval "$(pyenv virtualenv-init -)"
 
 # brew doctor 対策
-alias brew="env PATH=${PATH/\/Users\/${USER}\/\.pyenv\/shims:/} brew"
+# alias brew="env PATH=${PATH/\/Users\/${USER}\/\.pyenv\/shims:/} brew"
 
 # pythonpath(acpype)
-export PYTHONPATH=$HOME/src/acpype:$PYTHONPATH
+export PYTHONPATH=$PYTHONPATH:$HOME/src/acpype
 
 
 # pythonpath for my modules
-export PYTHONPATH=$HOME/works/research/work21_quadrupole/modules:$PYTHONPATH
+export PYTHONPATH=$PYTHONPATH:$HOME/works/research/work21_quadrupole/modules
 
 
 # CPATH m1macだとうまく動いていない．
@@ -537,6 +544,14 @@ export PYTHONPATH=$HOME/works/research/work21_quadrupole/modules:$PYTHONPATH
 export CPATH=/opt/homebrew/Cellar/boost/1.79.0_1/include/:$CPATH  #boost 
 export CPATH=/opt/homebrew/Cellar/open-mpi/4.1.4/include/:$CPATH  #mpi.h
 # export CPLUS_INCLUDE_PATH=/opt/homebrew/Cellar/gcc/11.3.0_2/include/c++/11:$CPLUS_INCLUDE_PATH #標準library置き換え macのdefaultでは/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/vector:704:10:にある．
+
+
+export PATH=${HOME}/works/research/jsr_utokyo/tools:${PATH}
+export PYTHONPATH=${HOME}/works/research/jsr_utokyo/tools:${PYTHONPATH}
+export PATH=${HOME}/works/codes/tools:${PATH}
+export PYPJONPATH=${HOME}/works/codes/tools:${PYTHONPATH}
+
+
 
 #=============================
 # packages manager antigen
@@ -580,4 +595,10 @@ antigen apply
 # if [ -f /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]; then
 #     source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # fi
-export PATH="/opt/homebrew/opt/openjdk@11/bin:$PATH"
+# export PATH="/opt/homebrew/opt/openjdk@11/bin:$PATH"
+
+export PATH=/Users/amano/anaconda3/bin:$PATH
+
+
+# activate ssh-agent
+# exec ssh-agent $SHELL
