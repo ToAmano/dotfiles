@@ -530,6 +530,10 @@ export PYTHONPATH=$HOME/src/acpype:$PYTHONPATH
 export PYTHONPATH=$HOME/works/research/work21_quadrupole/modules:$PYTHONPATH
 
 
+export PYTHONPATH=$HOME/works/codes/tools:$PYTHONPATH
+export PATH=$HOME/works/codes/tools:$PATH
+
+
 # CPATH m1macだとうまく動いていない．
 # https://apple.stackexchange.com/questions/414622/installing-a-c-c-library-with-homebrew-on-m1-macs
 # export CPATH=/opt/homebrew/include:$CPATH
