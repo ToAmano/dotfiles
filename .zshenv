@@ -96,3 +96,5 @@ MANPATH=/usr/local/opt/grep/libexec/gnuman:${MANPATH}
 # 2022/1/27 for homebrew
 PATH=/usr/local/sbin:${PATH}
 
+
+export DYLD_FALLBACK_LIBRARY_PATH=/opt/homebrew/bin/:$DYLD_FALLBACK_LIBRARY_PATH
