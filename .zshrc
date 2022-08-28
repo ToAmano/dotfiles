@@ -606,3 +606,8 @@ export PATH=/Users/amano/anaconda3/bin:$PATH
 
 # activate ssh-agent
 # exec ssh-agent $SHELL
+
+
+# lmod+intel/oneapi
+
+export MODULEPATH=/opt/intel/oneapi/modulefiles:${MODULEPATH}

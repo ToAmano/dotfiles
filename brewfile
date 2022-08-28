@@ -12,6 +12,7 @@ brew "sqlite"
 brew "tmux"
 brew "pymol"
 brew "openjdk"
+brew "spaceman" # https://github.com/Jaysce/Spaceman
 
 # commands
 brew "iproute2mac" # ip 
