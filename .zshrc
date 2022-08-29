@@ -611,3 +611,7 @@ export PATH=/Users/amano/anaconda3/bin:$PATH
 # lmod+intel/oneapi
 
 export MODULEPATH=/opt/intel/oneapi/modulefiles:${MODULEPATH}
+
+
+# AiiDA completion
+# eval "$(_VERDI_COMPLETE=zsh_source verdi)"

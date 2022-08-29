@@ -97,4 +97,5 @@ MANPATH=/usr/local/opt/grep/libexec/gnuman:${MANPATH}
 PATH=/usr/local/sbin:${PATH}
 
 
-export DYLD_FALLBACK_LIBRARY_PATH=/opt/homebrew/bin/:$DYLD_FALLBACK_LIBRARY_PATH
+export DYLD_FALLBACK_LIBRARY_PATH=/opt/homebrew/bin:$DYLD_FALLBACK_LIBRARY_PATH
+export DYLD_FALLBACK_LIBRARY_PATH=/opt/homebrew/Cellar/postgresql/14.5_1/lib/postgresql@14:$DYLD_FALLBACK_LIBRARY_PATH
