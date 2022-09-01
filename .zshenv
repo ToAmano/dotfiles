@@ -61,6 +61,3 @@ export PATH=/usr/local/texlive/2022/bin/universal-darwin/:$PATH
 # 2022/1/27 for intel homebrew
 PATH=/usr/local/sbin:${PATH}
 
-
-export DYLD_FALLBACK_LIBRARY_PATH=/opt/homebrew/bin/:$DYLD_FALLBACK_LIBRARY_PATH
-export DYLD_LIBRARY_PATH=/opt/homebrew/bin/:$DYLD_LIBRARY_PATH

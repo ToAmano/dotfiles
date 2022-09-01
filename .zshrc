@@ -597,6 +597,7 @@ export PATH=/Users/amano/anaconda3/bin:$PATH
 export MODULEPATH=/opt/intel/oneapi/modulefiles:${MODULEPATH}
 
 
+<<<<<<< HEAD
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
 __conda_setup="$('/Users/amano/opt/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
@@ -635,3 +636,12 @@ MANPATH=${HOMEBREW_HOME}/opt/grep/libexec/gnuman:${MANPATH}
 
 export DYLD_FALLBACK_LIBRARY_PATH=${HOMEBREW_HOME}/bin/:$DYLD_FALLBACK_LIBRARY_PATH
 export DYLD_LIBRARY_PATH=${HOMEBREW_HOME}/bin/:$DYLD_LIBRARY_PATH
+
+
+export DYLD_FALLBACK_LIBRARY_PATH=${HOMEBREW_HOME}/Cellar/postgresql/14.5_1/lib/postgresql@14:$DYLD_FALLBACK_LIBRARY_PATH
+
+
+
+
+
+
