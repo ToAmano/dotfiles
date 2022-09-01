@@ -93,3 +93,7 @@ ln -snfv ${PWD}/.ssh/config ${HOME}/.ssh/config
 # https://stackoverflow.com/questions/14672875/true-color-24-bit-in-terminal-emacs
 # use "system tic" https://emacs.stackexchange.com/questions/32506/conditional-true-color-24-bit-color-support-for-iterm2-and-terminal-app-in-osx
 /usr/bin/tic -x -o ${HOME}/.terminfo ${BASEDIR}/.terminfo/78/terminfo-24bit.src
+
+
+
+# https://repo.anaconda.com/archive/Anaconda3-2022.05-MacOSX-x86_64.sh
