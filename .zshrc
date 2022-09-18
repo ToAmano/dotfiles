@@ -615,3 +615,8 @@ export MODULEPATH=/opt/intel/oneapi/modulefiles:${MODULEPATH}
 
 # AiiDA completion
 # eval "$(_VERDI_COMPLETE=zsh_source verdi)"
+# export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
+
+
+export PATH=$HOME/.rbenv/bin:$PATH
+eval "$(rbenv init -)"
