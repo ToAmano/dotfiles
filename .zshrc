@@ -16,22 +16,6 @@
 
 
 
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/Users/amano/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/Users/amano/anaconda3/etc/profile.d/conda.sh" ]; then
-        . "/Users/amano/anaconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="/Users/amano/anaconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
-
-
 #環境変数
 
 #2020/2/23 TERM
@@ -514,17 +498,17 @@ function ssh_local() {
 
 
 # lmode
-source /opt/homebrew/opt/lmod/init/profile
+source ${HOMEBREW_HOME}/opt/lmod/init/profile
 
 
 # pyenv
 # pyenv
 #https://mitsudo.net/python環境の構築-mac-with-anaconda-by-homebrew/
-#export PYENV_ROOT=~/.pyenv
-#export PATH=$PYENV_ROOT/bin:$PATH
-#eval "$(pyenv init --path)" # https://commte.net/7259
-#eval "$(pyenv init -)"
-#eval "$(pyenv virtualenv-init -)"
+export PYENV_ROOT=~/.pyenv
+export PATH=$PYENV_ROOT/bin:$PATH
+eval "$(pyenv init --path)" # https://commte.net/7259
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
 
 # brew doctor 対策
 # alias brew="env PATH=${PATH/\/Users\/${USER}\/\.pyenv\/shims:/} brew"
@@ -545,8 +529,8 @@ export PATH=$HOME/works/codes/tools:$PATH
 # https://apple.stackexchange.com/questions/414622/installing-a-c-c-library-with-homebrew-on-m1-macs
 # export CPATH=/opt/homebrew/include:$CPATH
 # export LIBRARY_PATH=/opt/homebrew/lib:$LIBRARY_PATH
-export CPATH=/opt/homebrew/Cellar/boost/1.79.0_1/include/:$CPATH  #boost 
-export CPATH=/opt/homebrew/Cellar/open-mpi/4.1.4/include/:$CPATH  #mpi.h
+export CPATH=${HOMEBREW_HOME}/Cellar/boost/1.79.0_1/include/:$CPATH  #boost 
+export CPATH=${HOMEBREW_HOME}/Cellar/open-mpi/4.1.4/include/:$CPATH  #mpi.h
 # export CPLUS_INCLUDE_PATH=/opt/homebrew/Cellar/gcc/11.3.0_2/include/c++/11:$CPLUS_INCLUDE_PATH #標準library置き換え macのdefaultでは/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/vector:704:10:にある．
 
 
@@ -620,3 +604,51 @@ export MODULEPATH=/opt/intel/oneapi/modulefiles:${MODULEPATH}
 
 export PATH=$HOME/.rbenv/bin:$PATH
 eval "$(rbenv init -)"
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/Users/amano/opt/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/Users/amano/opt/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/Users/amano/opt/anaconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/Users/amano/opt/anaconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
+
+# coreutils
+PATH=${HOMEBREW_HOME}/opt/coreutils/libexec/gnubin:${PATH}
+MANPATH=${HOMEBREW_HOME}/opt/coreutils/libexec/gnuman:${MANPATH}
+# ed
+PATH=${HOMEBREW_HOME}/opt/ed/libexec/gnubin:${PATH}
+MANPATH=${HOMEBREW_HOME}/opt/ed/libexec/gnuman:${MANPATH}
+# findutils
+PATH=${HOMEBREW_HOME}/opt/findutils/libexec/gnubin:${PATH}
+MANPATH=${HOMEBREW_HOME}/opt/findutils/libexec/gnuman:${MANPATH}
+# sed
+PATH=${HOMEBREW_HOME}/opt/gnu-sed/libexec/gnubin:${PATH}
+MANPATH=${HOMEBREW_HOME}/opt/gnu-sed/libexec/gnuman:${MANPATH}
+# tar
+PATH=${HOMEBREW_HOME}/opt/gnu-tar/libexec/gnubin:${PATH}
+MANPATH=${HOMEBREW_HOME}/opt/gnu-tar/libexec/gnuman:${MANPATH}
+# grep
+PATH=${HOMEBREW_HOME}/opt/grep/libexec/gnubin:${PATH}
+MANPATH=${HOMEBREW_HOME}/opt/grep/libexec/gnuman:${MANPATH}
+
+
+export DYLD_FALLBACK_LIBRARY_PATH=${HOMEBREW_HOME}/bin/:$DYLD_FALLBACK_LIBRARY_PATH
+export DYLD_LIBRARY_PATH=${HOMEBREW_HOME}/bin/:$DYLD_LIBRARY_PATH
+
+
+export DYLD_FALLBACK_LIBRARY_PATH=${HOMEBREW_HOME}/Cellar/postgresql/14.5_1/lib/postgresql@14:$DYLD_FALLBACK_LIBRARY_PATH
+
+
+
+
+
+
+>>>>>>> f33d973bb894652681a0da0c05d1d63614eab07c

@@ -51,51 +51,13 @@ export PATH=/usr/local/texlive/2022/bin/universal-darwin/:$PATH
 
 
 
-#2021/11/15 for homebrew on M1 mac
-if [ -e /opt/homebrew/bin/brew ]; then
-    eval "$(/opt/homebrew/bin/brew shellenv)"
-fi
-export PATH=/opt/homebrew/bin:${PATH}
+# #2021/11/15 for homebrew on M1 mac
+# if [ -e /opt/homebrew/bin/brew ]; then
+#     eval "$(/opt/homebrew/bin/brew shellenv)"
+# fi
+# export PATH=/opt/homebrew/bin:${PATH}
 
 
-# coreutils
-PATH=/usr/local/opt/coreutils/libexec/gnubin:${PATH}
-MANPATH=/usr/local/opt/coreutils/libexec/gnuman:${MANPATH}
-# ed
-PATH=/usr/local/opt/ed/libexec/gnubin:${PATH}
-MANPATH=/usr/local/opt/ed/libexec/gnuman:${MANPATH}
-# findutils
-PATH=/usr/local/opt/findutils/libexec/gnubin:${PATH}
-MANPATH=/usr/local/opt/findutils/libexec/gnuman:${MANPATH}
-# sed
-PATH=/usr/local/opt/gnu-sed/libexec/gnubin:${PATH}
-MANPATH=/usr/local/opt/gnu-sed/libexec/gnuman:${MANPATH}
-# tar
-PATH=/usr/local/opt/gnu-tar/libexec/gnubin:${PATH}
-MANPATH=/usr/local/opt/gnu-tar/libexec/gnuman:${MANPATH}
-# grep
-PATH=/usr/local/opt/grep/libexec/gnubin:${PATH}
-MANPATH=/usr/local/opt/grep/libexec/gnuman:${MANPATH}
-
-
-
-# setting for M1 mac
- PATH=/opt/homebrew/opt/coreutils/libexec/gnubin:${PATH}
- PATH=/opt/homebrew/opt/findutils/libexec/gnubin:${PATH}
- PATH=/opt/homebrew/opt/gnu-sed/libexec/gnubin:${PATH}
- PATH=/opt/homebrew/opt/gnu-tar/libexec/gnubin:${PATH}
- PATH=/opt/homebrew/opt/grep/libexec/gnubin:${PATH} 
-
- MANPATH=/opt/homebrew/opt/coreutils/libexec/gnuman:${MANPATH}
- MANPATH=/opt/homebrew/opt/findutils/libexec/gnuman:${MANPATH}
- MANPATH=/opt/homebrew/opt/gnu-sed/libexec/gnuman:${MANPATH}
- MANPATH=/opt/homebrew/opt/gnu-tar/libexec/gnuman:${MANPATH}
- MANPATH=/opt/homebrew/opt/grep/libexec/gnuman:${MANPATH}
-
-
-# 2022/1/27 for homebrew
+# 2022/1/27 for intel homebrew
 PATH=/usr/local/sbin:${PATH}
 
-
-export DYLD_FALLBACK_LIBRARY_PATH=/opt/homebrew/bin:$DYLD_FALLBACK_LIBRARY_PATH
-export DYLD_FALLBACK_LIBRARY_PATH=/opt/homebrew/Cellar/postgresql/14.5_1/lib/postgresql@14:$DYLD_FALLBACK_LIBRARY_PATH
