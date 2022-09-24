@@ -240,6 +240,8 @@
 		<dict>
 			<key>ASCII Anti Aliased</key>
 			<true/>
+			<key>ASCII Ligatures</key>
+			<false/>
 			<key>Ambiguous Double Width</key>
 			<false/>
 			<key>Ansi 0 Color</key>
@@ -889,11 +891,11 @@
 			<key>Name</key>
 			<string>Solarized-Dark</string>
 			<key>Non Ascii Font</key>
-			<string>HackNerdFontCompleteM-Regular 16</string>
+			<string>icons-in-terminal 18</string>
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
-			<string>MenloForPowerline-Regular 16</string>
+			<string>Ricty-Regular 20</string>
 			<key>Only The Default BG Color Uses Transparency</key>
 			<true/>
 			<key>Option Key Sends</key>

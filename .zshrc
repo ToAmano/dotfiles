@@ -42,8 +42,11 @@ then
   compinit
 fi
 
+# 2022/09/23:icons-in-terminal
+source ~/src/icons-in-terminal/build/icons_bash.sh 
 
-# path to homebrew
+
+#path to homebrew
 ## The path can be defferent on on defferent machines.
 if [[ -d '/home/linuxbrew/.linuxbrew' ]]; then
  # Linux/WSL
@@ -153,6 +156,7 @@ zstyle ':completion:*:default' list-colors ${LS_COLORS}
 
 # ヒストリー機能
 # command r でコマンド履歴を辿るのでいっぱいにしとく
+# https://qiita.com/agotoh/items/e6b22bcfe63162f70e0d
 HISTFILE=~/.zsh/.zsh_history      # ヒストリファイルを指定
 HISTSIZE=10000               # ヒストリに保存するコマンド数
 SAVEHIST=10000               # ヒストリファイルに保存するコマンド数
@@ -585,7 +589,7 @@ antigen apply
 # fi
 # export PATH="/opt/homebrew/opt/openjdk@11/bin:$PATH"
 
-export PATH=/Users/amano/anaconda3/bin:$PATH
+# export PATH=/Users/amano/anaconda3/bin:$PATH
 
 
 # activate ssh-agent
@@ -606,18 +610,18 @@ export PATH=$HOME/.rbenv/bin:$PATH
 eval "$(rbenv init -)"
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/Users/amano/opt/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+__conda_setup="$('/Users/amano/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else
-    if [ -f "/Users/amano/opt/anaconda3/etc/profile.d/conda.sh" ]; then
-        . "/Users/amano/opt/anaconda3/etc/profile.d/conda.sh"
+    if [ -f "/Users/amano/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/Users/amano/anaconda3/etc/profile.d/conda.sh"
     else
-        export PATH="/Users/amano/opt/anaconda3/bin:$PATH"
+        export PATH="/Users/amano/anaconda3/bin:$PATH"
     fi
 fi
 unset __conda_setup
-# <<< conda initialize <<<
+# # <<< conda initialize <<<
 
 
 # coreutils
@@ -646,9 +650,3 @@ export DYLD_LIBRARY_PATH=${HOMEBREW_HOME}/bin/:$DYLD_LIBRARY_PATH
 
 export DYLD_FALLBACK_LIBRARY_PATH=${HOMEBREW_HOME}/Cellar/postgresql/14.5_1/lib/postgresql@14:$DYLD_FALLBACK_LIBRARY_PATH
 
-
-
-
-
-
->>>>>>> f33d973bb894652681a0da0c05d1d63614eab07c

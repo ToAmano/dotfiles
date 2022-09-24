@@ -1,4 +1,4 @@
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
 ;;
 ;; emacs.d/init.el
 ;;
@@ -64,6 +64,8 @@
 ;;
 ;;packageのディレクトリと，そのサブディレクトリをload-pathに追加
 (add-to-load-path "elisp" "conf" "public_repos" "elpa" "site-lisp")
+
+(add-to-list 'load-path "~/.emacs.d/")
 ;;
 ;;
 ;;YaTeX関連のパス
@@ -80,8 +82,11 @@
 ;; icons in terminal
 ;; 2021/11/24 一旦disabled
 ;; https://github.com/sebastiencs/icons-in-terminal
-;; (add-to-list 'load-path "~/.local/share/icons-in-terminal/")
-
+(add-to-list 'load-path "~/.local/share/icons-in-terminal/")
+(require 'icons-in-terminal)
+(insert (icons-in-terminal 'oct_flame)) ; C-h f icons-in-terminal[RET] for more info
+;(set-fontset-font t 'unicode "icons-in-terminal")
+;(set-fontset-font t '(#Xe000 . #Xf8ff) "icons-in-terminal")
 
 ;;Tex関係のパス
 ;;2019/7/9  使うtexliveを2018へ．いらないと思われるpathをコメントアウトした．
@@ -103,7 +108,12 @@
 ;;
 ;;
 ;;
-;;
+;; font
+
+;; (add-to-list 'bdf-directory-list "/System/Library/Fonts/")
+;; (add-to-list 'load-path "/System/Library/Fonts/")
+
+;; (set-face-attribute 'default nil :family "monaco" :height 100)
 
 
 ;;;;=================================
@@ -163,6 +173,8 @@
     (package-install pkg)))
 
 
+;https://emacs.stackexchange.com/questions/185/can-i-avoid-outdated-byte-compiled-elisp-files
+(setq load-prefer-newer t)
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -192,6 +204,127 @@
 (set-terminal-coding-system 'utf-8)
 (prefer-coding-system 'utf-8)
 
+
+;; font setting
+;; https://dev.classmethod.jp/articles/emacs-setup-and-org-mode/
+;(create-fontset-from-ascii-font
+; "Menlo-14:weight=normal:slant=normal"
+; nil
+; "menlokakugo")
+
+;;(set-fontset-font
+;; "fontset-menlokakugo"
+; 'unicode
+; (font-spec :family "Hiragino Kaku Gothic ProN")
+; nil
+; 'append)
+
+;; https://www.reddit.com/r/emacs/comments/pc189c/fonts_in_emacs_daemon_mode/
+;; if gui do something in whatver type of emacs instance we are using
+;; (defun apply-if-gui (&rest action)
+;;   "Do specified ACTION if we're in a gui regardless of daemon or not."
+;;   (if (daemonp)
+;;       (add-hook 'after-make-frame-functions
+;;                 (lambda (frame)
+;;                   (select-frame frame)
+;;                   (if (display-graphic-p frame)
+;;                       (apply action))))
+;;     (if (display-graphic-p)
+;;         (apply action))))
+
+;; ;; Default font (cant be font with hyphen in the name like Inconsolata-g)
+;; ;;(setq initial-frame-alist '((font . "Monospace")))
+;; ;;(setq default-frame-alist '((font . "Monospace")))
+
+;; ;; Emoji: 😄, 🤦, 🏴, ,  ;; should render as 3 color emojis and 2 glyphs
+;; (defun styling/set-backup-fonts()
+;;  "Set the emoji and glyph fonts."
+;;   (set-fontset-font t 'symbol "Apple Color Emoji" nil 'prepend)
+;;   (set-fontset-font t 'symbol "Noto Color Emoji" nil 'prepend)
+;;   (set-fontset-font t 'symbol "Segoe UI Emoji" nil 'prepend)
+;;   (set-fontset-font t 'symbol "UbuntuMono Nerd Font" nil 'prepend)
+;;   )
+
+;; ;; respect default terminal fonts
+;; ;; if we're in a gui set the fonts appropriately
+;; ;; for daemon sessions and and nondaemons
+;; (apply-if-gui 'styling/set-backup-fonts)
+
+;; Initial frame settings
+;; frameがフォントの大枠を決めるもので，emacsの全てに影響する．
+;(add-to-list 'default-frame-alist '(font . "fontset-menlokakugo"))
+;(setq face-font-rescale-alist '(("Hiragino.*" . 1.2)))
+;(setq default-frame-alist '((font . "Inconsolata-dz-15")))
+;; (add-to-list 'default-frame-alist '(font . "Inconsolata-12")) ;;こっちでもok?
+;; (setq default-frame-alist
+;;       (append (list
+;;               '(font . "Takaoゴシック-10"))
+;;               default-frame-alist))
+
+
+;; ;; font settings
+;; (defconst default-fontset-name "menloja")
+;; (defconst default-base-font-name "Menlo")
+;; (defconst default-base-font-size 10)
+;; (defconst default-ja-font-name "Hiragino Kaku Gothic ProN")
+;; (defconst default-ja-font-pat "Hiragino.*")
+;; (defconst default-ja-font-scale 1.3)
+
+;; (defun setup-window-system-configuration (&optional frame)
+;;   "Initialize configurations for window system.
+;; Configurations, which require X (there exists a frame), are
+;; placed in this function.
+;; When Emacs is started as a GUI application, just running this
+;; function initializes the configurations.
+;; When Emacs is started as a daemon, this function should be called
+;; just after the first frame is created by a client.  For this,
+;; this function is added to `after-make-frame-functions' and
+;; removed from them after the first call."
+;;   (with-selected-frame (or frame (selected-frame))
+;;     (when window-system
+;;       (let* ((fontset-name default-fontset-name)
+;;              (base default-base-font-name) (size default-base-font-size)
+;;              (ja default-ja-font-name) (ja-pat default-ja-font-pat)
+;;              (scale default-ja-font-scale)
+;;              (base-font (format "%s-%d:weight=normal:slant=normal" base size))
+;;              (ja-font (font-spec :family ja))
+;;              (fsn (concat "fontset-" fontset-name))
+;;              (elt (list (cons 'font fsn))))
+;;         ;; create font
+;;         (create-fontset-from-ascii-font base-font nil fontset-name)
+;;         (set-fontset-font fsn 'unicode ja-font nil 'append)
+;;         (add-to-list 'face-font-rescale-alist (cons ja-pat scale))
+;;         ;; default
+;;         (set-frame-font fsn)
+;;         (setq-default initial-frame-alist (append elt initial-frame-alist)
+;;                       default-frame-alist (append elt default-frame-alist))
+;;         ;; current frame
+;;         (set-frame-parameter (selected-frame) 'font fsn)
+;;         ;; call once
+;;         (remove-hook 'after-init-hook #'setup-window-system-configuration)
+;;         (remove-hook 'after-make-frame-functions
+;;                      #'setup-window-system-configuration)))))
+
+;; (when window-system
+;;   (if after-init-time
+;;       ;; already initialized
+;;       (setup-window-system-configuration)
+;;     (add-hook 'after-init-hook #'setup-window-system-configuration)))
+;; (add-hook 'after-make-frame-functions #'setup-window-system-configuration)
+
+
+;; (set-face-attribute 'default nil :family "Menlo" :height 240)
+;; (let ((typ (frame-parameter nil 'font)))
+;;   (unless (string-equal "tty" typ)
+;;     (set-fontset-font typ 'japanese-jisx0208
+;;                       (font-spec :family "Hiragino Kaku Gothic ProN"))))
+;; (add-to-list 'face-font-rescale-alist
+;;              '(".*Hiragino Kaku Gothic ProN.*" . 1.2)
+
+
+
+
+
 ;; 2021/12/18 backup file directory
 ;; http://yohshiy.blog.fc2.com/blog-entry-319.html
  (setq backup-directory-alist '((".*" . "~/.emacs.d/.ehist")))
@@ -212,6 +345,10 @@
 ;;bufferの終端を明示
 ;;https://github.com/emacs-jp/emacs-jp.github.com/issues/38
 (setq-default indicate-empty-lines t)
+
+;; https://dev.classmethod.jp/articles/emacs-setup-and-org-mode/
+(ido-mode t)
+
 
 
 ;;;;auto-insert(テンプレートの挿入）
@@ -382,7 +519,7 @@
      ;; ;; Enable flashing mode-line on errors(color:violet)
      (doom-themes-visual-bell-config)
      ;; Enable custom neotree theme (all-the-icons must be installed!)
-     (doom-themes-neotree-config)
+     ;(doom-themes-neotree-config)
      ;; Corrects (and improves) org-mode's native fontification.
      (doom-themes-org-config))
 ;; (setq doom-themes-treemacs-theme "doom-colors") ; use the colorful treemacs theme
@@ -459,31 +596,60 @@
 ;; all-the-icons
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;all-the-iconsはGUIでのみ有効である．
-(use-package all-the-icons)
-(setq all-the-icons-color-icons t)
-(setq all-the-icons-icon-for-buffer t)
-(setq all-the-icons-icon-for-dir t)
-(setq all-the-icons-icon-for-file t)
-(setq all-the-icons-icon-for-mode t)
-(setq all-the-icons-icon-for-url t)
-(setq all-the-icons-icon-for-weather t)
-(setq all-the-icons-scale-factor 0.9)
-(all-the-icons-octicon "file-binary")
+;; ;;all-the-iconsはGUIでのみ有効である．
+;; (use-package all-the-icons)
+;; (setq all-the-icons-color-icons t)
+;; (setq all-the-icons-icon-for-buffer t)
+;; (setq all-the-icons-icon-for-dir t)
+;; (setq all-the-icons-icon-for-file t)
+;; (setq all-the-icons-icon-for-mode t)
+;; (setq all-the-icons-icon-for-url t)
+;; (setq all-the-icons-icon-for-weather t)
+;; (setq all-the-icons-scale-factor 0.9)
+;; (all-the-icons-octicon "file-binary")
 
 
 ;; icons-in-terminal
-;;(require 'icons-in-terminal)
-;; (icons-in-terminal-insert)
-;; (icons-in-terminal-insert-faicon)
-;; (icons-in-terminal-faicon "book")
-;;(icons-in-terminal-icon-for-buffer)
-;;(icons-in-terminal-icon-for-mode 'emacs-lisp-mode)
-;;(icons-in-terminal-icon-for-file "template.el")
+;(require 'icons-in-terminal)
+;(icons-in-terminal-insert)
+;(icons-in-terminal-insert-faicon)
+;(icons-in-terminal-faicon "book")
+;(icons-in-terminal-icon-for-buffer)
+;(icons-in-terminal-icon-for-mode 'emacs-lisp-mode)
+;(icons-in-terminal-icon-for-file "template.el")
 
 ;;(use-package 'sidebar)
 ;;(global-set-key (kbd "C-x C-f") 'sidebar-open)
 ;;(global-set-key (kbd "C-x C-a") 'sidebar-buffers-open)
+
+
+;; (leaf all-the-icons
+;;   :ensure t
+;;   :init (leaf memoize :ensure t)
+;;   :require t
+;;   :custom
+;;   ((all-the-icons-scale-factor   . 0.9)
+;;    (all-the-icons-default-adjust . 0.0))
+;;   )
+;; (leaf all-the-icons-in-terminal
+;;   :el-get (all-the-icons-in-terminal
+;;            :type github
+;;            :pkgname "uwabami/isfit-plus")
+;;   :after all-the-icons
+;;   :require t
+;;   :config
+;;   (add-to-list 'all-the-icons-mode-icon-alist
+;;                '(f90-mode all-the-icons-faicon "facebook")) ;; facebook!?
+;;   (add-to-list 'all-the-icons-mode-icon-alist
+;;                '(wl-folder-mode all-the-icons-faicon "folder-o" ))
+;;   (add-to-list 'all-the-icons-mode-icon-alist
+;;                '(wl-summary-mode all-the-icons-faicon "folder-open-o"))
+;;   (add-to-list 'all-the-icons-mode-icon-alist
+;;                '(wl-draft-mode all-the-icons-material "drafts"))
+;;   (add-to-list 'all-the-icons-mode-icon-alist
+;;                '(mime-view-mode all-the-icons-faicon "envelope-o"))
+;;   )
+
 
 ;;;;=================================
 ;;;; beacon（カーソルを光らせる）
@@ -499,9 +665,9 @@
     (beacon-mode 1))
 
 
-;;;;=================================
+;; =================================
 ;; dashboard（emacsの起動画面のカスタマイズ）
-;;;;=================================
+;; =================================
 ;;
 ;;2020/4/10
 ;;https://github.com/emacs-dashboard/emacs-dashboard
@@ -567,10 +733,9 @@
 
 
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; ==================================
 ;; dired（emacs標準ファイラ）
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; ==================================
 
 ;; https://qiita.com/l3msh0/items/8665122e01f6f5ef502f
 ;; 起動は C-x d
@@ -580,14 +745,13 @@
 ;; R :: mv
 ;; C :: cp
 ;; D :: rm
-;;(use-package icons-in-terminal-dired.el)
+(use-package icons-in-terminal-dired.el)
 ;;(set-fontset-font t '(#Xe000 . #Xf8ff) "icons-in-terminal")
 
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; ================================
 ;; symbol-overlay（単語ハイライト）
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; ================================
 ;;2020/4/7
 ;;https://qiita.com/blue0513/items/c0dc35a880170997c3f5
 ;;単語と言ってもspace区切りの物だけのようなので，yatexのようなdocumentで使うよりはcodingで使うものかも
@@ -692,9 +856,9 @@
 ;;
 ;;https://github.com/domtronn/spaceline-all-the-icons.el
 ;;http://8gu15.hatenablog.jp/entry/2018/12/06/071125
-(use-package spaceline-all-the-icons
-  :after spaceline
-  :config (spaceline-all-the-icons-theme))
+;; (use-package spaceline-all-the-icons
+;;   :after spaceline
+;;   :config (spaceline-all-the-icons-theme))
 
 ;;https://qiita.com/twitte_raru/items/6f02b6a8b6020a0e4f64
 ;;これは，どうもdoom-modeline-iconsと言うiconフォントを使っていて，それが文字化けの原因になっているようだ．
@@ -704,16 +868,37 @@
 
 ;;:custom
 (setq doom-modeline-buffer-file-name-style 'truncate-with-project)
-(setq doom-modeline-icon nil)
+;(setq doom-modeline-icon nil)
 
-(setq doom-modeline-major-mode-icon nil)
+;(setq doom-modeline-major-mode-icon nil)
 ;;Whether display the minor modes in the mode-line.
 (setq doom-modeline-minor-modes nil)
 ;;(setq doom-modeline-icon (display-graphic-p))
-(setq doom-modeline-buffer-state-icon nil)
+;(setq doom-modeline-buffer-state-icon nil)
 
 ;; Whether display the `lsp' state. Non-nil to display in the mode-line.
 (setq doom-modeline-lsp t)
+
+;; Whether display icons in the mode-line.
+;; While using the server mode in GUI, should set the value explicitly.
+(setq doom-modeline-icon t)
+
+;; Whether display the icon for `major-mode'. It respects `doom-modeline-icon'.
+(setq doom-modeline-major-mode-icon t)
+
+;; Whether display the colorful icon for `major-mode'.
+;; It respects `all-the-icons-color-icons'.
+(setq doom-modeline-major-mode-color-icon t)
+
+;; Whether display the icon for the buffer state. It respects `doom-modeline-icon'.
+(setq doom-modeline-buffer-state-icon t)
+
+;; Whether display the modification icon for the buffer.
+;; It respects `doom-modeline-icon' and `doom-modeline-buffer-state-icon'.
+(setq doom-modeline-buffer-modification-icon t)
+
+;; Whether display the time icon. It respects variable `doom-modeline-icon'.
+(setq doom-modeline-time-icon t)
 
 
 ;; (defun setup-initial-doom-modeline ()
@@ -1056,8 +1241,8 @@
   ;; 隠しファイルをデフォルトで表示
   (setq neo-show-hidden-files t)
   ;; グラフィックはemacs-nwでは使用不可．
-  (setq neo-theme (if (display-graphic-p) 'icons 'arrow))
-  (setq neo-theme 'icons)
+;  (setq neo-theme (if (display-graphic-p) 'icons 'arrow))
+  (setq neo-theme 'icons 'arrow )
   ;;https://www.emacswiki.org/emacs/NeoTree
   (setq neo-smart-open t)
   ;; (display-graphic-p)

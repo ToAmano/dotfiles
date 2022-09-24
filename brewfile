@@ -65,7 +65,8 @@ brew "source-highlight" # replace less
 # cask font
 cask "font-hack-nerd-font"
 cask "font-menlo-for-powerline"
-
+brew "ricty"
+cask "font-ricty-diminished"
 
 # cask
 # cask "anaconda" 現在M1macに非対応
