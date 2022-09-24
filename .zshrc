@@ -1,20 +1,12 @@
-############################################
+# ---------------------------
 # ~/.zshrc
-#
-#
 #
 # the orginal file is in ${HOME}/works/codes/.zshrc
 #
-############################################
-
-
-
+# ---------------------------
 
 # in ~/.zshenv, executed `unsetopt GLOBAL_RCS` and ignored /etc/zshrc
 [ -r /etc/zshrc ] && . /etc/zshrc
-
-
-
 
 #環境変数
 
@@ -26,12 +18,7 @@ export TERM="xterm-256color"
 # 可能なtermの設定は/usr/share/terminfo/以下に入っている．
 # https://stackoverflow.com/questions/12345675/screen-cannot-find-terminfo-entry-for-xterm-256color/16566036
 
-
-#
 fpath+=$HOME/.zsh/pure
-
-
-
 
 # https://docs.brew.sh/Shell-Completion#configuring-completions-in-zsh
 if type brew &>/dev/null
@@ -41,10 +28,6 @@ then
   autoload -Uz compinit
   compinit
 fi
-
-# 2022/09/23:icons-in-terminal
-source ~/src/icons-in-terminal/build/icons_bash.sh 
-
 
 #path to homebrew
 ## The path can be defferent on on defferent machines.
@@ -61,26 +44,17 @@ fi
 eval "$($HOMEBREW_HOME/bin/brew shellenv)"
 
 
-####################################################
+# -----------------------
 #
 #lsコマンドの色について
 #
-####################################################
-
-
-# デフォルト設定(別になくても良い)
-#LS_COLORS="デフォルトの色設定(ご自由に)"
-#export LS_COLORS
+# -----------------------
 
 #read dircolors
 #dircolors-solarizedを使うため，対応するファイルを読み込む．
 
 #対応するファイルの場所
-# 2021/10/30 mv dotfiles to works/codes
-# 2021/12/03 mv dotfiles to works/dotfiles
-dircolorsPATH=${HOME}/works/dotfiles/iterm2setting/dircolors.ansi-modify-dark
-#dircolorsPATH=~/dotfiles/iterm2setting/dircolors-solarized/dircolors.ansi-modify-dark
-#dircolorsPATH=~/dotfiles/iterm2setting/dircolors-solarized/dircolors.256dark
+dircolorsPATH=${HOME}/works/dotfiles/iterm2/dircolors.ansi-modify-dark
 #以下で読み込み
 if [ -f  ${dircolorsPATH} ];then
     if type dircolors >/dev/null 2>&1;then
@@ -93,10 +67,7 @@ else
 fi
 
 
-
-
-
-#####補完機能について
+# >>> 補完機能について >>>
 ##https://gist.github.com/d-kuro/352498c993c51831b25963be62074afa
 # 補完機能有効にする
 autoload -U compinit
@@ -127,8 +98,7 @@ SPROMPT="correct: $RED%R$DEFAULT -> $GREEN%r$DEFAULT ? [Yes/No/Abort/Edit] => "
 
 
 
-##########cd拡張機能
-
+# >>> cd拡張機能 >>>
 # cdを使わずにディレクトリを移動できる
 setopt auto_cd
 # $ cd - でTabを押すと、ディレクトリの履歴が見れる
@@ -138,15 +108,11 @@ setopt auto_pushd
 # https://qiita.com/mollifier/items/1a9126b2200bcbaf515f
 autoload -Uz smart-insert-last-word
 
-
 # 2021/12/3
 # https://wonderwall.hatenablog.com/entry/2017/02/26/000702
 autoload -U zmv
 
-
-# 2021/12/3
 # https://qiita.com/Kakuni/items/a8025e075926272f491d
-
 # 補完候補一覧でファイルの種別を識別マーク表示(ls -F の記号)
 setopt list_types
 
@@ -177,13 +143,9 @@ bindkey -e
 # 文字コードの設定
 export LANG=ja_JP.UTF-8
 
-
 #change prompt to pure
 #autoload -U promptinit; promptinit
 #prompt pure
-
-
-#source /Users/amanotomohito/Downloads/Menlo-for-Powerline-master/'Menlo for Powerline.ttf'
 
 # Gitブランチ名を表示
 # https://github.com/git/git/blob/master/contrib/completion/git-prompt.sh
@@ -195,7 +157,6 @@ GIT_PS1_SHOWUNTRACKEDFILES=true
 GIT_PS1_SHOWSTASHSTATE=true
 GIT_PS1_SHOWUPSTREAM=auto
 
-
 # # 出力の後に改行を入れます
 # function add_line {
 #   if [[ -z "${PS1_NEWLINE_LOGIN}" ]]; then
@@ -206,24 +167,13 @@ GIT_PS1_SHOWUPSTREAM=auto
 # }
 # PROMPT_COMMAND='add_line'
 
-
 #export PS1='\[\e[37;100m\] \# \[\e[90;47m\]\[\e[30;47m\] \W \[\e[37m\]$(__git_ps1 "\[\e[37;102m\] \[\e[30m\] %s \[\e[0;92m\]")\[\e[49m\]\[\e[m\] \$ '
 
-
-
-
-
-
-
-
-
-
-
-####################################################
+# --------------------
 #
-#promptの設定について
+# promptの設定について
 #
-####################################################
+# --------------------
 
 #color変更のために必要らしい
 #https://www.sirochro.com/note/terminal-zsh-prompt-customize/#i-4
@@ -244,21 +194,15 @@ colors
 
 ##promptには，左側に表示するPROMPTと，右側に表示するRPROMPTがある．
 
-
-
 #promptの表示．改行も楽ちん
 #https://qrunch.net/@rugamaga/entries/XcrcLjb2vb5EfEUn
- # PROMPT='
- # %K{230}%F{33} %n%f %F{64}at%f %F{61}%m %f%k%K{245}%F{230}%f %F{230}%~%f%k%F{245}%f   %# '
-
+# PROMPT='
+# %K{230}%F{33} %n%f %F{64}at%f %F{61}%m %f%k%K{245}%F{230}%f %F{230}%~%f%k%F{245}%f   %# '
 function prompt-make {
     echo "\n %K{33}%F{235} %n%f %F{125}at%f %F{254}%m %f%k%K{136}%F{33}%f %F{230}%~ %f%k%F{136}%f   %# "
     return
 }
-
  PROMPT='`prompt-make`'
-
- 
 
 #https://suwaru.tokyo/1箇所コピペするだけでgitブランチ名を常に表示【-zshrc/
 # git ブランチ名を色付きで表示させるメソッド
@@ -297,34 +241,25 @@ function rprompt-git-current-branch {
   echo "%F{230}\ue0b2%f%K{230} ${branch_status} %F{245}\ue0b2%k%f%K{245}%F{230} %* \uf017%f %k"
 }
 
-
-
-
 # プロンプトが表示されるたびにプロンプト文字列を評価、置換する
 setopt prompt_subst
  
 #https://qiita.com/YumaInaura/items/874d5be9cfdb3d0415f1
 RPROMPT='`rprompt-git-current-branch`'
 
-
 ##これは最終兵器．powerlevel9k 最悪これを設定すればよし
 ##https://chaika.hatenablog.com/entry/2019/06/09/090000
 
 # POWERLEVEL9K_MODE='nerdfont-complete'
-# source ~/dotfiles/iterm2setting/powerlevel9k/powerlevel9k.zsh-theme
+# source ~/dotfiles/iterm2/powerlevel9k/powerlevel9k.zsh-theme
 
 # # Theme settings
 # POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(ssh dir vcs newline status)
 # POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=()
 # POWERLEVEL9K_PROMPT_ADD_NEWLINE=true
 
-
-
-
 ##alias
 # https://qiita.com/the_red/items/a30e23c66a3d8838912a
-
-
 
 #2022/07/23 locate
 # homebrewと被っているのを元に戻す.
@@ -333,7 +268,6 @@ alias locate="/usr/bin/locate"
 #2022/7/7 g++/gcc
 alias g++="${HOMEBREW_HOME}/bin/g++-11"
 alias gcc="${HOMEBREW_HOME}/bin/gcc-11"
-
 
 #2020/2/23 ls
 #これはsolarized colorになるようにわざわざcoreutilsを入れている
@@ -370,6 +304,11 @@ if [[ -x `which exa` ]]; then
     alias ll='exa -abghHliS --git'
 fi
 # <<< End colorlize <<<
+
+
+# 2022/09/23:icons-in-terminal
+source ${HOME}/works/dotfiles/src/icons-in-terminal/build/icons_bash.sh 
+
 
 
 #2020/2/23 emacs

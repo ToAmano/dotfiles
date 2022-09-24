@@ -35,7 +35,7 @@ brew "open-babel"
 # https://qiita.com/eumesy/items/3bb39fc783c8d4863c5f
 # https://yu8mada.com/2018/07/25/install-gnu-commands-on-macos-with-homebrew/
 #brew "coreutils --default-names"
-brew "coreutils"
+brew "coreutils"  #色付けにgnu lsが必要
 brew "diffutils"
 brew "findutils"
 brew "ed"
@@ -48,7 +48,6 @@ brew "gnutls"
 brew "wdiff"
 brew "wget"
 brew "gnu-which"
-brew "ls"      #色付けにgnu lsが必要
 
 
 # other highlevel command replace
