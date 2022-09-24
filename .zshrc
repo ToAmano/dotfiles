@@ -584,6 +584,8 @@ antigen apply
 # #https://github.com/zsh-users/zsh-syntax-highlighting/blob/master
 # export ZSH_HIGHLIGHT_HIGHLIGHTERS_DIR=/opt/homebrew/share/zsh-syntax-highlighting/highlighters
 
+# https://wonderwall.hatenablog.com/entry/2016/06/25/205033
+
 # if [ -f /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]; then
 #     source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # fi
@@ -602,12 +604,13 @@ export MODULEPATH=/opt/intel/oneapi/modulefiles:${MODULEPATH}
 
 
 # AiiDA completion
-# eval "$(_VERDI_COMPLETE=zsh_source verdi)"
-# export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
+eval "$(_VERDI_COMPLETE=zsh_source verdi)"
+export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
 
 
 export PATH=$HOME/.rbenv/bin:$PATH
 eval "$(rbenv init -)"
+
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
 __conda_setup="$('/Users/amano/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
@@ -646,7 +649,5 @@ MANPATH=${HOMEBREW_HOME}/opt/grep/libexec/gnuman:${MANPATH}
 
 export DYLD_FALLBACK_LIBRARY_PATH=${HOMEBREW_HOME}/bin/:$DYLD_FALLBACK_LIBRARY_PATH
 export DYLD_LIBRARY_PATH=${HOMEBREW_HOME}/bin/:$DYLD_LIBRARY_PATH
-
-
 export DYLD_FALLBACK_LIBRARY_PATH=${HOMEBREW_HOME}/Cellar/postgresql/14.5_1/lib/postgresql@14:$DYLD_FALLBACK_LIBRARY_PATH
 
