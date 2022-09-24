@@ -31,9 +31,10 @@
 !/install_simple.sh
 !/after_install.sh
 !/apple_setting.sh
+!/
 
 # github
-!/clone.sh
+!/install_git.sh
 
 # python
 !/pyenv_install.sh
