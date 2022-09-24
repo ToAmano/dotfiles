@@ -40,3 +40,10 @@
 	default = current
 [init]
 	defaultBranch = master
+
+
+#
+
+
+ [includeIf "gitdir:~/works/660nm/"]
+   path = ~/.gitconfig_sub

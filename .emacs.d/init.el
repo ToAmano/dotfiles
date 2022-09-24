@@ -1700,6 +1700,11 @@
 
 
 
+;;http://emacs.rubikitch.com/yaml-mode/
+(require 'yaml-mode)
+(add-to-list 'auto-mode-alist '("\\.ya?ml$" . yaml-mode))
+(define-key yaml-mode-map "\C-m" 'newline-and-indent)
+
 ;;;;==============================
 ;; py-autopep8 
 ;;;;==============================
@@ -1948,7 +1953,7 @@
 ;;というのも，bibtexを使いたくなったからで，latexmkならば面倒臭いbibtex関連のコンパイルをコマンド一つで実行できる．
 ;;https://qiita.com/Rumisbern/items/d9de41823aa46d5f05a8
 ;; 2022/07/27::latexmkでlualatexを利用するようにしたので対応して変更.
-(setq tex-command "latexmk -pdf ")
+(setq tex-command "latexmk -pdf")
 
 
 
@@ -2036,7 +2041,7 @@
  '(org-agenda-files nil)
  '(org-bullets-bullet-list '("" "" "" "" "" "" "" "" "" "") t)
  '(package-selected-packages
-   '(doom-modeline-now-playing doom hide-mode-line vterm eglot ## outline-magic py-autopep8 volatile-highlights w3m mew fill-column-indicator magit org-bullets org-pomodoro org-beautify-theme doom-modeline company-lsp lsp-ui lsp-mode blgrep clmemo amx which-key package-utils dashboard open-junk-file company-math company git-gutter+ git-gutter google-this selected symbol-overlay beacon anzu flycheck-color-mode-line ov rainbow-delimiters yatex spaceline-all-the-icons highlight-indentation indent-guide nyan-mode spaceline powerline total-lines helm imenu-list eyebrowse use-package gtags atom-one-dark-theme quickrun color-moccur yasnippet web-mode solarized-theme projectile neotree howm hiwin flycheck elscreen dumb-jump color-theme-sanityinc-solarized auto-complete all-the-icons))
+   '(yaml-mode doom-modeline-now-playing doom hide-mode-line vterm eglot ## outline-magic py-autopep8 volatile-highlights w3m mew fill-column-indicator magit org-bullets org-pomodoro org-beautify-theme doom-modeline company-lsp lsp-ui lsp-mode blgrep clmemo amx which-key package-utils dashboard open-junk-file company-math company git-gutter+ git-gutter google-this selected symbol-overlay beacon anzu flycheck-color-mode-line ov rainbow-delimiters yatex spaceline-all-the-icons highlight-indentation indent-guide nyan-mode spaceline powerline total-lines helm imenu-list eyebrowse use-package gtags atom-one-dark-theme quickrun color-moccur yasnippet web-mode solarized-theme projectile neotree howm hiwin flycheck elscreen dumb-jump color-theme-sanityinc-solarized auto-complete all-the-icons))
  '(warning-suppress-log-types '((use-package)))
  '(warning-suppress-types
    '((use-package)
