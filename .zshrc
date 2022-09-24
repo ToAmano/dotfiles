@@ -350,30 +350,26 @@ alias lsa='gls -Fa --color=auto'
 alias lsl='gls -Fl --color=auto'
 
 
+# >>> Begin colorlize >>>
 #2021/11/17
-# color cat,less, etc...
-
 # read grc setting 
-#[[ -s "/usr/local/etc/grc.zsh" ]] && source ${HOMEBREW_HOME}/etc/grc.zsh
-#[[ -s "${HOMEBREW_HOME}/share/zsh/site-functions/usr/local/etc/grc.zsh" ]] && source ${HOMEBREW_HOME}/etc/grc.zsh
 [[ -s "${HOMEBREW_HOME}/etc/grc.zsh" ]] && source ${HOMEBREW_HOME}/etc/grc.zsh
-
 # less
 export LESS="-R"
 export LESSOPEN="| ${HOMEBREW_HOME}/bin/src-hilite-lesspipe.sh  %s"
-
 # cat
 if [[ -x `which ccat` ]]; then
   alias cat='ccat'
 fi
-
 # diff
 if [[ -x `which diff` ]]; then
     alias diff='colordiff -u'
 fi
-
-
-### End Colorize ###
+# exa
+if [[ -x `which exa` ]]; then
+    alias ll='exa -abghHliS --git'
+fi
+# <<< End colorlize <<<
 
 
 #2020/2/23 emacs
@@ -477,11 +473,8 @@ alias ekill="emacsclient -e '(kill-emacs)'"
 export EDITOR="TERM=TERM=xterm-24bit emacsclient -a ''"
 export ALTERNATE_EDITOR=""
 
-
-# z
-# https://github.com/rupa/z
-source ~/src/z/z.sh
-
+# z (https://github.com/rupa/z)
+source ${HOME}/works/dotfiles/src/z/z.sh
 
 # iterm2 badge
 # https://www.rasukarusan.com/entry/2019/04/13/180443
@@ -624,7 +617,7 @@ else
     fi
 fi
 unset __conda_setup
-# # <<< conda initialize <<<
+# <<< conda initialize <<<
 
 
 # coreutils
@@ -650,4 +643,3 @@ MANPATH=${HOMEBREW_HOME}/opt/grep/libexec/gnuman:${MANPATH}
 export DYLD_FALLBACK_LIBRARY_PATH=${HOMEBREW_HOME}/bin/:$DYLD_FALLBACK_LIBRARY_PATH
 export DYLD_LIBRARY_PATH=${HOMEBREW_HOME}/bin/:$DYLD_LIBRARY_PATH
 export DYLD_FALLBACK_LIBRARY_PATH=${HOMEBREW_HOME}/Cellar/postgresql/14.5_1/lib/postgresql@14:$DYLD_FALLBACK_LIBRARY_PATH
-

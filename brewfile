@@ -15,6 +15,7 @@ brew "openjdk"
 brew "spaceman" # https://github.com/Jaysce/Spaceman
 
 # commands
+brew "exa"         # ls
 brew "iproute2mac" # ip 
 brew "nkf"        # 文字コード
 brew "inetutils"
@@ -52,6 +53,8 @@ brew "gnutls"
 brew "wdiff"
 brew "wget"
 brew "gnu-which"
+brew "ls"      #色付けにgnu lsが必要
+
 
 # other highlevel command replace
 # https://fhiyo.github.io/2017/11/14/colorize-terminal-output.html
