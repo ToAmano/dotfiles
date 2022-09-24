@@ -42,8 +42,8 @@
 # iterm
 !/com.googlecode.iterm2.plist
 !/Solarized-Dark.json
-!/iterm2setting/
-!/iterm2setting/dircolors.ansi-modify-dark
+!/iterm2/
+!/iterm2/dircolors.ansi-modify-dark
 
 #homebrew
 !/brewfile
