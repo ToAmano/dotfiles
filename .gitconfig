@@ -6,7 +6,7 @@
 #	name = 天野智仁
 #	email = amanotomohito@shoukaku.local
 [core]
-	editor = TERM=xterm-24bit emacsclient -t
+	editor = emacsclient -t #TERM=xterm-24bit emacsclient -t
 	autocrlf = false # 改行コードの自動変換
 	excludesfile = ~/.gitignore_global
 	symlinks = true #https://took.jp/post-447/
@@ -25,11 +25,6 @@
 	br = branch
 	ck = checkout
 # git-lfs setting. you need to install git-lfs via homebrew
-[filter "lfs"]
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
-	required = true
-	clean = git-lfs clean -- %f
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path = 
@@ -47,3 +42,8 @@
 
  [includeIf "gitdir:~/works/660nm/"]
    path = ~/.gitconfig_sub
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true

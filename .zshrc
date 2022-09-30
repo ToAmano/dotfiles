@@ -332,7 +332,7 @@ alias e='TERM="xterm-24bit" emacs -nw'
 #xterm-directでもokらしい．(が，自分のmacにはこのTERMが入ってなさそう)
 #https://ytyaru.hatenablog.com/entry/2020/05/26/000000
 #いずれにしても~/.terminfoディレクトリが必要なので，これもdotfileにいれておく．
-alias ee='TERM=xterm-24bit emacsclient -t'
+alias ee='TERM="xterm-24bit" emacsclient -t'
 
 
 
@@ -409,7 +409,7 @@ alias ekill="emacsclient -e '(kill-emacs)'"
 #alias erestart="ekill && estart"
 #alias e="emacsclient -nw -a ''"
 #alias emacs="emacsclient -nw -a ''"
-export EDITOR="TERM=TERM=xterm-24bit emacsclient -a ''"
+export EDITOR='emacsclient -at' #'TERM="xterm-24bit" emacsclient -a '''
 export ALTERNATE_EDITOR=""
 
 # z (https://github.com/rupa/z)
@@ -581,4 +581,4 @@ MANPATH=${HOMEBREW_HOME}/opt/grep/libexec/gnuman:${MANPATH}
 
 export DYLD_FALLBACK_LIBRARY_PATH=${HOMEBREW_HOME}/bin/:$DYLD_FALLBACK_LIBRARY_PATH
 export DYLD_LIBRARY_PATH=${HOMEBREW_HOME}/bin/:$DYLD_LIBRARY_PATH
-export DYLD_FALLBACK_LIBRARY_PATH=${HOMEBREW_HOME}/Cellar/postgresql/14.5_1/lib/postgresql@14:$DYLD_FALLBACK_LIBRARY_PATH
+export DYLD_FALLBACK_LIBRARY_PATH=${HOMEBREW_HOME}/Cellar/postgresql/14.5_4/lib/postgresql@14:$DYLD_FALLBACK_LIBRARY_PATH
