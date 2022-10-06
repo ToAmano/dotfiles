@@ -24,6 +24,7 @@ brew "gromgit/fuse/sshfs-mac" #original sshfs is deprecated in brew. see https:/
 brew "pyenv" # https://mitsudo.net/python環境の構築-mac-with-anaconda-by-homebrew/
 brew "pyenv-virtualenv"
 brew "asymptote"
+brew "aspell"
 
 # update command
 brew "bash"    #ブレース展開にbash4以上が必要．
