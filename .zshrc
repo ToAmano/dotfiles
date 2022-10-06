@@ -483,8 +483,8 @@ export PYPJONPATH=${HOME}/works/codes/tools:${PYTHONPATH}
 # 2021/12/4
 # とりあえずpackage-managerを導入．homebrewだとintel-M1macでのpathの違いが面倒なので．
 # いくつかあるようだが，とりあえずantigenを使用する．
-if [ -f ${HOME}/.zsh/antigen/antigen.zsh ]; then
-source ${HOME}/.zsh/antigen/antigen.zsh
+if [ -f ${HOME}/works/dotfiles/src/antigen/antigen.zsh ]; then
+source ${HOME}/works/dotfiles/src/antigen/antigen.zsh
 fi
 
 # 
@@ -496,6 +496,8 @@ antigen bundle zsh-users/zsh-autosuggestions
 # Syntax highlighting bundle.
 antigen bundle zsh-users/zsh-syntax-highlighting
 
+# command history search
+antigen bundle zdharma/history-search-multi-word
 
 # Tell antigen that you're done.
 antigen apply
