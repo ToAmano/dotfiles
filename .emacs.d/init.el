@@ -1392,7 +1392,7 @@
 ;;http://cha.la.coocan.jp/doc/EmacsFlycheck.html#org814f11c
 
 ;;;;=================================
-;;   aspell
+;;   ispell/aspell
 ;;;;=================================
 ;;
 ;; (setq-default ispell-program-name "aspell")
@@ -1400,22 +1400,19 @@
 ;;   (setq ispell-local-dictionary "en_US")
 ;;   (add-to-list 'ispell-skip-region-alist '("[^\000-\377]+")))
 
-
- ;; aspellのリンク
- ;; (setq-default ispell-program-name "aspell")
-  (setq-default ispell-program-name "/opt/homebrew/bin/aspell")
-
-
-  ;; 日英混文の処理
-  (with-eval-after-load "ispell"
-    (setq ispell-local-dictionary "en_US")
-    (add-to-list 'ispell-skip-region-alist '("[^\000-\377]+")))
+(use-package ispell
+  :ensure t
+  :init
+  (setq-default ispell-program-name "aspell") ; スペルチェッカーとしてaspellを利用
+  :config
+  (setq ispell-local-dictionary "en_US") ; 日英混文の処理
+  (add-to-list 'ispell-skip-region-alist '("[^\000-\377]+")) ;日本語の部分を飛ばす
+)
  
- 
-  ;; https://qiita.com/walking_with_models/items/da8eaf4afa39cf4ecd4a
-  ;; fly-spell
-  ;; configは，パッケージを読み込んだ後の設定．
-  (use-package flyspell
+;; https://qiita.com/walking_with_models/items/da8eaf4afa39cf4ecd4a
+;; fly-spell
+;; configは，パッケージを読み込んだ後の設定．
+(use-package flyspell
     :ensure t
     :hook (yatex-mode . flyspell-mode)
     :config
@@ -1425,8 +1422,8 @@
     (set-face-attribute 'flyspell-incorrect nil
                        :foreground "white"
                        :background "red" :box t :underline nil)
-    )
- 
+)
+
 
 ;;;;=================================
 ;; git-gutter
@@ -2223,7 +2220,7 @@
      (agenda . 5)))
  '(dashboard-set-navigator t)
  '(flycheck-checker-error-threshold 1000)
- '(org-agenda-files nil)
+ '(org-agenda-files nil t)
  '(org-bullets-bullet-list '("" "" "" "" "" "" "" "" "" "") t)
  '(package-selected-packages
    '(yaml-mode doom-modeline-now-playing doom hide-mode-line vterm eglot ## outline-magic py-autopep8 volatile-highlights w3m mew fill-column-indicator magit org-bullets org-pomodoro org-beautify-theme doom-modeline company-lsp lsp-ui lsp-mode blgrep clmemo amx which-key package-utils dashboard open-junk-file company-math company git-gutter+ git-gutter google-this selected symbol-overlay beacon anzu flycheck-color-mode-line ov rainbow-delimiters yatex spaceline-all-the-icons highlight-indentation indent-guide nyan-mode spaceline powerline total-lines helm imenu-list eyebrowse use-package gtags atom-one-dark-theme quickrun color-moccur yasnippet web-mode solarized-theme projectile neotree howm hiwin flycheck elscreen dumb-jump color-theme-sanityinc-solarized auto-complete all-the-icons))

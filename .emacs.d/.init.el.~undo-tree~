@@ -1,36 +1,7 @@
 (undo-tree-save-format-version . 1)
-"692095e96317f73c0740df3bbf50066a4ee5623c"
-[nil nil nil nil (25170 63354 1294 0) 0 nil]
-([nil nil ((43987 . 43988) (t 25170 44855 994252 982000)) nil (25170 63354 1293 0) 0 nil])
-([nil nil (("!" . -43987) 43988) nil (25170 63354 1292 0) 0 nil])
-([nil nil ((43987 . 43990)) nil (25170 63354 1291 0) 0 nil])
-([nil nil ((" " . -26827) (undo-tree-id18 . -1) (undo-tree-id19 . -1) ("
-" . -26828) (undo-tree-id20 . -1) (undo-tree-id21 . -1) 26829 (t 25170 45360 189701 432000)) nil (25170 63354 1290 0) 0 nil])
-([nil nil ((26827 . 26828)) nil (25170 63354 1286 0) 0 nil])
-([nil nil (("
-" . -26817) (undo-tree-id11 . -1) (undo-tree-id12 . -1) (undo-tree-id13 . -1) (" " . -26818) (undo-tree-id14 . -1) (undo-tree-id15 . -1) (" " . -26819) (undo-tree-id16 . -1) (undo-tree-id17 . -1) 26820) nil (25170 63354 1285 0) 0 nil])
-([nil nil ((26817 . 26820)) nil (25170 63354 1279 0) 0 nil])
-([nil nil ((19396 . 19405) ("  :config" . 19396) (t 25170 62558 979628 892000)) nil (25170 63354 1279 0) 0 nil])
-([nil nil ((19340 . 19342) (t 25170 62646 352543 154000)) nil (25170 63354 1278 0) 0 nil])
-([nil nil (("i" . -19340) (undo-tree-id9 . -1) ("i" . -19341) (undo-tree-id10 . -1) 19342) nil (25170 63354 1277 0) 0 nil])
-([nil nil ((19592 . 19595) (t 25170 62653 541431 849000)) nil (25170 63354 1274 0) 0 nil])
-([nil nil ((19595 . 19596)) nil (25170 63354 1273 0) 0 nil])
-([nil nil (("i" . -19595) (undo-tree-id8 . -1) 19596) nil (25170 63354 1273 0) 0 nil])
-([nil nil ((19595 . 19596)) nil (25170 63354 1271 0) 0 nil])
-([nil nil ((";" . -19595) (undo-tree-id7 . -1) 19596) nil (25170 63354 1271 0) 0 nil])
-([nil nil ((19595 . 19596)) nil (25170 63354 1269 0) 0 nil])
-([nil nil (("l" . -19595) (undo-tree-id6 . -1) 19596) nil (25170 63354 1269 0) 0 nil])
-([nil nil ((19595 . 19604)) nil (25170 63354 1267 0) 0 nil])
-([nil nil ((19604 . 19607)) nil (25170 63354 1267 0) 0 nil])
-([nil nil ((19607 . 19609)) nil (25170 63354 1266 0) 0 nil])
-([nil nil ((" " . -19608) (undo-tree-id5 . -1) 19609) nil (25170 63354 1265 0) 0 nil])
-([nil nil ((19608 . 19612)) nil (25170 63354 1264 0) 0 nil])
-([nil nil ((19612 . 19613)) nil (25170 63354 1263 0) 0 nil])
-([nil nil ((")" . -19613) (undo-tree-id0 . -1) (undo-tree-id1 . 1) (undo-tree-id2 . -1) ("
-" . -19614) (undo-tree-id3 . -1) (undo-tree-id4 . -1) 19615) nil (25170 63354 1262 0) 0 nil])
-([nil nil ((19635 . 19636) (")" . -19635) (19635 . 19636)) nil (25170 63354 1248 0) 0 nil])
-([nil nil ((19636 . 19637) (t 25170 62743 21270 728000)) nil (25170 63354 1247 0) 0 nil])
-([nil nil ((8221 . 9022) (#("(custom-set-faces
+"3bc63543ff1a27e879e95c3b2f06103346261afa"
+[nil nil nil nil (25391 4547 500386 0) 0 nil]
+([nil current ((14483 . 15284) (#("(custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
@@ -42,13 +13,21 @@
  '(hl-line ((t (:background \"darkslategray\"))))
  '(org-pomodoro-mode-line ((t (:foreground \"#ff5555\"))))
  '(org-pomodoro-mode-line-break ((t (:foreground \"#50fa7b\"))))
- '(vhl/default-face ((nil (:foreground \"#FF3333\" :background \"#FFCDCD\")))))" 0 801 (fontified nil)) . -8221) (61790 . 61840) (#("
-" 0 1 (fontified nil)) . -61790) (61003 . 61791) (#(" " 0 1 (fontified nil)) . 61003) (60803 . 61004) (60787 . 60790) (60766 . 60769) (60746 . 60749) (#("
-" 0 1 (fontified nil)) . -60794) (60779 . 60781) (60761 . 60763) (60744 . 60746) (60788 . 60789) (60774 . 60775) (#("
-" 0 1 (fontified nil)) . 60774) (60774 . 60775) (#(" " 0 1 (fontified nil)) . -60774) (60758 . 60759) (#("
-" 0 1 (fontified nil)) . 60758) (60758 . 60759) (#(" " 0 1 (fontified nil)) . -60758) (60743 . 60744) (#("
-" 0 1 (fontified nil)) . 60743) (60743 . 60744) (#(" " 0 1 (fontified nil)) . -60743) (60723 . 60788) (#(" " 0 1 (fontified nil)) . 60723) (60703 . 60724) (#("
-" 0 1 (fontified nil)) . -60703) (60622 . 60704) (#(" " 0 1 (fontified nil)) . 60622) (60330 . 60623) (#("(custom-set-variables
+ '(vhl/default-face ((nil (:foreground \"#FF3333\" :background \"#FFCDCD\")))))" 0 801 (fontified nil)) . -14483) (70413 . 70415) (70396 . 70399) (70377 . 70380) (70358 . 70361) (70339 . 70342) (70320 . 70323) (70301 . 70304) (70282 . 70285) (#("
+" 0 1 (fontified nil)) . -70392) (70376 . 70378) (70360 . 70362) (70344 . 70346) (70328 . 70330) (70312 . 70314) (70296 . 70298) (70280 . 70282) (70378 . 70379) (70363 . 70364) (#("
+" 0 1 (fontified nil)) . 70363) (70363 . 70364) (#(" " 0 1 (fontified nil)) . -70363) (70349 . 70350) (#("
+" 0 1 (fontified nil)) . 70349) (70349 . 70350) (#(" " 0 1 (fontified nil)) . -70349) (70335 . 70336) (#("
+" 0 1 (fontified nil)) . 70335) (70335 . 70336) (#(" " 0 1 (fontified nil)) . -70335) (70321 . 70322) (#("
+" 0 1 (fontified nil)) . 70321) (70321 . 70322) (#(" " 0 1 (fontified nil)) . -70321) (70307 . 70308) (#("
+" 0 1 (fontified nil)) . 70307) (70307 . 70308) (#(" " 0 1 (fontified nil)) . -70307) (70293 . 70294) (#("
+" 0 1 (fontified nil)) . 70293) (70293 . 70294) (#(" " 0 1 (fontified nil)) . -70293) (70279 . 70280) (#("
+" 0 1 (fontified nil)) . 70279) (70279 . 70280) (#(" " 0 1 (fontified nil)) . -70279) (70260 . 70378) (#(" " 0 1 (fontified nil)) . 70260) (70185 . 70261) (#("
+" 0 1 (fontified nil)) . -70185) (69388 . 70186) (#(" " 0 1 (fontified nil)) . 69388) (69186 . 69389) (69170 . 69173) (69149 . 69152) (69129 . 69132) (#("
+" 0 1 (fontified nil)) . -69177) (69162 . 69164) (69144 . 69146) (69127 . 69129) (69171 . 69172) (69157 . 69158) (#("
+" 0 1 (fontified nil)) . 69157) (69157 . 69158) (#(" " 0 1 (fontified nil)) . -69157) (69141 . 69142) (#("
+" 0 1 (fontified nil)) . 69141) (69141 . 69142) (#(" " 0 1 (fontified nil)) . -69141) (69126 . 69127) (#("
+" 0 1 (fontified nil)) . 69126) (69126 . 69127) (#(" " 0 1 (fontified nil)) . -69126) (69106 . 69171) (#(" " 0 1 (fontified nil)) . 69106) (69086 . 69107) (#("
+" 0 1 (fontified nil)) . -69086) (69005 . 69087) (#(" " 0 1 (fontified nil)) . 69005) (68713 . 69006) (#("(custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
@@ -66,353 +45,7 @@
  '(org-agenda-files nil)
  '(org-bullets-bullet-list '(\"\" \"\" \"\" \"\" \"\" \"\" \"\" \"\" \"\" \"\") t)
  '(package-selected-packages
-   '(doom-modeline-now-playing doom hide-mode-line vterm eglot ## outline-magic py-autopep8 volatile-highlights w3m mew fill-column-indicator magit org-bullets org-pomodoro org-beautify-theme doom-modeline company-lsp lsp-ui lsp-mode blgrep clmemo amx which-key package-utils dashboard open-junk-file company-math company git-gutter+ git-gutter google-this selected symbol-overlay beacon anzu flycheck-color-mode-line ov rainbow-delimiters yatex spaceline-all-the-icons highlight-indentation indent-guide nyan-mode spaceline powerline total-lines helm imenu-list eyebrowse use-package gtags atom-one-dark-theme quickrun color-moccur yasnippet web-mode solarized-theme projectile neotree howm hiwin flycheck elscreen dumb-jump color-theme-sanityinc-solarized auto-complete all-the-icons)))" 0 1462 (fontified nil)) . -60330)) nil (25170 63354 1242 0) 0 nil])
-([nil nil ((8221 . 9022) ("(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(doom-modeline-bar ((t (:background \"#6272a4\"))))
- '(flycheck-error ((t (:foreground \"brightmazenta\" :underline (:color \"Foreground Color\" :style line)))))
- '(flycheck-warning ((t (:foreground \"green\" :underline (:color \"Foreground Color\" :style line)))))
- '(font-lock-variable-name-face ((t (:foreground \"orange2\"))))
- '(hl-line ((t (:background \"darkslategray\"))))
- '(org-pomodoro-mode-line ((t (:foreground \"#ff5555\"))))
- '(org-pomodoro-mode-line-break ((t (:foreground \"#50fa7b\"))))
- '(vhl/default-face ((nil (:foreground \"#FF3333\" :background \"#FFCDCD\")))))" . -8221) (61790 . 61884) (#("
-" 0 1 (fontified nil)) . -61790) (61003 . 61791) (#(" " 0 1 (fontified nil)) . 61003) (60803 . 61004) (60787 . 60790) (60766 . 60769) (60746 . 60749) (#("
-" 0 1 (fontified nil)) . -60794) (60779 . 60781) (60761 . 60763) (60744 . 60746) (60788 . 60789) (60774 . 60775) (#("
-" 0 1 (fontified nil)) . 60774) (60774 . 60775) (#(" " 0 1 (fontified nil)) . -60774) (60758 . 60759) (#("
-" 0 1 (fontified nil)) . 60758) (60758 . 60759) (#(" " 0 1 (fontified nil)) . -60758) (60743 . 60744) (#("
-" 0 1 (fontified nil)) . 60743) (60743 . 60744) (#(" " 0 1 (fontified nil)) . -60743) (60723 . 60788) (#(" " 0 1 (fontified nil)) . 60723) (60703 . 60724) (#("
-" 0 1 (fontified nil)) . -60703) (60622 . 60704) (#(" " 0 1 (fontified nil)) . 60622) (60330 . 60623) ("(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(beacon-color \"yellow\")
- '(custom-safe-themes
-   '(\"4639288d273cbd3dc880992e6032f9c817f17c4a91f00f3872009a099f5b3f84\" default))
- '(dashboard-items
-   '((recents . 15)
-     (projects . 5)
-     (bookmarks . 5)
-     (agenda . 5)))
- '(dashboard-set-navigator t)
- '(flycheck-checker-error-threshold 1000)
- '(org-agenda-files nil)
- '(org-bullets-bullet-list '(\"\" \"\" \"\" \"\" \"\" \"\" \"\" \"\" \"\" \"\") t)
- '(package-selected-packages
-   '(doom-modeline-now-playing doom hide-mode-line vterm eglot ## outline-magic py-autopep8 volatile-highlights w3m mew fill-column-indicator magit org-bullets org-pomodoro org-beautify-theme doom-modeline company-lsp lsp-ui lsp-mode blgrep clmemo amx which-key package-utils dashboard open-junk-file company-math company git-gutter+ git-gutter google-this selected symbol-overlay beacon anzu flycheck-color-mode-line ov rainbow-delimiters yatex spaceline-all-the-icons highlight-indentation indent-guide nyan-mode spaceline powerline total-lines helm imenu-list eyebrowse use-package gtags atom-one-dark-theme quickrun color-moccur yasnippet web-mode solarized-theme projectile neotree howm hiwin flycheck elscreen dumb-jump color-theme-sanityinc-solarized auto-complete all-the-icons))
- '(warning-suppress-log-types '((use-package))))" . -60330)) nil (25170 63357 500550 0) 0 nil])
-([nil nil ((8221 . 9022) ("(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(doom-modeline-bar ((t (:background \"#6272a4\"))))
- '(flycheck-error ((t (:foreground \"brightmazenta\" :underline (:color \"Foreground Color\" :style line)))))
- '(flycheck-warning ((t (:foreground \"green\" :underline (:color \"Foreground Color\" :style line)))))
- '(font-lock-variable-name-face ((t (:foreground \"orange2\"))))
- '(hl-line ((t (:background \"darkslategray\"))))
- '(org-pomodoro-mode-line ((t (:foreground \"#ff5555\"))))
- '(org-pomodoro-mode-line-break ((t (:foreground \"#50fa7b\"))))
- '(vhl/default-face ((nil (:foreground \"#FF3333\" :background \"#FFCDCD\")))))" . -8221) (61790 . 61898) (#("
-" 0 1 (fontified nil)) . -61790) (61003 . 61791) (#(" " 0 1 (fontified nil)) . 61003) (60803 . 61004) (60787 . 60790) (60766 . 60769) (60746 . 60749) (#("
-" 0 1 (fontified nil)) . -60794) (60779 . 60781) (60761 . 60763) (60744 . 60746) (60788 . 60789) (60774 . 60775) (#("
-" 0 1 (fontified nil)) . 60774) (60774 . 60775) (#(" " 0 1 (fontified nil)) . -60774) (60758 . 60759) (#("
-" 0 1 (fontified nil)) . 60758) (60758 . 60759) (#(" " 0 1 (fontified nil)) . -60758) (60743 . 60744) (#("
-" 0 1 (fontified nil)) . 60743) (60743 . 60744) (#(" " 0 1 (fontified nil)) . -60743) (60723 . 60788) (#(" " 0 1 (fontified nil)) . 60723) (60703 . 60724) (#("
-" 0 1 (fontified nil)) . -60703) (60622 . 60704) (#(" " 0 1 (fontified nil)) . 60622) (60330 . 60623) ("(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(beacon-color \"yellow\")
- '(custom-safe-themes
-   '(\"4639288d273cbd3dc880992e6032f9c817f17c4a91f00f3872009a099f5b3f84\" default))
- '(dashboard-items
-   '((recents . 15)
-     (projects . 5)
-     (bookmarks . 5)
-     (agenda . 5)))
- '(dashboard-set-navigator t)
- '(flycheck-checker-error-threshold 1000)
- '(org-agenda-files nil)
- '(org-bullets-bullet-list '(\"\" \"\" \"\" \"\" \"\" \"\" \"\" \"\" \"\" \"\") t)
- '(package-selected-packages
-   '(doom-modeline-now-playing doom hide-mode-line vterm eglot ## outline-magic py-autopep8 volatile-highlights w3m mew fill-column-indicator magit org-bullets org-pomodoro org-beautify-theme doom-modeline company-lsp lsp-ui lsp-mode blgrep clmemo amx which-key package-utils dashboard open-junk-file company-math company git-gutter+ git-gutter google-this selected symbol-overlay beacon anzu flycheck-color-mode-line ov rainbow-delimiters yatex spaceline-all-the-icons highlight-indentation indent-guide nyan-mode spaceline powerline total-lines helm imenu-list eyebrowse use-package gtags atom-one-dark-theme quickrun color-moccur yasnippet web-mode solarized-theme projectile neotree howm hiwin flycheck elscreen dumb-jump color-theme-sanityinc-solarized auto-complete all-the-icons))
- '(warning-suppress-log-types '((use-package)))
- '(warning-suppress-types '((use-package))))" . -60330)) nil (25170 63358 401051 0) 0 nil])
-([nil nil ((8221 . 9022) (#("(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(doom-modeline-bar ((t (:background \"#6272a4\"))))
- '(flycheck-error ((t (:foreground \"brightmazenta\" :underline (:color \"Foreground Color\" :style line)))))
- '(flycheck-warning ((t (:foreground \"green\" :underline (:color \"Foreground Color\" :style line)))))
- '(font-lock-variable-name-face ((t (:foreground \"orange2\"))))
- '(hl-line ((t (:background \"darkslategray\"))))
- '(org-pomodoro-mode-line ((t (:foreground \"#ff5555\"))))
- '(org-pomodoro-mode-line-break ((t (:foreground \"#50fa7b\"))))
- '(vhl/default-face ((nil (:foreground \"#FF3333\" :background \"#FFCDCD\")))))" 0 237 (fontified nil) 237 240 (fontified nil) 240 257 (fontified nil) 257 258 (fontified nil) 258 287 (fontified nil) 287 288 (fontified nil) 288 289 (fontified nil) 289 292 (fontified nil) 292 306 (fontified nil) 306 307 (fontified nil) 307 393 (fontified nil) 393 394 (fontified nil) 394 395 (fontified nil) 395 398 (fontified nil) 398 414 (fontified nil) 414 415 (fontified nil) 415 493 (fontified nil) 493 494 (fontified nil) 494 495 (fontified nil) 495 498 (fontified nil) 498 526 (fontified nil) 526 527 (fontified nil) 527 556 (fontified nil) 556 557 (fontified nil) 557 558 (fontified nil) 558 561 (fontified nil) 561 568 (fontified nil) 568 569 (fontified nil) 569 604 (fontified nil) 604 605 (fontified nil) 605 606 (fontified nil) 606 609 (fontified nil) 609 631 (fontified nil) 631 632 (fontified nil) 632 661 (fontified nil) 661 662 (fontified nil) 662 663 (fontified nil) 663 666 (fontified nil) 666 694 (fontified nil) 694 695 (fontified nil) 695 724 (fontified nil) 724 725 (fontified nil) 725 726 (fontified nil) 726 729 (fontified nil) 729 745 (fontified nil) 745 746 (fontified nil) 746 799 (fontified nil) 799 800 (fontified nil) 800 801 (fontified nil)) . -8221) (61790 . 61912) (#("
-" 0 1 (fontified nil)) . -61790) (61003 . 61791) (#(" " 0 1 (fontified nil)) . 61003) (60803 . 61004) (60787 . 60790) (60766 . 60769) (60746 . 60749) (#("
-" 0 1 (fontified nil)) . -60794) (60779 . 60781) (60761 . 60763) (60744 . 60746) (60788 . 60789) (60774 . 60775) (#("
-" 0 1 (fontified nil)) . 60774) (60774 . 60775) (#(" " 0 1 (fontified nil)) . -60774) (60758 . 60759) (#("
-" 0 1 (fontified nil)) . 60758) (60758 . 60759) (#(" " 0 1 (fontified nil)) . -60758) (60743 . 60744) (#("
-" 0 1 (fontified nil)) . 60743) (60743 . 60744) (#(" " 0 1 (fontified nil)) . -60743) (60723 . 60788) (#(" " 0 1 (fontified nil)) . 60723) (60703 . 60724) (#("
-" 0 1 (fontified nil)) . -60703) (60622 . 60704) (#(" " 0 1 (fontified nil)) . 60622) (60330 . 60623) (#("(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(beacon-color \"yellow\")
- '(custom-safe-themes
-   '(\"4639288d273cbd3dc880992e6032f9c817f17c4a91f00f3872009a099f5b3f84\" default))
- '(dashboard-items
-   '((recents . 15)
-     (projects . 5)
-     (bookmarks . 5)
-     (agenda . 5)))
- '(dashboard-set-navigator t)
- '(flycheck-checker-error-threshold 1000)
- '(org-agenda-files nil)
- '(org-bullets-bullet-list '(\"\" \"\" \"\" \"\" \"\" \"\" \"\" \"\" \"\" \"\") t)
- '(package-selected-packages
-   '(doom-modeline-now-playing doom hide-mode-line vterm eglot ## outline-magic py-autopep8 volatile-highlights w3m mew fill-column-indicator magit org-bullets org-pomodoro org-beautify-theme doom-modeline company-lsp lsp-ui lsp-mode blgrep clmemo amx which-key package-utils dashboard open-junk-file company-math company git-gutter+ git-gutter google-this selected symbol-overlay beacon anzu flycheck-color-mode-line ov rainbow-delimiters yatex spaceline-all-the-icons highlight-indentation indent-guide nyan-mode spaceline powerline total-lines helm imenu-list eyebrowse use-package gtags atom-one-dark-theme quickrun color-moccur yasnippet web-mode solarized-theme projectile neotree howm hiwin flycheck elscreen dumb-jump color-theme-sanityinc-solarized auto-complete all-the-icons))
- '(warning-suppress-log-types '((use-package)))
- '(warning-suppress-types '((use-package) (use-package))))" 0 245 (fontified nil) 245 248 (fontified nil) 248 260 (fontified nil) 260 261 (fontified nil) 261 269 (fontified nil) 269 270 (fontified nil) 270 271 (fontified nil) 271 274 (fontified nil) 274 296 (fontified nil) 296 373 (fontified nil) 373 374 (fontified nil) 374 375 (fontified nil) 375 378 (fontified nil) 378 397 (fontified nil) 397 413 (fontified nil) 413 419 (fontified nil) 419 433 (fontified nil) 433 439 (fontified nil) 439 454 (fontified nil) 454 460 (fontified nil) 460 473 (fontified nil) 473 474 (fontified nil) 474 475 (fontified nil) 475 478 (fontified nil) 478 501 (fontified nil) 501 502 (fontified nil) 502 503 (fontified nil) 503 504 (fontified nil) 504 505 (fontified nil) 505 508 (fontified nil) 508 540 (fontified nil) 540 541 (fontified nil) 541 545 (fontified nil) 545 546 (fontified nil) 546 547 (fontified nil) 547 550 (fontified nil) 550 566 (fontified nil) 566 567 (fontified nil) 567 570 (fontified nil) 570 571 (fontified nil) 571 572 (fontified nil) 572 575 (fontified nil) 575 598 (fontified nil) 598 599 (fontified nil) 599 641 (fontified nil) 641 642 (fontified nil) 642 643 (fontified nil) 643 644 (fontified nil) 644 645 (fontified nil) 645 648 (fontified nil) 648 677 (fontified nil) 677 1460 (fontified nil) 1460 1461 (fontified nil) 1461 1462 (fontified nil) 1462 1465 (fontified nil) 1465 1491 (fontified nil) 1491 1492 (fontified nil) 1492 1508 (fontified nil) 1508 1509 (fontified nil) 1509 1510 (fontified nil) 1510 1513 (fontified nil) 1513 1535 (fontified nil) 1535 1536 (fontified nil) 1536 1566 (fontified nil) 1566 1567 (fontified nil) 1567 1568 (fontified nil)) . -60330)) nil (25170 63358 759455 0) 0 nil])
-([nil nil ((8221 . 9022) (#("(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(doom-modeline-bar ((t (:background \"#6272a4\"))))
- '(flycheck-error ((t (:foreground \"brightmazenta\" :underline (:color \"Foreground Color\" :style line)))))
- '(flycheck-warning ((t (:foreground \"green\" :underline (:color \"Foreground Color\" :style line)))))
- '(font-lock-variable-name-face ((t (:foreground \"orange2\"))))
- '(hl-line ((t (:background \"darkslategray\"))))
- '(org-pomodoro-mode-line ((t (:foreground \"#ff5555\"))))
- '(org-pomodoro-mode-line-break ((t (:foreground \"#50fa7b\"))))
- '(vhl/default-face ((nil (:foreground \"#FF3333\" :background \"#FFCDCD\")))))" 0 237 (fontified nil) 237 240 (fontified nil) 240 257 (fontified nil) 257 258 (fontified nil) 258 287 (fontified nil) 287 288 (fontified nil) 288 289 (fontified nil) 289 292 (fontified nil) 292 306 (fontified nil) 306 307 (fontified nil) 307 393 (fontified nil) 393 394 (fontified nil) 394 395 (fontified nil) 395 398 (fontified nil) 398 414 (fontified nil) 414 415 (fontified nil) 415 493 (fontified nil) 493 494 (fontified nil) 494 495 (fontified nil) 495 498 (fontified nil) 498 526 (fontified nil) 526 527 (fontified nil) 527 556 (fontified nil) 556 557 (fontified nil) 557 558 (fontified nil) 558 561 (fontified nil) 561 568 (fontified nil) 568 569 (fontified nil) 569 604 (fontified nil) 604 605 (fontified nil) 605 606 (fontified nil) 606 609 (fontified nil) 609 631 (fontified nil) 631 632 (fontified nil) 632 661 (fontified nil) 661 662 (fontified nil) 662 663 (fontified nil) 663 666 (fontified nil) 666 694 (fontified nil) 694 695 (fontified nil) 695 724 (fontified nil) 724 725 (fontified nil) 725 726 (fontified nil) 726 729 (fontified nil) 729 745 (fontified nil) 745 746 (fontified nil) 746 799 (fontified nil) 799 800 (fontified nil) 800 801 (fontified nil)) . -8221) (61790 . 61926) (#("
-" 0 1 (fontified nil)) . -61790) (61003 . 61791) (#(" " 0 1 (fontified nil)) . 61003) (60803 . 61004) (60787 . 60790) (60766 . 60769) (60746 . 60749) (#("
-" 0 1 (fontified nil)) . -60794) (60779 . 60781) (60761 . 60763) (60744 . 60746) (60788 . 60789) (60774 . 60775) (#("
-" 0 1 (fontified nil)) . 60774) (60774 . 60775) (#(" " 0 1 (fontified nil)) . -60774) (60758 . 60759) (#("
-" 0 1 (fontified nil)) . 60758) (60758 . 60759) (#(" " 0 1 (fontified nil)) . -60758) (60743 . 60744) (#("
-" 0 1 (fontified nil)) . 60743) (60743 . 60744) (#(" " 0 1 (fontified nil)) . -60743) (60723 . 60788) (#(" " 0 1 (fontified nil)) . 60723) (60703 . 60724) (#("
-" 0 1 (fontified nil)) . -60703) (60622 . 60704) (#(" " 0 1 (fontified nil)) . 60622) (60330 . 60623) (#("(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(beacon-color \"yellow\")
- '(custom-safe-themes
-   '(\"4639288d273cbd3dc880992e6032f9c817f17c4a91f00f3872009a099f5b3f84\" default))
- '(dashboard-items
-   '((recents . 15)
-     (projects . 5)
-     (bookmarks . 5)
-     (agenda . 5)))
- '(dashboard-set-navigator t)
- '(flycheck-checker-error-threshold 1000)
- '(org-agenda-files nil)
- '(org-bullets-bullet-list '(\"\" \"\" \"\" \"\" \"\" \"\" \"\" \"\" \"\" \"\") t)
- '(package-selected-packages
-   '(doom-modeline-now-playing doom hide-mode-line vterm eglot ## outline-magic py-autopep8 volatile-highlights w3m mew fill-column-indicator magit org-bullets org-pomodoro org-beautify-theme doom-modeline company-lsp lsp-ui lsp-mode blgrep clmemo amx which-key package-utils dashboard open-junk-file company-math company git-gutter+ git-gutter google-this selected symbol-overlay beacon anzu flycheck-color-mode-line ov rainbow-delimiters yatex spaceline-all-the-icons highlight-indentation indent-guide nyan-mode spaceline powerline total-lines helm imenu-list eyebrowse use-package gtags atom-one-dark-theme quickrun color-moccur yasnippet web-mode solarized-theme projectile neotree howm hiwin flycheck elscreen dumb-jump color-theme-sanityinc-solarized auto-complete all-the-icons))
- '(warning-suppress-log-types '((use-package)))
- '(warning-suppress-types '((use-package) (use-package) (use-package))))" 0 245 (fontified nil) 245 248 (fontified nil) 248 260 (fontified nil) 260 261 (fontified nil) 261 269 (fontified nil) 269 270 (fontified nil) 270 271 (fontified nil) 271 274 (fontified nil) 274 296 (fontified nil) 296 373 (fontified nil) 373 374 (fontified nil) 374 375 (fontified nil) 375 378 (fontified nil) 378 397 (fontified nil) 397 413 (fontified nil) 413 419 (fontified nil) 419 433 (fontified nil) 433 439 (fontified nil) 439 454 (fontified nil) 454 460 (fontified nil) 460 473 (fontified nil) 473 474 (fontified nil) 474 475 (fontified nil) 475 478 (fontified nil) 478 501 (fontified nil) 501 502 (fontified nil) 502 503 (fontified nil) 503 504 (fontified nil) 504 505 (fontified nil) 505 508 (fontified nil) 508 540 (fontified nil) 540 541 (fontified nil) 541 545 (fontified nil) 545 546 (fontified nil) 546 547 (fontified nil) 547 550 (fontified nil) 550 566 (fontified nil) 566 567 (fontified nil) 567 570 (fontified nil) 570 571 (fontified nil) 571 572 (fontified nil) 572 575 (fontified nil) 575 598 (fontified nil) 598 599 (fontified nil) 599 641 (fontified nil) 641 642 (fontified nil) 642 643 (fontified nil) 643 644 (fontified nil) 644 645 (fontified nil) 645 648 (fontified nil) 648 677 (fontified nil) 677 1460 (fontified nil) 1460 1461 (fontified nil) 1461 1462 (fontified nil) 1462 1465 (fontified nil) 1465 1491 (fontified nil) 1491 1492 (fontified nil) 1492 1508 (fontified nil) 1508 1509 (fontified nil) 1509 1510 (fontified nil) 1510 1513 (fontified nil) 1513 1535 (fontified nil) 1535 1536 (fontified nil) 1536 1580 (fontified nil) 1580 1581 (fontified nil) 1581 1582 (fontified nil)) . -60330)) nil (25170 63359 162424 0) 0 nil])
-([nil nil ((8221 . 9022) (#("(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(doom-modeline-bar ((t (:background \"#6272a4\"))))
- '(flycheck-error ((t (:foreground \"brightmazenta\" :underline (:color \"Foreground Color\" :style line)))))
- '(flycheck-warning ((t (:foreground \"green\" :underline (:color \"Foreground Color\" :style line)))))
- '(font-lock-variable-name-face ((t (:foreground \"orange2\"))))
- '(hl-line ((t (:background \"darkslategray\"))))
- '(org-pomodoro-mode-line ((t (:foreground \"#ff5555\"))))
- '(org-pomodoro-mode-line-break ((t (:foreground \"#50fa7b\"))))
- '(vhl/default-face ((nil (:foreground \"#FF3333\" :background \"#FFCDCD\")))))" 0 237 (fontified nil) 237 240 (fontified nil) 240 257 (fontified nil) 257 258 (fontified nil) 258 287 (fontified nil) 287 288 (fontified nil) 288 289 (fontified nil) 289 292 (fontified nil) 292 306 (fontified nil) 306 307 (fontified nil) 307 393 (fontified nil) 393 394 (fontified nil) 394 395 (fontified nil) 395 398 (fontified nil) 398 414 (fontified nil) 414 415 (fontified nil) 415 493 (fontified nil) 493 494 (fontified nil) 494 495 (fontified nil) 495 498 (fontified nil) 498 526 (fontified nil) 526 527 (fontified nil) 527 556 (fontified nil) 556 557 (fontified nil) 557 558 (fontified nil) 558 561 (fontified nil) 561 568 (fontified nil) 568 569 (fontified nil) 569 604 (fontified nil) 604 605 (fontified nil) 605 606 (fontified nil) 606 609 (fontified nil) 609 631 (fontified nil) 631 632 (fontified nil) 632 661 (fontified nil) 661 662 (fontified nil) 662 663 (fontified nil) 663 666 (fontified nil) 666 694 (fontified nil) 694 695 (fontified nil) 695 724 (fontified nil) 724 725 (fontified nil) 725 726 (fontified nil) 726 729 (fontified nil) 729 745 (fontified nil) 745 746 (fontified nil) 746 799 (fontified nil) 799 800 (fontified nil) 800 801 (fontified nil)) . -8221) (61961 . 61963) (61944 . 61947) (61925 . 61928) (61906 . 61909) (61887 . 61890) (#("
-" 0 1 (fontified nil)) . -61949) (61933 . 61935) (61917 . 61919) (61901 . 61903) (61885 . 61887) (61941 . 61942) (61926 . 61927) (#("
-" 0 1 (fontified nil)) . 61926) (61926 . 61927) (#(" " 0 1 (fontified nil)) . -61926) (61912 . 61913) (#("
-" 0 1 (fontified nil)) . 61912) (61912 . 61913) (#(" " 0 1 (fontified nil)) . -61912) (61898 . 61899) (#("
-" 0 1 (fontified nil)) . 61898) (61898 . 61899) (#(" " 0 1 (fontified nil)) . -61898) (61884 . 61885) (#("
-" 0 1 (fontified nil)) . 61884) (61884 . 61885) (#(" " 0 1 (fontified nil)) . -61884) (61865 . 61941) (#(" " 0 1 (fontified nil)) . 61865) (61790 . 61866) (#("
-" 0 1 (fontified nil)) . -61790) (61003 . 61791) (#(" " 0 1 (fontified nil)) . 61003) (60803 . 61004) (60787 . 60790) (60766 . 60769) (60746 . 60749) (#("
-" 0 1 (fontified nil)) . -60794) (60779 . 60781) (60761 . 60763) (60744 . 60746) (60788 . 60789) (60774 . 60775) (#("
-" 0 1 (fontified nil)) . 60774) (60774 . 60775) (#(" " 0 1 (fontified nil)) . -60774) (60758 . 60759) (#("
-" 0 1 (fontified nil)) . 60758) (60758 . 60759) (#(" " 0 1 (fontified nil)) . -60758) (60743 . 60744) (#("
-" 0 1 (fontified nil)) . 60743) (60743 . 60744) (#(" " 0 1 (fontified nil)) . -60743) (60723 . 60788) (#(" " 0 1 (fontified nil)) . 60723) (60703 . 60724) (#("
-" 0 1 (fontified nil)) . -60703) (60622 . 60704) (#(" " 0 1 (fontified nil)) . 60622) (60330 . 60623) (#("(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(beacon-color \"yellow\")
- '(custom-safe-themes
-   '(\"4639288d273cbd3dc880992e6032f9c817f17c4a91f00f3872009a099f5b3f84\" default))
- '(dashboard-items
-   '((recents . 15)
-     (projects . 5)
-     (bookmarks . 5)
-     (agenda . 5)))
- '(dashboard-set-navigator t)
- '(flycheck-checker-error-threshold 1000)
- '(org-agenda-files nil)
- '(org-bullets-bullet-list '(\"\" \"\" \"\" \"\" \"\" \"\" \"\" \"\" \"\" \"\") t)
- '(package-selected-packages
-   '(doom-modeline-now-playing doom hide-mode-line vterm eglot ## outline-magic py-autopep8 volatile-highlights w3m mew fill-column-indicator magit org-bullets org-pomodoro org-beautify-theme doom-modeline company-lsp lsp-ui lsp-mode blgrep clmemo amx which-key package-utils dashboard open-junk-file company-math company git-gutter+ git-gutter google-this selected symbol-overlay beacon anzu flycheck-color-mode-line ov rainbow-delimiters yatex spaceline-all-the-icons highlight-indentation indent-guide nyan-mode spaceline powerline total-lines helm imenu-list eyebrowse use-package gtags atom-one-dark-theme quickrun color-moccur yasnippet web-mode solarized-theme projectile neotree howm hiwin flycheck elscreen dumb-jump color-theme-sanityinc-solarized auto-complete all-the-icons))
- '(warning-suppress-log-types '((use-package)))
- '(warning-suppress-types '((use-package) (use-package) (use-package) (use-package))))" 0 245 (fontified nil) 245 248 (fontified nil) 248 260 (fontified nil) 260 261 (fontified nil) 261 269 (fontified nil) 269 270 (fontified nil) 270 271 (fontified nil) 271 274 (fontified nil) 274 296 (fontified nil) 296 373 (fontified nil) 373 374 (fontified nil) 374 375 (fontified nil) 375 378 (fontified nil) 378 397 (fontified nil) 397 413 (fontified nil) 413 419 (fontified nil) 419 433 (fontified nil) 433 439 (fontified nil) 439 454 (fontified nil) 454 460 (fontified nil) 460 473 (fontified nil) 473 474 (fontified nil) 474 475 (fontified nil) 475 478 (fontified nil) 478 501 (fontified nil) 501 502 (fontified nil) 502 503 (fontified nil) 503 504 (fontified nil) 504 505 (fontified nil) 505 508 (fontified nil) 508 540 (fontified nil) 540 541 (fontified nil) 541 545 (fontified nil) 545 546 (fontified nil) 546 547 (fontified nil) 547 550 (fontified nil) 550 566 (fontified nil) 566 567 (fontified nil) 567 570 (fontified nil) 570 571 (fontified nil) 571 572 (fontified nil) 572 575 (fontified nil) 575 598 (fontified nil) 598 599 (fontified nil) 599 641 (fontified nil) 641 642 (fontified nil) 642 643 (fontified nil) 643 644 (fontified nil) 644 645 (fontified nil) 645 648 (fontified nil) 648 677 (fontified nil) 677 1460 (fontified nil) 1460 1461 (fontified nil) 1461 1462 (fontified nil) 1462 1465 (fontified nil) 1465 1491 (fontified nil) 1491 1492 (fontified nil) 1492 1508 (fontified nil) 1508 1509 (fontified nil) 1509 1510 (fontified nil) 1510 1513 (fontified nil) 1513 1535 (fontified nil) 1535 1536 (fontified nil) 1536 1594 (fontified nil) 1594 1595 (fontified nil) 1595 1596 (fontified nil)) . -60330)) nil (25170 63359 663218 0) 0 nil])
-([nil nil ((8221 . 9022) (#("(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(doom-modeline-bar ((t (:background \"#6272a4\"))))
- '(flycheck-error ((t (:foreground \"brightmazenta\" :underline (:color \"Foreground Color\" :style line)))))
- '(flycheck-warning ((t (:foreground \"green\" :underline (:color \"Foreground Color\" :style line)))))
- '(font-lock-variable-name-face ((t (:foreground \"orange2\"))))
- '(hl-line ((t (:background \"darkslategray\"))))
- '(org-pomodoro-mode-line ((t (:foreground \"#ff5555\"))))
- '(org-pomodoro-mode-line-break ((t (:foreground \"#50fa7b\"))))
- '(vhl/default-face ((nil (:foreground \"#FF3333\" :background \"#FFCDCD\")))))" 0 237 (fontified nil) 237 240 (fontified nil) 240 257 (fontified nil) 257 258 (fontified nil) 258 287 (fontified nil) 287 288 (fontified nil) 288 289 (fontified nil) 289 292 (fontified nil) 292 306 (fontified nil) 306 307 (fontified nil) 307 393 (fontified nil) 393 394 (fontified nil) 394 395 (fontified nil) 395 398 (fontified nil) 398 414 (fontified nil) 414 415 (fontified nil) 415 493 (fontified nil) 493 494 (fontified nil) 494 495 (fontified nil) 495 498 (fontified nil) 498 526 (fontified nil) 526 527 (fontified nil) 527 556 (fontified nil) 556 557 (fontified nil) 557 558 (fontified nil) 558 561 (fontified nil) 561 568 (fontified nil) 568 569 (fontified nil) 569 604 (fontified nil) 604 605 (fontified nil) 605 606 (fontified nil) 606 609 (fontified nil) 609 631 (fontified nil) 631 632 (fontified nil) 632 661 (fontified nil) 661 662 (fontified nil) 662 663 (fontified nil) 663 666 (fontified nil) 666 694 (fontified nil) 694 695 (fontified nil) 695 724 (fontified nil) 724 725 (fontified nil) 725 726 (fontified nil) 726 729 (fontified nil) 729 745 (fontified nil) 745 746 (fontified nil) 746 799 (fontified nil) 799 800 (fontified nil) 800 801 (fontified nil)) . -8221) (61980 . 61982) (61963 . 61966) (61944 . 61947) (61925 . 61928) (61906 . 61909) (61887 . 61890) (#("
-" 0 1 (fontified nil)) . -61965) (61949 . 61951) (61933 . 61935) (61917 . 61919) (61901 . 61903) (61885 . 61887) (61955 . 61956) (61940 . 61941) (#("
-" 0 1 (fontified nil)) . 61940) (61940 . 61941) (#(" " 0 1 (fontified nil)) . -61940) (61926 . 61927) (#("
-" 0 1 (fontified nil)) . 61926) (61926 . 61927) (#(" " 0 1 (fontified nil)) . -61926) (61912 . 61913) (#("
-" 0 1 (fontified nil)) . 61912) (61912 . 61913) (#(" " 0 1 (fontified nil)) . -61912) (61898 . 61899) (#("
-" 0 1 (fontified nil)) . 61898) (61898 . 61899) (#(" " 0 1 (fontified nil)) . -61898) (61884 . 61885) (#("
-" 0 1 (fontified nil)) . 61884) (61884 . 61885) (#(" " 0 1 (fontified nil)) . -61884) (61865 . 61955) (#(" " 0 1 (fontified nil)) . 61865) (61790 . 61866) (#("
-" 0 1 (fontified nil)) . -61790) (61003 . 61791) (#(" " 0 1 (fontified nil)) . 61003) (60803 . 61004) (60787 . 60790) (60766 . 60769) (60746 . 60749) (#("
-" 0 1 (fontified nil)) . -60794) (60779 . 60781) (60761 . 60763) (60744 . 60746) (60788 . 60789) (60774 . 60775) (#("
-" 0 1 (fontified nil)) . 60774) (60774 . 60775) (#(" " 0 1 (fontified nil)) . -60774) (60758 . 60759) (#("
-" 0 1 (fontified nil)) . 60758) (60758 . 60759) (#(" " 0 1 (fontified nil)) . -60758) (60743 . 60744) (#("
-" 0 1 (fontified nil)) . 60743) (60743 . 60744) (#(" " 0 1 (fontified nil)) . -60743) (60723 . 60788) (#(" " 0 1 (fontified nil)) . 60723) (60703 . 60724) (#("
-" 0 1 (fontified nil)) . -60703) (60622 . 60704) (#(" " 0 1 (fontified nil)) . 60622) (60330 . 60623) (#("(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(beacon-color \"yellow\")
- '(custom-safe-themes
-   '(\"4639288d273cbd3dc880992e6032f9c817f17c4a91f00f3872009a099f5b3f84\" default))
- '(dashboard-items
-   '((recents . 15)
-     (projects . 5)
-     (bookmarks . 5)
-     (agenda . 5)))
- '(dashboard-set-navigator t)
- '(flycheck-checker-error-threshold 1000)
- '(org-agenda-files nil)
- '(org-bullets-bullet-list '(\"\" \"\" \"\" \"\" \"\" \"\" \"\" \"\" \"\" \"\") t)
- '(package-selected-packages
-   '(doom-modeline-now-playing doom hide-mode-line vterm eglot ## outline-magic py-autopep8 volatile-highlights w3m mew fill-column-indicator magit org-bullets org-pomodoro org-beautify-theme doom-modeline company-lsp lsp-ui lsp-mode blgrep clmemo amx which-key package-utils dashboard open-junk-file company-math company git-gutter+ git-gutter google-this selected symbol-overlay beacon anzu flycheck-color-mode-line ov rainbow-delimiters yatex spaceline-all-the-icons highlight-indentation indent-guide nyan-mode spaceline powerline total-lines helm imenu-list eyebrowse use-package gtags atom-one-dark-theme quickrun color-moccur yasnippet web-mode solarized-theme projectile neotree howm hiwin flycheck elscreen dumb-jump color-theme-sanityinc-solarized auto-complete all-the-icons))
- '(warning-suppress-log-types '((use-package)))
- '(warning-suppress-types
-   '((use-package)
-     (use-package)
-     (use-package)
-     (use-package)
-     (use-package))))" 0 245 (fontified nil) 245 248 (fontified nil) 248 260 (fontified nil) 260 261 (fontified nil) 261 269 (fontified nil) 269 270 (fontified nil) 270 271 (fontified nil) 271 274 (fontified nil) 274 296 (fontified nil) 296 373 (fontified nil) 373 374 (fontified nil) 374 375 (fontified nil) 375 378 (fontified nil) 378 397 (fontified nil) 397 413 (fontified nil) 413 419 (fontified nil) 419 433 (fontified nil) 433 439 (fontified nil) 439 454 (fontified nil) 454 460 (fontified nil) 460 473 (fontified nil) 473 474 (fontified nil) 474 475 (fontified nil) 475 478 (fontified nil) 478 501 (fontified nil) 501 502 (fontified nil) 502 503 (fontified nil) 503 504 (fontified nil) 504 505 (fontified nil) 505 508 (fontified nil) 508 540 (fontified nil) 540 541 (fontified nil) 541 545 (fontified nil) 545 546 (fontified nil) 546 547 (fontified nil) 547 550 (fontified nil) 550 566 (fontified nil) 566 567 (fontified nil) 567 570 (fontified nil) 570 571 (fontified nil) 571 572 (fontified nil) 572 575 (fontified nil) 575 598 (fontified nil) 598 599 (fontified nil) 599 641 (fontified nil) 641 642 (fontified nil) 642 643 (fontified nil) 643 644 (fontified nil) 644 645 (fontified nil) 645 648 (fontified nil) 648 677 (fontified nil) 677 1460 (fontified nil) 1460 1461 (fontified nil) 1461 1462 (fontified nil) 1462 1465 (fontified nil) 1465 1491 (fontified nil) 1491 1492 (fontified nil) 1492 1508 (fontified nil) 1508 1509 (fontified nil) 1509 1510 (fontified nil) 1510 1513 (fontified nil) 1513 1539 (fontified nil) 1539 1554 (fontified nil) 1554 1560 (fontified nil) 1560 1573 (fontified nil) 1573 1579 (fontified nil) 1579 1592 (fontified nil) 1592 1598 (fontified nil) 1598 1611 (fontified nil) 1611 1617 (fontified nil) 1617 1631 (fontified nil) 1631 1632 (fontified nil) 1632 1633 (fontified nil)) . -60330)) nil (25170 63359 769319 0) 0 nil])
-([nil nil ((8221 . 9022) (#("(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(doom-modeline-bar ((t (:background \"#6272a4\"))))
- '(flycheck-error ((t (:foreground \"brightmazenta\" :underline (:color \"Foreground Color\" :style line)))))
- '(flycheck-warning ((t (:foreground \"green\" :underline (:color \"Foreground Color\" :style line)))))
- '(font-lock-variable-name-face ((t (:foreground \"orange2\"))))
- '(hl-line ((t (:background \"darkslategray\"))))
- '(org-pomodoro-mode-line ((t (:foreground \"#ff5555\"))))
- '(org-pomodoro-mode-line-break ((t (:foreground \"#50fa7b\"))))
- '(vhl/default-face ((nil (:foreground \"#FF3333\" :background \"#FFCDCD\")))))" 0 237 (fontified nil) 237 240 (fontified nil) 240 257 (fontified nil) 257 258 (fontified nil) 258 287 (fontified nil) 287 288 (fontified nil) 288 289 (fontified nil) 289 292 (fontified nil) 292 306 (fontified nil) 306 307 (fontified nil) 307 393 (fontified nil) 393 394 (fontified nil) 394 395 (fontified nil) 395 398 (fontified nil) 398 414 (fontified nil) 414 415 (fontified nil) 415 493 (fontified nil) 493 494 (fontified nil) 494 495 (fontified nil) 495 498 (fontified nil) 498 526 (fontified nil) 526 527 (fontified nil) 527 556 (fontified nil) 556 557 (fontified nil) 557 558 (fontified nil) 558 561 (fontified nil) 561 568 (fontified nil) 568 569 (fontified nil) 569 604 (fontified nil) 604 605 (fontified nil) 605 606 (fontified nil) 606 609 (fontified nil) 609 631 (fontified nil) 631 632 (fontified nil) 632 661 (fontified nil) 661 662 (fontified nil) 662 663 (fontified nil) 663 666 (fontified nil) 666 694 (fontified nil) 694 695 (fontified nil) 695 724 (fontified nil) 724 725 (fontified nil) 725 726 (fontified nil) 726 729 (fontified nil) 729 745 (fontified nil) 745 746 (fontified nil) 746 799 (fontified nil) 799 800 (fontified nil) 800 801 (fontified nil)) . -8221) (61999 . 62001) (61982 . 61985) (61963 . 61966) (61944 . 61947) (61925 . 61928) (61906 . 61909) (61887 . 61890) (#("
-" 0 1 (fontified nil)) . -61981) (61965 . 61967) (61949 . 61951) (61933 . 61935) (61917 . 61919) (61901 . 61903) (61885 . 61887) (61969 . 61970) (61954 . 61955) (#("
-" 0 1 (fontified nil)) . 61954) (61954 . 61955) (#(" " 0 1 (fontified nil)) . -61954) (61940 . 61941) (#("
-" 0 1 (fontified nil)) . 61940) (61940 . 61941) (#(" " 0 1 (fontified nil)) . -61940) (61926 . 61927) (#("
-" 0 1 (fontified nil)) . 61926) (61926 . 61927) (#(" " 0 1 (fontified nil)) . -61926) (61912 . 61913) (#("
-" 0 1 (fontified nil)) . 61912) (61912 . 61913) (#(" " 0 1 (fontified nil)) . -61912) (61898 . 61899) (#("
-" 0 1 (fontified nil)) . 61898) (61898 . 61899) (#(" " 0 1 (fontified nil)) . -61898) (61884 . 61885) (#("
-" 0 1 (fontified nil)) . 61884) (61884 . 61885) (#(" " 0 1 (fontified nil)) . -61884) (61865 . 61969) (#(" " 0 1 (fontified nil)) . 61865) (61790 . 61866) (#("
-" 0 1 (fontified nil)) . -61790) (61003 . 61791) (#(" " 0 1 (fontified nil)) . 61003) (60803 . 61004) (60787 . 60790) (60766 . 60769) (60746 . 60749) (#("
-" 0 1 (fontified nil)) . -60794) (60779 . 60781) (60761 . 60763) (60744 . 60746) (60788 . 60789) (60774 . 60775) (#("
-" 0 1 (fontified nil)) . 60774) (60774 . 60775) (#(" " 0 1 (fontified nil)) . -60774) (60758 . 60759) (#("
-" 0 1 (fontified nil)) . 60758) (60758 . 60759) (#(" " 0 1 (fontified nil)) . -60758) (60743 . 60744) (#("
-" 0 1 (fontified nil)) . 60743) (60743 . 60744) (#(" " 0 1 (fontified nil)) . -60743) (60723 . 60788) (#(" " 0 1 (fontified nil)) . 60723) (60703 . 60724) (#("
-" 0 1 (fontified nil)) . -60703) (60622 . 60704) (#(" " 0 1 (fontified nil)) . 60622) (60330 . 60623) (#("(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(beacon-color \"yellow\")
- '(custom-safe-themes
-   '(\"4639288d273cbd3dc880992e6032f9c817f17c4a91f00f3872009a099f5b3f84\" default))
- '(dashboard-items
-   '((recents . 15)
-     (projects . 5)
-     (bookmarks . 5)
-     (agenda . 5)))
- '(dashboard-set-navigator t)
- '(flycheck-checker-error-threshold 1000)
- '(org-agenda-files nil)
- '(org-bullets-bullet-list '(\"\" \"\" \"\" \"\" \"\" \"\" \"\" \"\" \"\" \"\") t)
- '(package-selected-packages
-   '(doom-modeline-now-playing doom hide-mode-line vterm eglot ## outline-magic py-autopep8 volatile-highlights w3m mew fill-column-indicator magit org-bullets org-pomodoro org-beautify-theme doom-modeline company-lsp lsp-ui lsp-mode blgrep clmemo amx which-key package-utils dashboard open-junk-file company-math company git-gutter+ git-gutter google-this selected symbol-overlay beacon anzu flycheck-color-mode-line ov rainbow-delimiters yatex spaceline-all-the-icons highlight-indentation indent-guide nyan-mode spaceline powerline total-lines helm imenu-list eyebrowse use-package gtags atom-one-dark-theme quickrun color-moccur yasnippet web-mode solarized-theme projectile neotree howm hiwin flycheck elscreen dumb-jump color-theme-sanityinc-solarized auto-complete all-the-icons))
- '(warning-suppress-log-types '((use-package)))
- '(warning-suppress-types
-   '((use-package)
-     (use-package)
-     (use-package)
-     (use-package)
-     (use-package)
-     (use-package))))" 0 245 (fontified nil) 245 248 (fontified nil) 248 260 (fontified nil) 260 261 (fontified nil) 261 269 (fontified nil) 269 270 (fontified nil) 270 271 (fontified nil) 271 274 (fontified nil) 274 296 (fontified nil) 296 373 (fontified nil) 373 374 (fontified nil) 374 375 (fontified nil) 375 378 (fontified nil) 378 397 (fontified nil) 397 413 (fontified nil) 413 419 (fontified nil) 419 433 (fontified nil) 433 439 (fontified nil) 439 454 (fontified nil) 454 460 (fontified nil) 460 473 (fontified nil) 473 474 (fontified nil) 474 475 (fontified nil) 475 478 (fontified nil) 478 501 (fontified nil) 501 502 (fontified nil) 502 503 (fontified nil) 503 504 (fontified nil) 504 505 (fontified nil) 505 508 (fontified nil) 508 540 (fontified nil) 540 541 (fontified nil) 541 545 (fontified nil) 545 546 (fontified nil) 546 547 (fontified nil) 547 550 (fontified nil) 550 566 (fontified nil) 566 567 (fontified nil) 567 570 (fontified nil) 570 571 (fontified nil) 571 572 (fontified nil) 572 575 (fontified nil) 575 598 (fontified nil) 598 599 (fontified nil) 599 641 (fontified nil) 641 642 (fontified nil) 642 643 (fontified nil) 643 644 (fontified nil) 644 645 (fontified nil) 645 648 (fontified nil) 648 677 (fontified nil) 677 1460 (fontified nil) 1460 1461 (fontified nil) 1461 1462 (fontified nil) 1462 1465 (fontified nil) 1465 1491 (fontified nil) 1491 1492 (fontified nil) 1492 1508 (fontified nil) 1508 1509 (fontified nil) 1509 1510 (fontified nil) 1510 1513 (fontified nil) 1513 1539 (fontified nil) 1539 1554 (fontified nil) 1554 1560 (fontified nil) 1560 1573 (fontified nil) 1573 1579 (fontified nil) 1579 1592 (fontified nil) 1592 1598 (fontified nil) 1598 1611 (fontified nil) 1611 1617 (fontified nil) 1617 1630 (fontified nil) 1630 1636 (fontified nil) 1636 1650 (fontified nil) 1650 1651 (fontified nil) 1651 1652 (fontified nil)) . -60330)) nil (25170 63360 873595 0) 0 nil])
-([nil current ((8221 . 9022) (#("(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(doom-modeline-bar ((t (:background \"#6272a4\"))))
- '(flycheck-error ((t (:foreground \"brightmazenta\" :underline (:color \"Foreground Color\" :style line)))))
- '(flycheck-warning ((t (:foreground \"green\" :underline (:color \"Foreground Color\" :style line)))))
- '(font-lock-variable-name-face ((t (:foreground \"orange2\"))))
- '(hl-line ((t (:background \"darkslategray\"))))
- '(org-pomodoro-mode-line ((t (:foreground \"#ff5555\"))))
- '(org-pomodoro-mode-line-break ((t (:foreground \"#50fa7b\"))))
- '(vhl/default-face ((nil (:foreground \"#FF3333\" :background \"#FFCDCD\")))))" 0 237 (fontified nil) 237 240 (fontified nil) 240 257 (fontified nil) 257 258 (fontified nil) 258 287 (fontified nil) 287 288 (fontified nil) 288 289 (fontified nil) 289 292 (fontified nil) 292 306 (fontified nil) 306 307 (fontified nil) 307 393 (fontified nil) 393 394 (fontified nil) 394 395 (fontified nil) 395 398 (fontified nil) 398 414 (fontified nil) 414 415 (fontified nil) 415 493 (fontified nil) 493 494 (fontified nil) 494 495 (fontified nil) 495 498 (fontified nil) 498 526 (fontified nil) 526 527 (fontified nil) 527 556 (fontified nil) 556 557 (fontified nil) 557 558 (fontified nil) 558 561 (fontified nil) 561 568 (fontified nil) 568 569 (fontified nil) 569 604 (fontified nil) 604 605 (fontified nil) 605 606 (fontified nil) 606 609 (fontified nil) 609 631 (fontified nil) 631 632 (fontified nil) 632 661 (fontified nil) 661 662 (fontified nil) 662 663 (fontified nil) 663 666 (fontified nil) 666 694 (fontified nil) 694 695 (fontified nil) 695 724 (fontified nil) 724 725 (fontified nil) 725 726 (fontified nil) 726 729 (fontified nil) 729 745 (fontified nil) 745 746 (fontified nil) 746 799 (fontified nil) 799 800 (fontified nil) 800 801 (fontified nil)) . -8221) (62018 . 62020) (62001 . 62004) (61982 . 61985) (61963 . 61966) (61944 . 61947) (61925 . 61928) (61906 . 61909) (61887 . 61890) (#("
-" 0 1 (fontified nil)) . -61997) (61981 . 61983) (61965 . 61967) (61949 . 61951) (61933 . 61935) (61917 . 61919) (61901 . 61903) (61885 . 61887) (61983 . 61984) (61968 . 61969) (#("
-" 0 1 (fontified nil)) . 61968) (61968 . 61969) (#(" " 0 1 (fontified nil)) . -61968) (61954 . 61955) (#("
-" 0 1 (fontified nil)) . 61954) (61954 . 61955) (#(" " 0 1 (fontified nil)) . -61954) (61940 . 61941) (#("
-" 0 1 (fontified nil)) . 61940) (61940 . 61941) (#(" " 0 1 (fontified nil)) . -61940) (61926 . 61927) (#("
-" 0 1 (fontified nil)) . 61926) (61926 . 61927) (#(" " 0 1 (fontified nil)) . -61926) (61912 . 61913) (#("
-" 0 1 (fontified nil)) . 61912) (61912 . 61913) (#(" " 0 1 (fontified nil)) . -61912) (61898 . 61899) (#("
-" 0 1 (fontified nil)) . 61898) (61898 . 61899) (#(" " 0 1 (fontified nil)) . -61898) (61884 . 61885) (#("
-" 0 1 (fontified nil)) . 61884) (61884 . 61885) (#(" " 0 1 (fontified nil)) . -61884) (61865 . 61983) (#(" " 0 1 (fontified nil)) . 61865) (61790 . 61866) (#("
-" 0 1 (fontified nil)) . -61790) (61003 . 61791) (#(" " 0 1 (fontified nil)) . 61003) (60803 . 61004) (60787 . 60790) (60766 . 60769) (60746 . 60749) (#("
-" 0 1 (fontified nil)) . -60794) (60779 . 60781) (60761 . 60763) (60744 . 60746) (60788 . 60789) (60774 . 60775) (#("
-" 0 1 (fontified nil)) . 60774) (60774 . 60775) (#(" " 0 1 (fontified nil)) . -60774) (60758 . 60759) (#("
-" 0 1 (fontified nil)) . 60758) (60758 . 60759) (#(" " 0 1 (fontified nil)) . -60758) (60743 . 60744) (#("
-" 0 1 (fontified nil)) . 60743) (60743 . 60744) (#(" " 0 1 (fontified nil)) . -60743) (60723 . 60788) (#(" " 0 1 (fontified nil)) . 60723) (60703 . 60724) (#("
-" 0 1 (fontified nil)) . -60703) (60622 . 60704) (#(" " 0 1 (fontified nil)) . 60622) (60330 . 60623) (#("(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(beacon-color \"yellow\")
- '(custom-safe-themes
-   '(\"4639288d273cbd3dc880992e6032f9c817f17c4a91f00f3872009a099f5b3f84\" default))
- '(dashboard-items
-   '((recents . 15)
-     (projects . 5)
-     (bookmarks . 5)
-     (agenda . 5)))
- '(dashboard-set-navigator t)
- '(flycheck-checker-error-threshold 1000)
- '(org-agenda-files nil)
- '(org-bullets-bullet-list '(\"\" \"\" \"\" \"\" \"\" \"\" \"\" \"\" \"\" \"\") t)
- '(package-selected-packages
-   '(doom-modeline-now-playing doom hide-mode-line vterm eglot ## outline-magic py-autopep8 volatile-highlights w3m mew fill-column-indicator magit org-bullets org-pomodoro org-beautify-theme doom-modeline company-lsp lsp-ui lsp-mode blgrep clmemo amx which-key package-utils dashboard open-junk-file company-math company git-gutter+ git-gutter google-this selected symbol-overlay beacon anzu flycheck-color-mode-line ov rainbow-delimiters yatex spaceline-all-the-icons highlight-indentation indent-guide nyan-mode spaceline powerline total-lines helm imenu-list eyebrowse use-package gtags atom-one-dark-theme quickrun color-moccur yasnippet web-mode solarized-theme projectile neotree howm hiwin flycheck elscreen dumb-jump color-theme-sanityinc-solarized auto-complete all-the-icons))
+   '(yaml-mode doom-modeline-now-playing doom hide-mode-line vterm eglot ## outline-magic py-autopep8 volatile-highlights w3m mew fill-column-indicator magit org-bullets org-pomodoro org-beautify-theme doom-modeline company-lsp lsp-ui lsp-mode blgrep clmemo amx which-key package-utils dashboard open-junk-file company-math company git-gutter+ git-gutter google-this selected symbol-overlay beacon anzu flycheck-color-mode-line ov rainbow-delimiters yatex spaceline-all-the-icons highlight-indentation indent-guide nyan-mode spaceline powerline total-lines helm imenu-list eyebrowse use-package gtags atom-one-dark-theme quickrun color-moccur yasnippet web-mode solarized-theme projectile neotree howm hiwin flycheck elscreen dumb-jump color-theme-sanityinc-solarized auto-complete all-the-icons))
  '(warning-suppress-log-types '((use-package)))
  '(warning-suppress-types
    '((use-package)
@@ -421,5 +54,6 @@
      (use-package)
      (use-package)
      (use-package)
-     (use-package))))" 0 245 (fontified nil) 245 248 (fontified nil) 248 260 (fontified nil) 260 261 (fontified nil) 261 269 (fontified nil) 269 270 (fontified nil) 270 271 (fontified nil) 271 274 (fontified nil) 274 296 (fontified nil) 296 373 (fontified nil) 373 374 (fontified nil) 374 375 (fontified nil) 375 378 (fontified nil) 378 397 (fontified nil) 397 413 (fontified nil) 413 419 (fontified nil) 419 433 (fontified nil) 433 439 (fontified nil) 439 454 (fontified nil) 454 460 (fontified nil) 460 473 (fontified nil) 473 474 (fontified nil) 474 475 (fontified nil) 475 478 (fontified nil) 478 501 (fontified nil) 501 502 (fontified nil) 502 503 (fontified nil) 503 504 (fontified nil) 504 505 (fontified nil) 505 508 (fontified nil) 508 540 (fontified nil) 540 541 (fontified nil) 541 545 (fontified nil) 545 546 (fontified nil) 546 547 (fontified nil) 547 550 (fontified nil) 550 566 (fontified nil) 566 567 (fontified nil) 567 570 (fontified nil) 570 571 (fontified nil) 571 572 (fontified nil) 572 575 (fontified nil) 575 598 (fontified nil) 598 599 (fontified nil) 599 641 (fontified nil) 641 642 (fontified nil) 642 643 (fontified nil) 643 644 (fontified nil) 644 645 (fontified nil) 645 648 (fontified nil) 648 677 (fontified nil) 677 1460 (fontified nil) 1460 1461 (fontified nil) 1461 1462 (fontified nil) 1462 1465 (fontified nil) 1465 1491 (fontified nil) 1491 1492 (fontified nil) 1492 1508 (fontified nil) 1508 1509 (fontified nil) 1509 1510 (fontified nil) 1510 1513 (fontified nil) 1513 1539 (fontified nil) 1539 1554 (fontified nil) 1554 1560 (fontified nil) 1560 1573 (fontified nil) 1573 1579 (fontified nil) 1579 1592 (fontified nil) 1592 1598 (fontified nil) 1598 1611 (fontified nil) 1611 1617 (fontified nil) 1617 1630 (fontified nil) 1630 1636 (fontified nil) 1636 1649 (fontified nil) 1649 1655 (fontified nil) 1655 1669 (fontified nil) 1669 1670 (fontified nil) 1670 1671 (fontified nil)) . -60330)) nil (25170 63362 647113 0) 0 nil])
+     (use-package)
+     (use-package))))" 0 1700 (fontified nil)) . -68713) (t 25391 4311 816390 771000)) nil (25391 4547 500380 0) 0 nil])
 nil
