@@ -279,9 +279,9 @@ alias gcc="${HOMEBREW_HOME}/bin/gcc-11"
 # 2021/11/19
 # homebrewに写ったことで，lsと打てばglsを引っ張ってくれる．
 # しかし，grcにもlsの設定があるため，バッティングする．そこで，glsにaliasを入れる．
-alias ls="ls -F --color=auto"
-alias lsa='ls -Fa --color=auto'
-alias lsl='ls -Fl --color=auto'
+alias ls="gls -F --color=auto"
+alias lsa='gls -Fa --color=auto'
+alias lsl='gls -Fl --color=auto'
 
 
 # >>> Begin colorlize >>>
