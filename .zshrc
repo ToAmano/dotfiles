@@ -296,7 +296,7 @@ if [[ -x `which ccat` ]]; then
   alias cat='ccat'
 fi
 # diff
-if [[ -x `which diff` ]]; then
+if [[ -x `which colordiff` ]]; then
     alias diff='colordiff -u'
 fi
 # exa
