@@ -19,7 +19,7 @@
 !/.zshrc
 !/.zshenv
 !/.zprofile
-
+!/commit_template
 
 !/bin/    #dirとその中身を設定するにはこの2行が必要．
 !/bin/**
