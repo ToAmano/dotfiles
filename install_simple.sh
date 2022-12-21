@@ -7,9 +7,8 @@ dotfiles_logo='
   | (_| | (_) | |_| | | | |  __/\__ \ 
    \__,_|\___/ \__|_| |_|_|\___||___/ 
   *** WHAT IS INSIDE? ***
-  1. Download https://github.com/b4b4r07/dotfiles.git
-  2. Symlinking dot files to your home directory
-  3. Execute all sh files within `etc/init/` (optional)
+  1. Symlinking dot files to your home directory
+  2. Execute all sh files within `etc/init/` (optional)
   See the README for documentation.
 '
 echo "$dotfiles_logo"
@@ -34,7 +33,6 @@ for f in .??*; do
     [ "$f" = ".gitconfig.local.template" ] && continue
     [ "$f" = ".gitmodules" ] && continue
     [ "$f" = ".DS_Store" ] && continue
-    [ "$f" = ".ssh" ] && continue
     [ "$f" = ".emacs.d" ] && continue
 
     # シンボリックリンクを貼る
@@ -85,8 +83,8 @@ fi
 
 
 # sshのlinkをはる。
-mkdir ${HOME}/.ssh
-ln -snfv ${PWD}/.ssh/config ${HOME}/.ssh/config
+# mkdir ${HOME}/.ssh
+# ln -snfv ${PWD}/.ssh/config ${HOME}/.ssh/config
 
 
 # emacs true color用の設定．
