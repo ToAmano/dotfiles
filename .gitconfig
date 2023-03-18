@@ -48,4 +48,4 @@
 	process = git-lfs filter-process
 	required = true
 [commit]
-	template = commit_template
+	template = /Users/amano/works/dotfiles/commit_template
