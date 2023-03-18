@@ -6,16 +6,15 @@
 
 # 
 
-
 ## How to use
 
 ### 1, 事前準備
 - install xcode command line tools.
-- ssh connection to github
+- ssh connection to github (option)
 - clone "dotfiles" repository in ${HOME}/works
 
 ### 2, dotfiles
-- install_simple.sh: symlinking
+- install_simple.sh: simply symlinking .files.
 - install_brew.sh: install commands/apps via homebrew
 - 
 
