@@ -440,11 +440,11 @@ source ${HOMEBREW_HOME}/opt/lmod/init/profile
 # pyenv
 # pyenv
 #https://mitsudo.net/python環境の構築-mac-with-anaconda-by-homebrew/
-export PYENV_ROOT=~/.pyenv
-export PATH=$PYENV_ROOT/bin:$PATH
-eval "$(pyenv init --path)" # https://commte.net/7259
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
+# export PYENV_ROOT=~/.pyenv
+# export PATH=$PYENV_ROOT/bin:$PATH
+# eval "$(pyenv init --path)" # https://commte.net/7259
+# eval "$(pyenv init -)"
+# eval "$(pyenv virtualenv-init -)"
 
 # brew doctor 対策
 # alias brew="env PATH=${PATH/\/Users\/${USER}\/\.pyenv\/shims:/} brew"
@@ -547,14 +547,14 @@ eval "$(rbenv init -)"
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/Users/amano/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+__conda_setup="$('/Users/amano/opt/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else
-    if [ -f "/Users/amano/anaconda3/etc/profile.d/conda.sh" ]; then
-        . "/Users/amano/anaconda3/etc/profile.d/conda.sh"
+    if [ -f "/Users/amano/opt/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/Users/amano/opt/anaconda3/etc/profile.d/conda.sh"
     else
-        export PATH="/Users/amano/anaconda3/bin:$PATH"
+        export PATH="/Users/amano/opt/anaconda3/bin:$PATH"
     fi
 fi
 unset __conda_setup

@@ -1,5 +1,5 @@
 {
-  "Badge Text" : "\\(user.badge)",
+  "Badge Text" : "\\(session.username)@\\(session.hostname):\\(session.path)",
   "Working Directory" : "\/Users\/amanotomohito",
   "Prompt Before Closing 2" : false,
   "Selected Text Color" : {
@@ -33,6 +33,14 @@
     "Blue Component" : 0.25882352941176473,
     "Green Component" : 0.21176470588235294
   },
+  "Triggers" : [
+    {
+      "action" : "PasswordTrigger",
+      "parameter" : "",
+      "regex" : "Vault password:",
+      "partial" : true
+    }
+  ],
   "Mouse Reporting" : true,
   "Cursor Boost" : 0.063184691011236013,
   "Ansi 4 Color" : {
@@ -214,7 +222,7 @@
     "Blue Component" : 0.63137254901960782,
     "Green Component" : 0.63137254901960782
   },
-  "Unlimited Scrollback" : false,
+  "Unlimited Scrollback" : true,
   "Custom Command" : "No",
   "HotKey Key Code" : 36,
   "Keyboard Map" : {
@@ -278,6 +286,12 @@
       "Text" : "[1;5B",
       "Action" : 10
     },
+    "0xf703-0x280000-0x0" : {
+      "Version" : 0,
+      "Label" : "",
+      "Text" : "f",
+      "Action" : 10
+    },
     "0xf70d-0x20000" : {
       "Text" : "[21;2~",
       "Action" : 10
@@ -314,16 +328,12 @@
       "Text" : "[1;2D",
       "Action" : 10
     },
-    "0xf703-0x280000" : {
-      "Text" : "0x1b 0x1b 0x5b 0x43",
-      "Action" : 11
+    "0xf707-0x20000" : {
+      "Text" : "[1;2S",
+      "Action" : 10
     },
     "0xf700-0x240000" : {
       "Text" : "[1;5A",
-      "Action" : 10
-    },
-    "0xf707-0x20000" : {
-      "Text" : "[1;2S",
       "Action" : 10
     },
     "0xf70a-0x20000" : {
@@ -346,10 +356,6 @@
       "Text" : "[1;6B",
       "Action" : 10
     },
-    "0xf702-0x280000" : {
-      "Text" : "0x1b 0x1b 0x5b 0x44",
-      "Action" : 11
-    },
     "0xf72b-0x20000" : {
       "Text" : "[1;2F",
       "Action" : 10
@@ -364,6 +370,12 @@
     },
     "0xf701-0x220000" : {
       "Text" : "[1;2B",
+      "Action" : 10
+    },
+    "0xf702-0x280000-0x0" : {
+      "Version" : 0,
+      "Label" : "",
+      "Text" : "b",
       "Action" : 10
     },
     "0xf70b-0x20000" : {
@@ -391,7 +403,7 @@
     "Blue Component" : 0,
     "Green Component" : 0.59999999999999998
   },
-  "Send Code When Idle" : false,
+  "Send Code When Idle" : true,
   "ASCII Anti Aliased" : true,
   "Tags" : [
 
@@ -412,7 +424,7 @@
   },
   "Window Type" : 0,
   "Use Bright Bold" : true,
-  "Has Hotkey" : true,
+  "Has Hotkey" : false,
   "HotKey Modifier Activation" : 0,
   "Cursor Text Color" : {
     "Red Component" : 0.027450980392156862,
@@ -465,7 +477,7 @@
     "Green Component" : 0.21176470588235294
   },
   "Blur" : false,
-  "Normal Font" : "MenloForPowerline-Regular 16",
+  "Normal Font" : "Ricty-Regular 20",
   "Vertical Spacing" : 0.98999999999999999,
   "Use Underline Color" : false,
   "Ansi 7 Color" : {
@@ -509,7 +521,7 @@
   "Bound Hosts" : [
 
   ],
-  "Non Ascii Font" : "HackNerdFontComplete-Regular 16",
+  "Non Ascii Font" : "icons-in-terminal 18",
   "Ansi 13 Color" : {
     "Red Component" : 0.42352941176470588,
     "Color Space" : "sRGB",
@@ -522,6 +534,7 @@
   ],
   "Visual Bell" : true,
   "Custom Directory" : "No",
+  "ASCII Ligatures" : false,
   "Ansi 5 Color" : {
     "Red Component" : 0.82745098039215681,
     "Color Space" : "sRGB",
