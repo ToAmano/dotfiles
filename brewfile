@@ -25,6 +25,7 @@ brew "pyenv" # https://mitsudo.net/python環境の構築-mac-with-anaconda-by-ho
 brew "pyenv-virtualenv"
 brew "asymptote"
 brew "aspell"
+brew "tree"
 
 # update command
 brew "bash"    #ブレース展開にbash4以上が必要．
