@@ -49,3 +49,5 @@
 	required = true
 [commit]
 	template = ~/works/dotfiles/commit_template
+[merge]
+	ff = false

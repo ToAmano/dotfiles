@@ -49,7 +49,7 @@ brew "gnutls"
 brew "wdiff"
 brew "wget"
 brew "gnu-which"
-
+brew "rbenv"
 
 # other highlevel command replace
 # https://fhiyo.github.io/2017/11/14/colorize-terminal-output.html

@@ -266,8 +266,9 @@ RPROMPT='`rprompt-git-current-branch`'
 alias locate="/usr/bin/locate"
 
 #2022/7/7 g++/gcc
-alias g++="${HOMEBREW_HOME}/bin/g++-11"
-alias gcc="${HOMEBREW_HOME}/bin/gcc-11"
+#2023/6/17 update to g++13
+alias g++="${HOMEBREW_HOME}/bin/g++-13"
+alias gcc="${HOMEBREW_HOME}/bin/gcc-13"
 
 #2020/2/23 ls
 #これはsolarized colorになるようにわざわざcoreutilsを入れている
@@ -440,11 +441,11 @@ source ${HOMEBREW_HOME}/opt/lmod/init/profile
 # pyenv
 # pyenv
 #https://mitsudo.net/python環境の構築-mac-with-anaconda-by-homebrew/
-# export PYENV_ROOT=~/.pyenv
-# export PATH=$PYENV_ROOT/bin:$PATH
-# eval "$(pyenv init --path)" # https://commte.net/7259
-# eval "$(pyenv init -)"
-# eval "$(pyenv virtualenv-init -)"
+export PYENV_ROOT=~/.pyenv
+export PATH=$PYENV_ROOT/bin:$PATH
+eval "$(pyenv init --path)" # https://commte.net/7259
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
 
 # brew doctor 対策
 # alias brew="env PATH=${PATH/\/Users\/${USER}\/\.pyenv\/shims:/} brew"
@@ -467,8 +468,27 @@ export PATH=$HOME/works/codes/tools:$PATH
 # export LIBRARY_PATH=/opt/homebrew/lib:$LIBRARY_PATH
 export CPATH=${HOMEBREW_HOME}/Cellar/boost/1.79.0_1/include/:$CPATH  #boost 
 export CPATH=${HOMEBREW_HOME}/Cellar/open-mpi/4.1.4/include/:$CPATH  #mpi.h
-# export CPLUS_INCLUDE_PATH=/opt/homebrew/Cellar/gcc/11.3.0_2/include/c++/11:$CPLUS_INCLUDE_PATH #標準library置き換え macのdefaultでは/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/vector:704:10:にある．
+export CPATH=${HOMEBREW_HOME}/include/:$CPATH 
+export CPATH=${HOMEBREW_HOME}/include/eigen3/:$CPATH #Eigen from homebrew
+export CPATH=${HOMEBREW_HOME}/include/boost/:$CPATH #boost from homebrew
+export CPATH=${HOMEBREW_HOME}/include/rdkit:$CPATH  # rdkit from homebrew
+export LD_LIBRARY_PATH=${HOMEBREW_HOME}/opt/rdkit/lib:$LD_LIBRARY_PATH
 
+# こっちがintel macでのpath設定か？
+export CPATH=${HOMEBREW_HOME}/opt/rdkit/include:$CPATH
+export CPATH=${HOMEBREW_HOME}/opt/boost/include:$CPATH
+# export CPLUS_INCLUDE_PATH=/opt/homebrew/Cellar/gcc/11.3.0_2/include/c++/11:$CPLUS_INCLUDE_PATH #標準library置き換え macのdefaultでは/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/vector:704:10:にある．
+# libtorch (C++ version of pytorch)
+export CPATH=${HOME}/src/libtorch/include/torch/:$CPATH
+export CPATH=${HOME}/src/libtorch/include/:$CPATH
+# export CPATH=${HOME}/src/libtorch/include/torch/csrc/api/include/torch:$CPATH
+export CPATH=/usr/local/Cellar/libomp/16.0.6/include/:$CPATH # omp.h
+export CPATH=/usr/local/opt/libomp/include/:$CPATH
+export LD_LIBRARY_PATH=/usr/local/Cellar/libomp/16.0.6/lib:$LD_LIBRARY_PATH
+export LD_LIBRARY_PATH=/usr/local/opt/libomp/lib:$LD_LIBRARY_PATH
+
+
+export RDBASE=/usr/local/opt/rdkit/share/RDKit
 
 export PATH=${HOME}/works/research/jsr_utokyo/tools:${PATH}
 export PYTHONPATH=${HOME}/works/research/jsr_utokyo/tools:${PYTHONPATH}
