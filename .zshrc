@@ -43,7 +43,6 @@ else
 fi
 eval "$($HOMEBREW_HOME/bin/brew shellenv)"
 
-
 # -----------------------
 #
 #lsコマンドの色について
@@ -507,6 +506,16 @@ if [ -f ${HOME}/works/dotfiles/src/antigen/antigen.zsh ]; then
 source ${HOME}/works/dotfiles/src/antigen/antigen.zsh
 fi
 
+# Load the oh-my-zsh's library.
+antigen use oh-my-zsh
+
+# Bundles from the default repo (robbyrussell's oh-my-zsh).
+# antigen bundle git
+antigen bundle heroku
+# antigen bundle pip
+antigen bundle lein
+antigen bundle command-not-found
+# antigen bundle pyenv 
 # 
 antigen bundle zsh-users/zsh-completions
 
@@ -519,8 +528,14 @@ antigen bundle zsh-users/zsh-syntax-highlighting
 # command history search
 antigen bundle zdharma/history-search-multi-word
 
+# conda-zsh-completion https://namileriblog.com/python/conda-zsh-completion/
+# antigen bundle 
+antigen bundle conda-incubator/conda-zsh-completion --branch=master
+
 # Tell antigen that you're done.
 antigen apply
+
+autoload -U compinit && compinit
 
 # #2021/12/3
 # # https://zenn.dev/k4zu/articles/zsh-tutorial
@@ -580,6 +595,10 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
+
+# <<<<<<<<<<<<<<<<<<
+# path for commands
+# >>>>>>>>>>>>>>>>>>
 
 # coreutils
 PATH=${HOMEBREW_HOME}/opt/coreutils/libexec/gnubin:${PATH}

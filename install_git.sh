@@ -37,3 +37,8 @@ git clone https://github.com/zsh-users/antigen.git
 
 # z.sh
 git clone https://github.com/rupa/z.git
+
+# 2023/7/8
+# conda-zsh-completion
+git clone https://github.com/conda-incubator/conda-zsh-completion.git
+
