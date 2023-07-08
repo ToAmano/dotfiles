@@ -1,0 +1,147 @@
+# .bash_profile
+
+# Get the aliases and functions
+if [ -f ~/.bashrc ]; then
+	. ~/.bashrc
+fi
+
+# alias
+alias e="emacs -nw" # emacs
+
+
+# User specific environment and startup programs
+export iterm2_hostname=ohtaka
+test -e ~/.iterm2_shell_integration.bash && source ~/.iterm2_shell_integration.bash || true
+
+
+alias ee='TERM="xterm-24bit" emacsclient -t'
+
+# ALAMODE install
+export SPGLIB_ROOT=${HOME}/src/spglib/bin
+export LD_LIBRARY_PATH=$SPGLIB_ROOT/lib64:$LD_LIBRARY_PATH
+export LD_LIBRARY_PATH=${HOME}/src/eigen-3.4.0/Eigen:$LD_LIBRARY_PATH
+export LD_LIBRARY_PATH=${HOME}/src/eigen-3.4.0:$LD_LIBRARY_PATH
+
+
+# ALAMODE
+export PATH=$PATH:${HOME}/src/alamode_1_2_0/_build/alm/
+export PATH=$PATH:${HOME}/src/alamode_1_2_0/_build/anphon/
+export PATH=$PATH:${HOME}/src/alamode_1_2_0/tools/
+export PYTHONPATH=$PYTHONPATH:${HOME}/src/alamode_1_2_0/tools/
+
+
+# my code
+export PYTHONPATH=$PYTHONPATH:${HOME}/works/codes/tools
+export PYTHONPATH=$PYTHONPATH:${HOME}/works/jsr_utokyo/tools
+export PATH=$PATH:${HOME}/works/codes/tools
+export PATH=$PATH:${HOME}/works/jsr_utokyo/tools
+
+# ESPRESSO_PSEUDO
+export ESPRESSO_PSEUDO=${HOME}/src/pseudo
+
+# Go
+ export PATH=$PATH:${HOME}/src/go/bin
+
+# ccat
+export PATH=$PATH:${HOME}/src/ccat-1.1.0
+
+# grc
+export PATH=$PATH:${HOME}/src/grc
+
+GRC_ALIASES=true
+[[ -s "${HOME}/src/grc/grc.sh" ]] && source ${HOME}/src/grc/grc.sh
+
+
+# anaconda3 for conda init
+. ${HOME}/anaconda3/etc/profile.d/conda.sh
+
+
+# cif2cell
+export PYTHONPATH=${HOME}/src/cif2cell-1.2.10/PyCifRW-3.3/opt/PyCifRW-3.3/lib64/python2.7/site-packages:$PYTHONPATH
+
+
+# wannier90
+alias wannier90.x=/home/k0151/k015124/src/qe-7.0/external/wannier90/wannier90.x
+
+
+
+
+# デフォルト設定(別になくても良い)
+#LS_COLORS="デフォルトの色設定(ご自由に)"
+#export LS_COLORS
+
+#read dircolors
+#dircolors-solarizedを使うため，対応するファイルを読み込む．
+
+#対応するファイルの場所
+# 2021/10/30 mv dotfiles to works/codes
+# 2021/12/03 mv dotfiles to works/dotfiles
+dircolorsPATH=${HOME}/works/dotfiles/iterm2/dircolors.ansi-modify-dark
+#dircolorsPATH=~/dotfiles/iterm2setting/dircolors-solarized/dircolors.ansi-modify-dark
+#dircolorsPATH=~/dotfiles/iterm2setting/dircolors-solarized/dircolors.256dark
+#以下で読み込み
+if [ -f  ${dircolorsPATH} ];then
+    if type dircolors >/dev/null 2>&1;then
+	eval $(dircolors ${dircolorsPATH} )
+    elif type gdircolors >/dev/null 2>&1;then
+	eval $(gdircolors ${dircolorsPATH} )
+    fi
+else
+    echo error DO NOT exist ${dircolorsPATH}
+fi
+
+
+
+
+
+ export PYTHONPATH=/home/k0151/k015124/works/codes:$PYTHONPATH
+ export PATH=/home/k0151/k015124/works/jsr_utokyo/tools:$PATH
+
+
+ # gromacs
+ export PATH=$PATH:/home/k0151/k015124/src/gromacs-2022.4/build/bin
+ export PATH=$PATH:/home/k0151/k015124/src/gromacs-2022.4/build_nompi/bin
+
+# psi4
+# https://psicode.org/psi4manual/1.5.0/external.html
+export PSI_SCRATCH=/work/k0151/k015124/psi4_scratch
+eval "$(/home/k0151/k015124/.linuxbrew/bin/brew shellenv)"
+
+
+# mpif90を含むのでcompile時に競合する可能性あり
+# export PATH=$PATH:/home/k0151/k015124/anaconda3/bin
+
+# export HOMEBREW_HOME=/home/k0151/k015124/.linuxbrew:${HOMEBREW_HOME}
+
+
+# less
+export LESS="-R"
+export LESSOPEN="| ${HOMEBREW_HOME}/bin/src-hilite-lesspipe.sh  %s"
+
+# cat
+if [[ -x `which ccat` ]]; then
+  alias cat='ccat'
+fi
+
+# libnettle
+export LD_LIBRARY_PATH=${HOME}/local/nettle/lib64:$LD_LIBRARY_PATH
+export PKG_CONFIG_PATH=${HOME}/local/nettle/lib64:$PKG_CONFIG_PATH
+
+# diff
+if [[ -x `which colordiff` ]]; then
+    alias diff='colordiff -u'
+fi
+eval "$(/home/k0151/k015124/.linuxbrew/bin/brew shellenv)"
+
+
+# 2022/09/23:icons-in-terminal
+source ${HOME}/works/dotfiles/src/icons-in-terminal/build/icons_bash.sh
+
+module load intel_compiler
+module load intel_mkl
+module load intel_mpi
+
+
+echo
+echo " your data is at /vol0006/mdt1/data/hp220331/"
+echo
