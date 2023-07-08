@@ -146,6 +146,10 @@ export LANG=ja_JP.UTF-8
 #autoload -U promptinit; promptinit
 #prompt pure
 
+# git管理されているか否か
+# https://qiita.com/yaotti/items/04ad9976c66ccbee2047
+autoload -Uz vcs_info
+
 # Gitブランチ名を表示
 # https://github.com/git/git/blob/master/contrib/completion/git-prompt.sh
 #source ~/.git-prompt.sh
@@ -208,7 +212,8 @@ function prompt-make {
 function rprompt-git-current-branch {
   local branch_name st branch_status
  
-  if [ ! -e  ".git" ]; then
+  # if [ ! -e  ".git" ]; then
+  if ! git rev-parse 2> /dev/null ; then # https://memo.sugyan.com/entry/20120323/1332507609
       # git 管理されていないディレクトリは何も返さない
       echo "%F{245}\ue0b2%f%K{245}%F{230} %* \uf017%f %k"
     return
@@ -510,7 +515,7 @@ fi
 antigen use oh-my-zsh
 
 # Bundles from the default repo (robbyrussell's oh-my-zsh).
-# antigen bundle git
+antigen bundle git
 antigen bundle heroku
 # antigen bundle pip
 antigen bundle lein
