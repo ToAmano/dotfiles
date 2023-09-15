@@ -58,7 +58,7 @@ brew "ccat" # replace cat
 brew "grc"  # ping, etc..
 brew "colordiff" # replace diff
 brew "source-highlight" # replace less
-
+brew "chromedriver"
 
 
 # cask font
