@@ -266,8 +266,8 @@ RPROMPT='`rprompt-git-current-branch`'
 alias locate="/usr/bin/locate"
 
 #2022/7/7 g++/gcc
-alias g++="${HOMEBREW_HOME}/bin/g++-11"
-alias gcc="${HOMEBREW_HOME}/bin/gcc-11"
+# alias g++="${HOMEBREW_HOME}/bin/g++-13"
+# alias gcc="${HOMEBREW_HOME}/bin/gcc-13"
 
 #2020/2/23 ls
 #これはsolarized colorになるようにわざわざcoreutilsを入れている
@@ -386,7 +386,7 @@ google(){
 fpath=(~/.zsh/completions $fpath) 
 autoload -U compinit && compinit
 
-eval "$(hub alias -s)"
+# eval "$(hub alias -s)"
 
 # シェル起動時にEmacs daemonも起動する．
 #  https://www.pandanoir.info/entry/2018/08/03/193000
@@ -454,7 +454,7 @@ export PYTHONPATH=$PYTHONPATH:$HOME/src/acpype
 
 
 # pythonpath for my modules
-export PYTHONPATH=$PYTHONPATH:$HOME/works/research/work21_quadrupole/modules
+# export PYTHONPATH=$PYTHONPATH:$HOME/works/research/work21_quadrupole/modules
 
 
 export PYTHONPATH=$HOME/works/codes/tools:$PYTHONPATH
@@ -465,15 +465,28 @@ export PATH=$HOME/works/codes/tools:$PATH
 # https://apple.stackexchange.com/questions/414622/installing-a-c-c-library-with-homebrew-on-m1-macs
 # export CPATH=/opt/homebrew/include:$CPATH
 # export LIBRARY_PATH=/opt/homebrew/lib:$LIBRARY_PATH
-export CPATH=${HOMEBREW_HOME}/Cellar/boost/1.79.0_1/include/:$CPATH  #boost 
+export CPATH=${HOMEBREW_HOME}/Cellar/boost/1.82.0_1/include/:$CPATH  #boost
 export CPATH=${HOMEBREW_HOME}/Cellar/open-mpi/4.1.4/include/:$CPATH  #mpi.h
+export CPATH=/opt/homebrew/include/:$CPATH # homebrewで入れたライブラリはこれでok．（omp.h）
 # export CPLUS_INCLUDE_PATH=/opt/homebrew/Cellar/gcc/11.3.0_2/include/c++/11:$CPLUS_INCLUDE_PATH #標準library置き換え macのdefaultでは/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/vector:704:10:にある．
+# export CPATH=${HOME}/src/libtorch/include/
+# export CPATH=${HOME}/src/pytorch-install/include/:$CPATH
+export CPATH=${HOMEBREW_HOME}/include/eigen3/:$CPATH
+export CPATH=${HOMEBREW_HOME}/include/rdkit/:$CPATH
+export CPATH=${HOME}/src/rdkit/Code:$CPATH
+
+export LD_LIBRARY_PATH=${HOMEBREW_HOME}/lib/:$LD_LIBRARY_PATH
+export DYLD_LIBRARY_PATH=${HOMEBREW_HOME}/lib/:$DYLD_LIBRARY_PATH
+export DYLD_LIBRARY_PATH=${HOMEBREW_HOME}/Cellar/gcc/14.1.0_1/lib/gcc/14/:$DYLD_LIBRARY_PATH
 
 
-export PATH=${HOME}/works/research/jsr_utokyo/tools:${PATH}
-export PYTHONPATH=${HOME}/works/research/jsr_utokyo/tools:${PYTHONPATH}
+export RDBASE=/opt/homebrew/opt/rdkit/share/RDKit
+
+# export PATH=${HOME}/works/research/jsr_utokyo/tools:${PATH}
+# export PYTHONPATH=${HOME}/works/research/jsr_utokyo/tools:${PYTHONPATH}
 export PATH=${HOME}/works/codes/tools:${PATH}
 export PYPJONPATH=${HOME}/works/codes/tools:${PYTHONPATH}
+
 
 
 
@@ -545,21 +558,6 @@ export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
 export PATH=$HOME/.rbenv/bin:$PATH
 eval "$(rbenv init -)"
 
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/Users/amano/opt/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/Users/amano/opt/anaconda3/etc/profile.d/conda.sh" ]; then
-        . "/Users/amano/opt/anaconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="/Users/amano/opt/anaconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
-
 
 # coreutils
 PATH=${HOMEBREW_HOME}/opt/coreutils/libexec/gnubin:${PATH}
@@ -589,5 +587,28 @@ export DYLD_FALLBACK_LIBRARY_PATH=${HOMEBREW_HOME}/Cellar/gcc/12.2.0/lib/gcc/12:
 export DYLD_LIBRARY_PATH=${HOMEBREW_HOME}/Cellar/gcc/12.2.0/lib/gcc/current:$DYLD_LIBRARY_PATH
 
 
+# julia 2023.3.28
+export PATH=${PATH}:/Applications/Julia-1.8.app/Contents/Resources/julia/bin/
+
 # allow x11 forward
 xhost +local:
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/Users/amano/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/Users/amano/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/Users/amano/anaconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/Users/amano/anaconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+export PATH="/opt/homebrew/opt/sphinx-doc/bin:$PATH"
+
+
+# https://shishimaro.co.jp/blog/ai/489
+export MECABRC=/opt/homebrew/etc/mecabrc

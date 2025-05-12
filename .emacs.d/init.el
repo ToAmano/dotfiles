@@ -83,8 +83,8 @@
 ;; 2021/11/24 一旦disabled
 ;; https://github.com/sebastiencs/icons-in-terminal
 (add-to-list 'load-path "~/.local/share/icons-in-terminal/")
-(require 'icons-in-terminal)
-(insert (icons-in-terminal 'oct_flame)) ; C-h f icons-in-terminal[RET] for more info
+;(require 'icons-in-terminal)
+;(insert (icons-in-terminal 'oct_flame)) ; C-h f icons-in-terminal[RET] for more info
 ;(set-fontset-font t 'unicode "icons-in-terminal")
 ;(set-fontset-font t '(#Xe000 . #Xf8ff) "icons-in-terminal")
 
@@ -410,27 +410,27 @@
 ;;https://www.emacswiki.org/emacs/RecentFiles
 ;;https://qiita.com/tadsan/items/68b53c2b0e8bb87a78d7
 ;;https://www.yokoweb.net/2017/01/18/emacs-recentf/
-(defmacro with-suppressed-message (&rest body)
- ;; "Suppress new messages temporarily in the echo area and the `*Messages*' buffer while BODY is evaluated."
-  (declare (indent 0))
-  (let ((message-log-max nil))
-    `(with-temp-message (or (current-message) "") ,@body)))
-(setq recentf-save-file "~/.emacs.d/.recentf")
-(setq recentf-max-saved-items 2000) ;;2000ファイルまで履歴保存する
-(setq recentf-auto-cleanup 'never)  ;;存在しないファイルは消さない
-(setq recentf-exclude '("/recentf" "COMMIT_EDITMSG" "/.?TAGS" "^/sudo:" "/\\.emacs\\.d/games/*-scores" "/\\.emacs\\.d/\\.cask/"))
+;; (defmacro with-suppressed-message (&rest body)
+;;  ;; "Suppress new messages temporarily in the echo area and the `*Messages*' buffer while BODY is evaluated."
+;;   (declare (indent 0))
+;;   (let ((message-log-max nil))
+;;     `(with-temp-message (or (current-message) "") ,@body)))
+;; (setq recentf-save-file "~/.emacs.d/.recentf")
+;; (setq recentf-max-saved-items 2000) ;;2000ファイルまで履歴保存する
+;; (setq recentf-auto-cleanup 'never)  ;;存在しないファイルは消さない
+;; (setq recentf-exclude '("/recentf" "COMMIT_EDITMSG" "/.?TAGS" "^/sudo:" "/\\.emacs\\.d/games/*-scores" "/\\.emacs\\.d/\\.cask/"))
 
 
-(setq recentf-auto-save-timer (run-with-idle-timer 30 t 'recentf-save-list))
-;;30秒ごとに .recentf を保存
-(run-with-idle-timer 30 t '(lambda ()
-     (with-suppressed-message (recentf-save-list))))
-(recentf-mode 1)
+;; (setq recentf-auto-save-timer (run-with-idle-timer 30 t 'recentf-save-list))
+;; ;;30秒ごとに .recentf を保存
+;; (run-with-idle-timer 30 t '(lambda ()
+;;      (with-suppressed-message (recentf-save-list))))
+;; (recentf-mode 1)
 
-;;キーバインド
-(global-set-key (kbd "C-c r") 'recentf-open-files)
-(bind-key "C-c っ" 'helm-recentf)
-(bind-key "C-c t" 'helm-recentf)
+;; ;;キーバインド
+;; (global-set-key (kbd "C-c r") 'recentf-open-files)
+;; (bind-key "C-c っ" 'helm-recentf)
+;; (bind-key "C-c t" 'helm-recentf)
 
 
 
@@ -439,7 +439,8 @@
 ;;このhl-line-modeについては，重くなるという指摘がある．
 ;;問題が顕在化してくるようなら他のmodeを使って代用することもできるようだ．
 ;;http://emacs.rubikitch.com/global-hl-line-mode-timer/
-(global-hl-line-mode t)
+;;(global-hl-line-mode t)
+
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -677,57 +678,58 @@
 ;;bookmarksはemacsの標準機能
 ;;http://tototoshi.hatenablog.com/entry/20101226/1293334388
 
+;;2023/08/16 : 一旦コメンとアウト
 
-(use-package dashboard
-  :ensure t
-  :custom
-  (dashboard-set-navigator t)
-  (dashboard-items '((recents . 15)
-		     (projects . 5)
-		     (bookmarks . 5)
-		     (agenda . 10)))
-  :config
-  (dashboard-setup-startup-hook))
+;; (use-package dashboard
+;;   :ensure t
+;;   :custom
+;;   (dashboard-set-navigator t)
+;;   (dashboard-items '((recents . 15)
+;; 		     (projects . 5)
+;; 		     (bookmarks . 5)
+;; 		     (agenda . 10)))
+;;   :config
+;;   (dashboard-setup-startup-hook))
 
-;;emacs daemonを使う時にもdashboardを起動する．（2020/5/8）
-;;https://www.reddit.com/r/emacs/comments/8i2ip7/emacs_dashboard_emacsclient
-(setq initial-buffer-choice (lambda () (get-buffer "*dashboard*")))
-;;→なんか微妙な挙動を示しているので一時停止→2021/10/28 使用再開
-;; 2021/12/6 普通にemacsを開いた場合はダメになってしまう．
-;; したがって，常にemacs --daemonを使用する必要がある．
+;; ;;emacs daemonを使う時にもdashboardを起動する．（2020/5/8）
+;; ;;https://www.reddit.com/r/emacs/comments/8i2ip7/emacs_dashboard_emacsclient
+;; (setq initial-buffer-choice (lambda () (get-buffer "*dashboard*")))
+;; ;;→なんか微妙な挙動を示しているので一時停止→2021/10/28 使用再開
+;; ;; 2021/12/6 普通にemacsを開いた場合はダメになってしまう．
+;; ;; したがって，常にemacs --daemonを使用する必要がある．
 
 
-;;ダッシュボードをもう一回開きたいとき．
-;;https://qiita.com/minoruGH/items/d5f2975a76b6ca4ceb1c
-(bind-key [f10] 'open-dashboard)
-(bind-key [f10] 'dashboard-quit dashboard-mode-map)
+;; ;;ダッシュボードをもう一回開きたいとき．
+;; ;;https://qiita.com/minoruGH/items/d5f2975a76b6ca4ceb1c
+;; (bind-key [f10] 'open-dashboard)
+;; (bind-key [f10] 'dashboard-quit dashboard-mode-map)
 
-(defun open-dashboard ()
-  "Open the *dashboard* buffer and jump to the first widget."
-  (interactive)
-  (delete-other-windows)
-  ;; Refresh dashboard buffer
-  (if (get-buffer dashboard-buffer-name)
-      (kill-buffer dashboard-buffer-name))
-  (dashboard-insert-startupify-lists)
-  (switch-to-buffer dashboard-buffer-name)
-  ;; Jump to the first section
-  (goto-char (point-min))
-  (dashboard-goto-recent-files))
+;; (defun open-dashboard ()
+;;   "Open the *dashboard* buffer and jump to the first widget."
+;;   (interactive)
+;;   (delete-other-windows)
+;;   ;; Refresh dashboard buffer
+;;   (if (get-buffer dashboard-buffer-name)
+;;       (kill-buffer dashboard-buffer-name))
+;;   (dashboard-insert-startupify-lists)
+;;   (switch-to-buffer dashboard-buffer-name)
+;;   ;; Jump to the first section
+;;   (goto-char (point-min))
+;;   (dashboard-goto-recent-files))
 
-(defun quit-dashboard ()
-  "Quit dashboard window."
-  (interactive)
-  (quit-window t)
-  (when (and dashboard-recover-layout-p
-             (bound-and-true-p winner-mode))
-    (winner-undo)
-    (setq dashboard-recover-layout-p nil)))
+;; (defun quit-dashboard ()
+;;   "Quit dashboard window."
+;;   (interactive)
+;;   (quit-window t)
+;;   (when (and dashboard-recover-layout-p
+;;              (bound-and-true-p winner-mode))
+;;     (winner-undo)
+;;     (setq dashboard-recover-layout-p nil)))
 
-(defun dashboard-goto-recent-files ()
-  "Go to recent files."
-  (interactive)
-  (funcall (local-key-binding "r")))
+;; (defun dashboard-goto-recent-files ()
+;;   "Go to recent files."
+;;   (interactive)
+;;   (funcall (local-key-binding "r")))
 
 
 
@@ -745,7 +747,7 @@
 ;; R :: mv
 ;; C :: cp
 ;; D :: rm
-(use-package icons-in-terminal-dired.el)
+;; (use-package icons-in-terminal-dired.el)
 ;;(set-fontset-font t '(#Xe000 . #Xf8ff) "icons-in-terminal")
 
 
@@ -1655,12 +1657,12 @@
 ;;2020/5/31 ペーストした時に視覚的にハイライト
 ;;https://qiita.com/Ladicle/items/feb5f9dce9adf89652cf
 
-  (use-package volatile-highlights
-    :diminish
-    :hook
-    (after-init . volatile-highlights-mode)
-    :custom-face
-    (vhl/default-face ((nil (:foreground "#FF3333" :background "#FFCDCD")))))
+  ;; (use-package volatile-highlights
+  ;;   :diminish
+  ;;   :hook
+  ;;   (after-init . volatile-highlights-mode)
+  ;;   :custom-face
+  ;;   (vhl/default-face ((nil (:foreground "#FF3333" :background "#FFCDCD")))))
 
 ;;;;=======================
 ;; quick-run
@@ -1699,12 +1701,12 @@
 ;;どうもelpaにないので，自分で持ってくる必要あり
 ;;https://blog.iss.ms/2012/03/17/095152
 ;;https://github.com/antonj/Highlight-Indentation-for-Emacs
-(use-package highlight-indentation
-  :config
-  ;;(highlight-indentation-mode t)
-  (add-hook 'c-mode-hook 'highlight-indentation-mode)
-  ;;(add-hook 'yatex-mode-hook 'highlight-indentation-mode)
-  )
+;; (use-package highlight-indentation
+;;   :config
+;;   ;;(highlight-indentation-mode t)
+;;   (add-hook 'c-mode-hook 'highlight-indentation-mode)
+;;   ;;(add-hook 'yatex-mode-hook 'highlight-indentation-mode)
+;;   )
 
 ;;;;==============================;;;;
 ;;;;==============================;;;;

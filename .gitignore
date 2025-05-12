@@ -20,6 +20,7 @@
 !/.zshenv
 !/.zprofile
 !/commit_template
+!/.bash_profile_ohtaka
 
 !/bin/    #dirとその中身を設定するにはこの2行が必要．
 !/bin/**

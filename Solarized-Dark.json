@@ -449,7 +449,7 @@
   "Name" : "Solarized-Dark",
   "Blinking Cursor" : false,
   "Guid" : "A3154373-EFB2-4A5B-B334-7A5CD9FFD8FE",
-  "Idle Code" : 0,
+  "Idle Code" : 1,
   "Ansi 10 Color" : {
     "Red Component" : 0.34509803921568627,
     "Color Space" : "sRGB",
