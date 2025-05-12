@@ -5,7 +5,6 @@
 
 
 
-
 # ignore /etc/zprofile, /etc/zshrc, /etc/zlogin, and /etc/zlogout
 unsetopt GLOBAL_RCS
 # copied from /etc/zprofile
@@ -34,17 +33,14 @@ export GTAGSCONF=/opt/local/share/gtags/gtags.conf
 export GTAGSLABEL=pygments
 
 
-
 #2020/10/16
 # g++でEigenをincludeするための変数設定．
 export CPATH=$CPATH:/Users/AMANOTOMOHITO/src/Eigen
 export LIBRARY_PATH=$LIBRARY_PATH:/Users/AMANOTOMOHITO/src/Eigen
 
-
 #2021/10/28
 # 自作codeへのpathを通す．
-export PATH=/Users/amanotomohito/works/codes:$PATH
-
+export PATH=${HOME}/works/codes:$PATH
 
 # 2022/07/29 :: MacTex2022
 export PATH=/usr/local/texlive/2022/bin/universal-darwin/:$PATH

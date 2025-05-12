@@ -43,7 +43,6 @@ else
 fi
 eval "$($HOMEBREW_HOME/bin/brew shellenv)"
 
-
 # -----------------------
 #
 #lsコマンドの色について
@@ -147,6 +146,10 @@ export LANG=ja_JP.UTF-8
 #autoload -U promptinit; promptinit
 #prompt pure
 
+# git管理されているか否か
+# https://qiita.com/yaotti/items/04ad9976c66ccbee2047
+autoload -Uz vcs_info
+
 # Gitブランチ名を表示
 # https://github.com/git/git/blob/master/contrib/completion/git-prompt.sh
 #source ~/.git-prompt.sh
@@ -209,7 +212,8 @@ function prompt-make {
 function rprompt-git-current-branch {
   local branch_name st branch_status
  
-  if [ ! -e  ".git" ]; then
+  # if [ ! -e  ".git" ]; then
+  if ! git rev-parse 2> /dev/null ; then # https://memo.sugyan.com/entry/20120323/1332507609
       # git 管理されていないディレクトリは何も返さない
       echo "%F{245}\ue0b2%f%K{245}%F{230} %* \uf017%f %k"
     return
@@ -268,6 +272,9 @@ alias locate="/usr/bin/locate"
 #2022/7/7 g++/gcc
 # alias g++="${HOMEBREW_HOME}/bin/g++-13"
 # alias gcc="${HOMEBREW_HOME}/bin/gcc-13"
+#2023/6/17 update to g++13
+alias g++="${HOMEBREW_HOME}/bin/g++-13"
+alias gcc="${HOMEBREW_HOME}/bin/gcc-13"
 
 #2020/2/23 ls
 #これはsolarized colorになるようにわざわざcoreutilsを入れている
@@ -440,11 +447,11 @@ source ${HOMEBREW_HOME}/opt/lmod/init/profile
 # pyenv
 # pyenv
 #https://mitsudo.net/python環境の構築-mac-with-anaconda-by-homebrew/
-# export PYENV_ROOT=~/.pyenv
-# export PATH=$PYENV_ROOT/bin:$PATH
-# eval "$(pyenv init --path)" # https://commte.net/7259
-# eval "$(pyenv init -)"
-# eval "$(pyenv virtualenv-init -)"
+export PYENV_ROOT=~/.pyenv
+export PATH=$PYENV_ROOT/bin:$PATH
+eval "$(pyenv init --path)" # https://commte.net/7259
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
 
 # brew doctor 対策
 # alias brew="env PATH=${PATH/\/Users\/${USER}\/\.pyenv\/shims:/} brew"
@@ -467,23 +474,30 @@ export PATH=$HOME/works/codes/tools:$PATH
 # export LIBRARY_PATH=/opt/homebrew/lib:$LIBRARY_PATH
 export CPATH=${HOMEBREW_HOME}/Cellar/boost/1.82.0_1/include/:$CPATH  #boost
 export CPATH=${HOMEBREW_HOME}/Cellar/open-mpi/4.1.4/include/:$CPATH  #mpi.h
-export CPATH=/opt/homebrew/include/:$CPATH # homebrewで入れたライブラリはこれでok．（omp.h）
+export CPATH=${HOMEBREW_HOME}/include/:$CPATH 
+export CPATH=${HOMEBREW_HOME}/include/eigen3/:$CPATH #Eigen from homebrew
+export CPATH=${HOMEBREW_HOME}/include/boost/:$CPATH #boost from homebrew
+export CPATH=${HOMEBREW_HOME}/include/rdkit:$CPATH  # rdkit from homebrew
+export LD_LIBRARY_PATH=${HOMEBREW_HOME}/opt/rdkit/lib:$LD_LIBRARY_PATH
+
+# こっちがintel macでのpath設定か？
+export CPATH=${HOMEBREW_HOME}/opt/rdkit/include:$CPATH
+export CPATH=${HOMEBREW_HOME}/opt/boost/include:$CPATH
 # export CPLUS_INCLUDE_PATH=/opt/homebrew/Cellar/gcc/11.3.0_2/include/c++/11:$CPLUS_INCLUDE_PATH #標準library置き換え macのdefaultでは/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/vector:704:10:にある．
-# export CPATH=${HOME}/src/libtorch/include/
-# export CPATH=${HOME}/src/pytorch-install/include/:$CPATH
-export CPATH=${HOMEBREW_HOME}/include/eigen3/:$CPATH
-export CPATH=${HOMEBREW_HOME}/include/rdkit/:$CPATH
-export CPATH=${HOME}/src/rdkit/Code:$CPATH
+# libtorch (C++ version of pytorch)
+export CPATH=${HOME}/src/libtorch/include/torch/:$CPATH
+export CPATH=${HOME}/src/libtorch/include/:$CPATH
+# export CPATH=${HOME}/src/libtorch/include/torch/csrc/api/include/torch:$CPATH
+export CPATH=/usr/local/Cellar/libomp/16.0.6/include/:$CPATH # omp.h
+export CPATH=/usr/local/opt/libomp/include/:$CPATH
+export LD_LIBRARY_PATH=/usr/local/Cellar/libomp/16.0.6/lib:$LD_LIBRARY_PATH
+export LD_LIBRARY_PATH=/usr/local/opt/libomp/lib:$LD_LIBRARY_PATH
 
-export LD_LIBRARY_PATH=${HOMEBREW_HOME}/lib/:$LD_LIBRARY_PATH
-export DYLD_LIBRARY_PATH=${HOMEBREW_HOME}/lib/:$DYLD_LIBRARY_PATH
-export DYLD_LIBRARY_PATH=${HOMEBREW_HOME}/Cellar/gcc/14.1.0_1/lib/gcc/14/:$DYLD_LIBRARY_PATH
 
+export RDBASE=/usr/local/opt/rdkit/share/RDKit
 
-export RDBASE=/opt/homebrew/opt/rdkit/share/RDKit
-
-# export PATH=${HOME}/works/research/jsr_utokyo/tools:${PATH}
-# export PYTHONPATH=${HOME}/works/research/jsr_utokyo/tools:${PYTHONPATH}
+export PATH=${HOME}/works/research/jsr_utokyo/tools:${PATH}
+export PYTHONPATH=${HOME}/works/research/jsr_utokyo/tools:${PYTHONPATH}
 export PATH=${HOME}/works/codes/tools:${PATH}
 export PYPJONPATH=${HOME}/works/codes/tools:${PYTHONPATH}
 
@@ -500,6 +514,16 @@ if [ -f ${HOME}/works/dotfiles/src/antigen/antigen.zsh ]; then
 source ${HOME}/works/dotfiles/src/antigen/antigen.zsh
 fi
 
+# Load the oh-my-zsh's library.
+antigen use oh-my-zsh
+
+# Bundles from the default repo (robbyrussell's oh-my-zsh).
+antigen bundle git
+antigen bundle heroku
+# antigen bundle pip
+antigen bundle lein
+antigen bundle command-not-found
+# antigen bundle pyenv 
 # 
 antigen bundle zsh-users/zsh-completions
 
@@ -512,8 +536,14 @@ antigen bundle zsh-users/zsh-syntax-highlighting
 # command history search
 antigen bundle zdharma/history-search-multi-word
 
+# conda-zsh-completion https://namileriblog.com/python/conda-zsh-completion/
+# antigen bundle 
+antigen bundle conda-incubator/conda-zsh-completion --branch=master
+
 # Tell antigen that you're done.
 antigen apply
+
+autoload -U compinit && compinit
 
 # #2021/12/3
 # # https://zenn.dev/k4zu/articles/zsh-tutorial
@@ -558,6 +588,25 @@ export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
 export PATH=$HOME/.rbenv/bin:$PATH
 eval "$(rbenv init -)"
 
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/Users/amano/opt/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/Users/amano/opt/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/Users/amano/opt/anaconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/Users/amano/opt/anaconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
+
+# <<<<<<<<<<<<<<<<<<
+# path for commands
+# >>>>>>>>>>>>>>>>>>
 
 # coreutils
 PATH=${HOMEBREW_HOME}/opt/coreutils/libexec/gnubin:${PATH}
